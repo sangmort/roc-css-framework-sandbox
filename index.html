@@ -48,12 +48,32 @@
 				an <u>unarticulated annotation</u>, a <small>small</small>, a
 				<sub>subset</sub>, a <sup>superset</sup>, a
 				<cite>citation</cite>, a <mark>mark</mark>, a <time>time</time>,
-				an <abbr>abbr</abbr>, a <def>definition</def>,
+				an <abbr>abbr</abbr>, a <def>definition</def>, a <kbd>kbd</kbd>,
+				a <code>line of code</code>.
 			</p>
 		</blockquote>
-		<code>code block</code>
-		<pre>pre-formatted text</pre>
 		<address>address</address>
+
+		<!-- Code -->
+
+		<p>a <kbd>kbd</kbd></p>
+		<p>
+			a <kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd>
+		</p>
+		<p>A <samp>sample output</samp></p>
+		<pre>pre     -     formatted text</pre>
+		<pre>pre tag, wrapping a:
+            <samp>samp tag, wrapping a: 
+                <kbd>kbd tag</kbd>
+            </samp>
+        </pre>
+		<p>an inline <code>single line of code</code>.</p>
+		<pre><code>
+            // code tag wrapped in pre tag 
+            .pre .code {
+                content: "multiple lines of code";
+            }
+        </code></pre>
 
 		<!-- lists -->
 
