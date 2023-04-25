@@ -245,8 +245,12 @@
 
 		<hr />
 
-		<!-- images -->
+		<!-- images and media -->
 		<img src="" alt="" />
+		<area shape="" coords="" href="" alt="" />
+		<map name=""></map>
+		<audio src=""></audio>
+		<video src=""></video>
 
 		<!-- tables -->
 		<table></table>
@@ -266,7 +270,40 @@
 		<option></option>
 		<textarea></textarea>
 
-		<!-- button -->
+		<hr />
+
+		<!-- Canvas -->
+
+		<canvas></canvas>
+
+		<script type="application/javascript">
+			function draw() {
+				const canvas = document.querySelector("canvas");
+				if (canvas.getContext) {
+					const ctx = canvas.getContext("2d");
+
+					ctx.fillStyle = "#333";
+					ctx.fillRect(10, 10, 75, 75);
+
+					ctx.fillStyle = "#ccc";
+					ctx.fillRect(25, 25, 75, 75);
+				}
+			}
+			onload = draw();
+		</script>
+
+		<hr />
+
+		<!-- SVG -->
+
+		<svg viewBox="0 0 10 10" x="200" width="100">
+			<circle cx="5" cy="5" r="4" fill="#333" />
+			Your browser doesn't support SVG.
+		</svg>
+
+		<hr />
+
+		<!-- buttons -->
 		<button>button</button>
 
 		<button type="button">button type=button</button>
@@ -282,6 +319,8 @@
 			</svg>
 			SVG Icon Button
 		</button>
+
+		<hr />
 
 		<!-- structural elements -->
 		<header></header>
