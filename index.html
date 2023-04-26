@@ -7,9 +7,13 @@
 		<meta name="description" content="" />
 	</head>
 	<body>
-		<!-- text content -->
-		<h2>text content</h2>
+		<h1>HTML Elements</h1>
 
+		<!-- text content --->
+		<h2>text content</h2>
+		<hr />
+
+		<!-- headings --->
 		<h3 id="headings">headings</h3>
 		<h1>heading 1</h1>
 		<h2>heading 2</h2>
@@ -17,16 +21,37 @@
 		<h4>heading 4</h4>
 		<h5>heading 5</h5>
 		<h6>heading 6</h6>
-		<hr />
 
+		<hr />
+        
+		<!-- Link - Text -->
 		<h3 id="links">links</h3>
-		<!--Link - Text -->
-		<a href="#links">link</a> <a href="#links">link</a>
-		<a href="#links">link</a>
-		<p><a href="#links">link</a> // link in paragraph</p>
+
+		<h4 id="links-no-paragraph">links - not wrapped in paragraph tag</h4>
+		<a href="#links">internal link</a> <a href="#links">internal link</a>
+		<a href="#links">internal link</a>
+
+		<br />
+
+		<a href="https://github.com/sangmort/css-framework-sandbox">external link</a> <a href="https://github.com/sangmort/css-framework-sandbox">external link</a>
+		<a href="https://github.com/sangmort/css-framework-sandbox">external link</a>
+
+
+		<h4 id="links-in-paragraph">links - wrapped in paragraph tag</h4>
+		<p><a href="#links">internal link</a> // internal link in paragraph</p>
 		<p>
-			<a href="#links">link</a> <a href="#links">link</a>
-			<a href="#links">link</a> // three links in paragraph
+			<a href="#links">internal link</a>
+			<a href="#links">internal link</a>
+			<a href="#links">internal link</a> // three internal links in
+			paragraph
+		</p>
+
+		<p><a href="#links">internal link</a> // internal link in paragraph</p>
+		<p>
+			<a href="#links">internal link</a>
+			<a href="#links">internal link</a>
+			<a href="#links">internal link</a> // three internal links in
+			paragraph
 		</p>
 		<p>
 			<a href="tel:+49.157.0156">+49 157 0156</a> // tel link in paragraph
