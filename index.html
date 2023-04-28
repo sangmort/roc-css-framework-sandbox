@@ -5,6 +5,7 @@
 		<title>CSS Framework Playground</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="description" content="" />
+        <link rel="stylesheet" href="basic.css">
 	</head>
 	<body>
 		<h1>HTML Elements</h1>
@@ -14,7 +15,7 @@
 		<hr />
 
 		<!-- headings --->
-		<h3 id="headings">headings</h3>
+		<h3 id="headings" class="playground-header">headings</h3>
 		<h1>heading 1</h1>
 		<h2>heading 2</h2>
 		<h3>heading 3</h3>
@@ -32,9 +33,9 @@
 		<!-- Link - Text -->
 		<!-- Links - No Paragraph - Text -->
 
-		<h3 id="links">links</h3>
+		<h3 id="links" class="playground-header">links</h3>
 
-		<h4 id="links-no-paragraph">links - not wrapped in paragraph tags</h4>
+		<h4 id="links-no-paragraph" class="playground-header">links - not wrapped in paragraph tags</h4>
 
 		<a href="#links">internal link</a>
 		<a href="#links">internal link</a>
@@ -46,9 +47,8 @@
 		<a href="tel:+1(111)5557777">(111) 555-7777</a>
 		<a href="/media/images/image-horizontal-1.jpg" download>download link</a>
 
-		<!--- *** -->
 		<!-- Links - Paragraph - Text -->
-		<h4 id="links-in-paragraph">links - wrapped in paragraph tags</h4>
+		<h4 id="links-in-paragraph" class="playground-header">links - wrapped in paragraph tags</h4>
 		<p><a href="#links">internal link</a></p>
 		<p>
 			<a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a> // external
@@ -80,9 +80,9 @@
 
 		<hr />
 
-		<!-- Text Modifiers-->
-		<h3 id="text-modifiers">text modifiers</h3>
-		<p>paragraph text</p>
+		<!-- Inline Text Modifiers-->
+		<h3 id="text-inline" class="playground-header">text - inline</h3>
+
 		<p>a <span>span</span> text</p>
 		<p>a <b>bring attention</b> text</p>
 		<p>a <strong>strong</strong> text</p>
@@ -116,8 +116,10 @@
 
 		<hr />
 
-		<!--Qoute-->
+		<!--Block Level Text-->
+		<h3 id="text-block">text - block</h3>
 
+		<p>paragraph text</p>
 		<p>a <q>short inline quote</q></p>
 		<blockquote>
 			<p>
