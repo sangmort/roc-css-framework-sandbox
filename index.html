@@ -330,8 +330,14 @@
 		<button onclick="window.dialog.show();">open dialog</button>
 
 		<dialog id="dialog">
-			I'm a dialog.
-			<button onclick="window.dialog.close();">close</button>
+			<p>I'm a dialog opened using JS onlick="window.dialog.show();" inside an html button.</p>
+			<p>I can be closed with JS using onlick="window.dialog.close()" inside an html button.</p>
+			<p>...or I can be closed using form method ="dialog", with a button inside.</p>
+			<p><code>id="dialog"</code></p>
+			<button onclick="window.dialog.close();">close with JS</button>
+			<form method="dialog">
+				<button>close with html</button>
+			</form>
 		</dialog>
 
 		<hr />
