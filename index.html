@@ -314,10 +314,24 @@
 		<td></td>
 
 		<!-- forms -->
-        <form action="/">
+		<form action="/">
+			<label for="text">text:</label>
+			<input type="text" value="some text" id="text" />
 
-            
-        </form>
+			<label for="mail">email:</label>
+			<input type="email" value="example123@example.com" id="mail" list="example-emails" />
+
+			<datalist id="example-emails">
+				<option value="a-example@example.com"></option>
+				<option value="b-example@example.com"></option>
+				<option value="c-example@example.com"></option>
+				<option value="d-example@example.com"></option>
+				<option value="e-example@example.com"></option>
+			</datalist>
+
+			<label for="msg">message:</label>
+			<textarea id="msg"></textarea>
+		</form>
 
 		<input type="" />
 		<label></label>
@@ -343,7 +357,7 @@
 			</form>
 		</dialog>
 
-        <details>
+		<details>
 			<p>A <strong>details tag</strong> without a summary.</p>
 		</details>
 		<details>
@@ -418,8 +432,6 @@
 		</button>
 
 		<hr />
-
-	
 
 		<!-- structural elements -->
 		<header></header>
