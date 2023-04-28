@@ -315,12 +315,11 @@
 
 		<!-- forms -->
 		<form action="/">
-
-            <!-- Name --->
+			<!-- Name --->
 			<label for="text">text:</label>
 			<input type="text" value="some text" id="text" />
 
-            <!-- Email --->
+			<!-- Email --->
 			<label for="mail">email:</label>
 			<input type="email" value="example123@example.com" id="mail" list="example-emails" />
 
@@ -332,7 +331,7 @@
 				<option value="e-example@example.com"></option>
 			</datalist>
 
-            <!-- Time --->
+			<!-- Time --->
 			<input type="time" list="example-times" />
 			<datalist id="example-times">
 				<option value="11:00"></option>
@@ -340,7 +339,17 @@
 				<option value="17:00"></option>
 			</datalist>
 
-            <!--- Textarea-->
+			<!--- Range --->
+			<input type="range" min="0" max="100" step="5" id="range" list="range-markers" />
+			<datalist id="range-markers">
+				<option value="0" label="0"></option>
+				<option value="25" label="25"></option>
+				<option value="50" label="50"></option>
+				<option value="75" label="75"></option>
+				<option value="100" label="100"></option>
+			</datalist>
+
+			<!--- Textarea-->
 			<label for="textarea">textarea:</label>
 			<textarea id="textarea"></textarea>
 		</form>
