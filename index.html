@@ -322,7 +322,6 @@
 			<!-- Email --->
 			<label for="mail">email:</label>
 			<input type="email" value="example123@example.com" id="mail" list="example-emails" />
-
 			<datalist id="example-emails">
 				<option value="a-example@example.com"></option>
 				<option value="b-example@example.com"></option>
@@ -332,7 +331,8 @@
 			</datalist>
 
 			<!-- Time --->
-			<input type="time" list="example-times" />
+            <label for="time">time:</label>
+			<input type="time" id="time" list="example-times" />
 			<datalist id="example-times">
 				<option value="11:00"></option>
 				<option value="13:00"></option>
@@ -340,6 +340,7 @@
 			</datalist>
 
 			<!--- Range --->
+            <label for="range">range:</label>
 			<input type="range" min="0" max="100" step="5" id="range" list="range-markers" />
 			<datalist id="range-markers">
 				<option value="0" label="0"></option>
