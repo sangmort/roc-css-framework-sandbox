@@ -318,9 +318,20 @@
 			<!-- Image -->
 			<input type="image" id="image" alt="image input" src="media/images/css-framework-sandbox-temp-small.png" />
 
+			<input
+				type="image"
+				id="image-disabled"
+				alt="disabled image input"
+				src="media/images/css-framework-sandbox-temp-small.png"
+				disabled
+			/>
+
 			<!-- Name --->
 			<label for="text">text:</label>
 			<input type="text" value="some text" id="text" />
+
+			<label for="text-disabled">disabled text:</label>
+			<input type="text" value="some text" id="text-disabled" disabled />
 
 			<!-- Email --->
 			<label for="mail">email:</label>
@@ -333,9 +344,21 @@
 				<option value="e-example@example.com"></option>
 			</datalist>
 
+			<label for="mail-disabled">disabled email:</label>
+			<input type="email" value="disabled@example.com" id="mail-disabled" list="example-emails" disabled />
+
 			<!-- URL -->
 			<label for="url">url:</label>
 			<input type="url" id="url" placeholder="https://example.com" pattern="https://.*" />
+
+			<label for="url-disabled">url:</label>
+			<input
+				type="url"
+				id="url-disabled"
+				placeholder="https://disabled-example.com"
+				pattern="https://.*"
+				disabled
+			/>
 
 			<!-- Search -->
 			<label for="search">search:</label>
@@ -344,12 +367,19 @@
 			<label for="search">disabled search:</label>
 			<input type="search" id="search-disabled" placeholder="disabled search..." disabled />
 
+			<!-- Tel / Phone -->
 			<label for="tel">phone number:</label>
-			<input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+			<input type="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+
+			<label for="tel-disabled">disabled phone number:</label>
+			<input type="tel" id="tel-disabled" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" disabled />
 
 			<!-- Number -->
 			<label for="number">number:</label>
 			<input type="number" id="number" value="777" />
+
+			<label for="number-disabled">number:</label>
+			<input type="number" id="number-disabled" value="666" disabled />
 
 			<!-- Checkbox -->
 			<input type="checkbox" id="checkbox1" />
@@ -358,8 +388,14 @@
 			<input type="checkbox" id="checkbox2" />
 			<label for="checkbox2">checkbox2</label>
 
+			<input type="checkbox" id="checkbox-disabled" disabled />
+			<label for="checkbox-disabled">checkbox-disabled</label>
+
 			<input type="checkbox" id="checkbox-checked" checked />
 			<label for="checkbox-checked">checkbox-checked</label>
+
+			<input type="checkbox" id="checkbox-checked-disabled" checked disabled />
+			<label for="checkbox-checked-disabled">checkbox-checked-disabled</label>
 
 			<!-- Radio -->
 			<input type="radio" name="radiobuttons" id="radio1" />
@@ -368,8 +404,14 @@
 			<input type="radio" name="radiobuttons" id="radio2" />
 			<label for="radio2">radio2</label>
 
-			<input type="radio" name="radiobuttons" id="radio3" />
-			<label for="radio3">radio3</label>
+			<input type="radio" name="radiobuttons" id="radio-checked" checked />
+			<label for="radio-checked">radio-checked</label>
+
+			<input type="radio" name="radiobuttons-2" id="radio-disabled" checked disabled />
+			<label for="radio-checked-disabled">radio-disabled</label>
+
+			<input type="radio" name="radiobuttons-2" id="radio-checked-disabled" checked disabled />
+			<label for="radio-checked-disabled">radio-checked-disabled</label>
 
 			<!-- Time --->
 			<label for="time">time:</label>
@@ -380,21 +422,36 @@
 				<option value="17:00"></option>
 			</datalist>
 
+			<label for="time-disabled">disabled time:</label>
+			<input type="time" id="time-disabled" disabled />
+
 			<!--- Date --->
 			<label for="date">date:</label>
 			<input type="date" id="date" value="2023-01-01" />
+
+			<label for="date-disabled">disabled date:</label>
+			<input type="date" id="date-disabled" value="2023-01-01" disabled />
 
 			<!-- Datetime Local-->
 			<label for="date-time-local">datetime-local:</label>
 			<input type="datetime-local" id="date-time-local" value="2023-01-01T00:01" />
 
+			<label for="date-time-local-disabled">disabled datetime-local:</label>
+			<input type="datetime-local" id="date-time-local-disabled" value="2023-01-01T00:01" disabled />
+
 			<!-- Week --->
 			<label for="week">week:</label>
 			<input type="week" id="week" />
 
+			<label for="week-disabled">disabled week:</label>
+			<input type="week" id="week-disabled" disabled />
+
 			<!-- Month --->
 			<label for="month">month:</label>
 			<input type="month" id="month" />
+
+			<label for="month-disabled">disabled month:</label>
+			<input type="month" id="month-disabled" disabled />
 
 			<!--- Range --->
 			<label for="range">range:</label>
