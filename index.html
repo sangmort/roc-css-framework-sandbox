@@ -464,6 +464,15 @@
 				<option value="100" label="100"></option>
 			</datalist>
 
+			<label for="range-disabled">disabled range:</label>
+			<input type="range" min="0" max="100" step="5" id="range-disabled" list="range-markers" disabled />
+
+			<label for="range-no-datalist">no datalist range:</label>
+			<input type="range" min="0" max="100" step="5" id="range-disabled" />
+
+			<label for="range-disabled-no-datalist">no datalist + disabled range:</label>
+			<input type="range" min="0" max="100" step="5" id="range-disabled" disabled />
+            
 			<!--- Color --->
 			<label for="color">color:</label>
 			<input type="color" id="color" list="color-list" />
@@ -473,9 +482,15 @@
 				<option value="#0000ff" label="#0000ff"></option>
 			</datalist>
 
+			<label for="color-disabled">disabled color:</label>
+			<input type="color" id="color-disabled" list="color-list" disabled />
+
 			<!--- Textarea -->
 			<label for="textarea">textarea:</label>
 			<textarea id="textarea"></textarea>
+
+			<label for="textarea-disabled">disabled textarea:</label>
+			<textarea id="textarea-disabled" disabled></textarea>
 
 			<!-- File -->
 			<label for="file">file:</label>
