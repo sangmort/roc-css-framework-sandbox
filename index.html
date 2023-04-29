@@ -315,6 +315,9 @@
 
 		<!-- forms -->
 		<form action="/">
+			<!-- Image -->
+			<input type="image" id="image" alt="image input" src="media/images/css-framework-sandbox-temp-small.png" />
+
 			<!-- Name --->
 			<label for="text">text:</label>
 			<input type="text" value="some text" id="text" />
@@ -330,12 +333,19 @@
 				<option value="e-example@example.com"></option>
 			</datalist>
 
+			<!-- URL -->
+			<label for="url">url:</label>
+			<input type="url" id="url" placeholder="https://example.com" pattern="https://.*" />
+
 			<!-- Search -->
 			<label for="search">search:</label>
 			<input type="search" id="search" placeholder="search..." />
 
 			<label for="search">disabled search:</label>
 			<input type="search" id="search-disabled" placeholder="disabled search..." disabled />
+
+			<label for="tel">phone number:</label>
+			<input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
 
 			<!-- Number -->
 			<label for="number">number:</label>
@@ -413,9 +423,6 @@
 			<!-- File -->
 			<label for="file">file:</label>
 			<input type="file" id="file" accept=".jpg, .jpeg, .png" />
-
-			<!-- Image -->
-			<input type="image" id="image" src="media/images/css-framework-sandbox-temp-small.png" />
 
 			<!-- Button -->
 			<input type="button" value="a button" />
