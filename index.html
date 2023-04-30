@@ -358,13 +358,115 @@
 		<!-- tables -->
 		<h2 id="tables" class="playground-header">tables</h2>
 
-		<table></table>
-		<thead></thead>
-		<tbody></tbody>
-		<tfoot></tfoot>
-		<tr></tr>
-		<th></th>
-		<td></td>
+		<p>table with thead, tbody, & tfoot:</p>
+		<table>
+			<thead>
+				<tr>
+					<th>thead 1</th>
+					<th>thead 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>tbody td 1</td>
+					<td>tbody td 2</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>tfoot td 1</td>
+					<td>tfoot td 2</td>
+				</tr>
+			</tfoot>
+		</table>
+		<pre><code>
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;thead 1&lt;/th&gt;
+                &lt;th&gt;thead 2&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;tbody td 1&lt;/td&gt;
+                &lt;td&gt;tbody td 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td&gt;tfoot td 1&lt;/td&gt;
+                &lt;td&gt;tfoot td 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tfoot&gt;
+    &lt;/table&gt;
+        </code></pre>
+
+		<p>table with colgroup:</p>
+
+		<table>
+			<colgroup>
+				<col span="2" />
+			</colgroup>
+			<tr>
+				<th>th 1</th>
+				<th>th 2</th>
+			</tr>
+			<tr>
+				<td>content 1</td>
+				<td>content 2</td>
+			</tr>
+			<tr>
+				<td>content 1</td>
+				<td>content 2</td>
+			</tr>
+		</table>
+
+		<pre><code>		
+    &lt;table&gt;
+        &lt;colgroup&gt;
+            &lt;col span="2"/&gt;
+        &lt;/colgroup&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th 1&lt;/th&gt;
+            &lt;th&gt;th 2&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;content 1&lt;/td&gt;
+            &lt;td&gt;content 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;content 1&lt;/td&gt;
+            &lt;td&gt;content 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    </code></pre>
+
+		<p>table with only tr & td:</p>
+
+		<table>
+			<tr>
+				<td>content 1</td>
+				<td>content 2</td>
+			</tr>
+			<tr>
+				<td>content 1</td>
+				<td>content 2</td>
+			</tr>
+		</table>
+
+		<pre><code>
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;content 1&lt;/td&gt;
+            &lt;td&gt;content 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;content 1&lt;/td&gt;
+            &lt;td&gt;content 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        </code></pre>
 
 		<hr />
 
