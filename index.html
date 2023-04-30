@@ -10,11 +10,11 @@
 	<body>
 		<h1>HTML Elements</h1>
 
-		<!-- text content --->
+		<!-- text content -->
 		<h2>text content</h2>
 		<hr />
 
-		<!-- headings --->
+		<!-- headings -->
 		<h3 id="headings" class="playground-header">headings</h3>
 		<h1>heading 1</h1>
 		<h2>heading 2</h2>
@@ -138,7 +138,7 @@
 			an <dfn><abbr title="abbreviation">abbr</abbr></dfn> in a definition.
 		</p>
 		<p>
-			<ruby> 漢 字</ruby>
+			<ruby> <rp>漢字</rp></ruby>
 		</p>
 		<p>
 			<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
@@ -150,17 +150,17 @@
 			a paragraph with a <a href="link">link</a>, a <span>span</span>, a <b>bring attention</b>, a
 			<strong>strong</strong>, an <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>, a
 			<del>delete</del>, an <ins>insert</ins>, an <u>unarticulated annotation</u>, a <small>small</small>, a
-			<sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a
-			<time>time</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a <kbd><kbd>kbd</kbd></kbd> inside a
+			<sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a time:
+			<time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a <kbd><kbd>kbd</kbd></kbd> inside a
 			<kbd><kbd>kbd</kbd></kbd
 			>, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
-			<abbr title="abreviation">abbr</abbr>, a <def>definition</def>, a
+			<abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>, a
 			<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>. This is to demonstrate how
 			all these inline text modifiers display when they're wrapped in the same paragraph tag.
 		</p>
 
 		<p>
-			A seperate paragraph with <ruby> 漢 字</ruby>
+			A seperate paragraph with <ruby><rp>漢字</rp></ruby>
 			<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>, a bdi:
 			<bdi>مرحبًا</bdi>, a bdo: <bdo dir="rtl">مرحبًا</bdo> ...
 		</p>
@@ -180,10 +180,10 @@
 				<b>bring attention</b>, a <strong>strong</strong>, an <i>idiotmatic</i>, an <em>emphasis</em>, a
 				<s>strikethrough</s>, a <del>delete</del>, an <ins>insert</ins>, an <u>unarticulated annotation</u>, a
 				<small>small</small>, a <sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a
-				<mark>mark</mark>, a <time>time</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
+				<mark>mark</mark>, a time: <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
 				<kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
 				>, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
-				<abbr title="abreviation">abbr</abbr>, a <def>definition</def>, a
+				<abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>, a
 				<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>. This is to demonstrate
 				how all these inline text modifiers display when they're wrapped in the same paragraph tag, when it's
 				wrapped in a blockquote.
@@ -219,14 +219,12 @@
 		<!--- Unordered Lists -->
 
 		<ul>
-			unordered list
 			<li>list item 1</li>
 			<li>list item 2</li>
 			<li>list item 3</li>
 		</ul>
 
 		<ul>
-			unordered list - nested
 			<li>list item 1</li>
 			<li>list item 2</li>
 			<li>
@@ -241,7 +239,6 @@
 		</ul>
 
 		<ul>
-			unordered list - nested more
 			<li>list item 1</li>
 			<li>list item 2</li>
 			<li>
@@ -263,7 +260,6 @@
 		</ul>
 
 		<ul>
-			unordered list with nested ordered list
 			<li>list item 1</li>
 			<li>
 				list item 2
@@ -278,14 +274,12 @@
 
 		<!-- Ordered Lists -->
 		<ol>
-			ordered list
 			<li>list item 1</li>
 			<li>list item 2</li>
 			<li>list item 3</li>
 		</ol>
 
 		<ol>
-			ordered list - nested
 			<li>list item a</li>
 			<li>list item b</li>
 			<li>
@@ -300,7 +294,6 @@
 		</ol>
 
 		<ol>
-			ordered list - nested more
 			<li>list item a</li>
 			<li>list item b</li>
 			<li>
@@ -322,7 +315,6 @@
 		</ol>
 
 		<ol>
-			ordered list with nested unordered list
 			<li>list item a</li>
 			<li>
 				list item b
@@ -338,7 +330,6 @@
 		<!-- Descriptive Lists-->
 
 		<dl>
-			description list
 			<dt>description term 1</dt>
 			<dd>description details 1</dd>
 
@@ -353,10 +344,9 @@
 		<!-- Menu -->
 
 		<menu>
-			menu
-			<li>list item 1</li>
-			<li>list item 2</li>
-			<li>list item 3</li>
+			<li>menu list item 1</li>
+			<li>menu list item 2</li>
+			<li>menu list item 3</li>
 		</menu>
 
 		<hr />
@@ -383,14 +373,14 @@
 				disabled
 			/>
 
-			<!-- Name --->
+			<!-- Name -->
 			<label for="text">text:</label>
 			<input type="text" value="some text" id="text" />
 
 			<label for="text-disabled">disabled text:</label>
 			<input type="text" value="some text" id="text-disabled" disabled />
 
-			<!-- Email --->
+			<!-- Email -->
 			<label for="mail">email:</label>
 			<input type="email" value="example123@example.com" id="mail" list="example-emails" />
 			<datalist id="example-emails">
@@ -470,7 +460,7 @@
 			<input type="radio" name="radiobuttons-2" id="radio-checked-disabled" checked disabled />
 			<label for="radio-checked-disabled">radio-checked-disabled</label>
 
-			<!-- Time --->
+			<!-- Time -->
 			<label for="time">time:</label>
 			<input type="time" id="time" list="example-times" />
 			<datalist id="example-times">
@@ -482,7 +472,7 @@
 			<label for="time-disabled">disabled time:</label>
 			<input type="time" id="time-disabled" disabled />
 
-			<!--- Date --->
+			<!--- Date -->
 			<label for="date">date:</label>
 			<input type="date" id="date" value="2023-01-01" />
 
@@ -496,21 +486,21 @@
 			<label for="date-time-local-disabled">disabled datetime-local:</label>
 			<input type="datetime-local" id="date-time-local-disabled" value="2023-01-01T00:01" disabled />
 
-			<!-- Week --->
+			<!-- Week -->
 			<label for="week">week:</label>
 			<input type="week" id="week" />
 
 			<label for="week-disabled">disabled week:</label>
 			<input type="week" id="week-disabled" disabled />
 
-			<!-- Month --->
+			<!-- Month -->
 			<label for="month">month:</label>
 			<input type="month" id="month" />
 
 			<label for="month-disabled">disabled month:</label>
 			<input type="month" id="month-disabled" disabled />
 
-			<!--- Range --->
+			<!--- Range -->
 			<label for="range">range:</label>
 			<input type="range" min="0" max="100" step="5" id="range" list="range-markers" />
 			<datalist id="range-markers">
@@ -525,12 +515,12 @@
 			<input type="range" min="0" max="100" step="5" id="range-disabled" list="range-markers" disabled />
 
 			<label for="range-no-datalist">no datalist range:</label>
-			<input type="range" min="0" max="100" step="5" id="range-disabled" />
+			<input type="range" min="0" max="100" step="5" id="range-no-datalist" />
 
 			<label for="range-disabled-no-datalist">no datalist + disabled range:</label>
-			<input type="range" min="0" max="100" step="5" id="range-disabled" disabled />
+			<input type="range" min="0" max="100" step="5" id="range-disabled-no-datalist" disabled />
 
-			<!--- Color --->
+			<!--- Color -->
 			<label for="color">color:</label>
 			<input type="color" id="color" list="color-list" />
 			<datalist id="color-list">
@@ -583,7 +573,6 @@
 					fill="#000"
 					d="M10.544,8.717l1.166-0.855l1.166,0.855l-0.467-1.399l1.012-0.778h-1.244L11.71,5.297l-0.466,1.244H10l1.011,0.778L10.544,8.717z M15.986,9.572l-0.467,1.244h-1.244l1.011,0.777l-0.467,1.4l1.167-0.855l1.165,0.855l-0.466-1.4l1.011-0.777h-1.244L15.986,9.572z M7.007,6.552c0-2.259,0.795-4.33,2.117-5.955C4.34,1.042,0.594,5.07,0.594,9.98c0,5.207,4.211,9.426,9.406,9.426c2.94,0,5.972-1.354,7.696-3.472c-0.289,0.026-0.987,0.044-1.283,0.044C11.219,15.979,7.007,11.759,7.007,6.552 M10,18.55c-4.715,0-8.551-3.845-8.551-8.57c0-3.783,2.407-6.999,5.842-8.131C6.549,3.295,6.152,4.911,6.152,6.552c0,5.368,4.125,9.788,9.365,10.245C13.972,17.893,11.973,18.55,10,18.55 M19.406,2.304h-1.71l-0.642-1.71l-0.642,1.71h-1.71l1.39,1.069l-0.642,1.924l1.604-1.176l1.604,1.176l-0.642-1.924L19.406,2.304z"
 				></path>
-				Your browser does not support SVG.
 			</svg>
 			SVG Icon Button
 		</button>
@@ -604,9 +593,6 @@
 		</dialog>
 
 		<details>
-			<p>A <strong>details tag</strong> without a summary.</p>
-		</details>
-		<details>
 			<summary>A <strong>summary tag</strong> inside of a...</summary>
 			<p>...details tag.</p>
 		</details>
@@ -619,7 +605,7 @@
 		<progress>empty</progress>
 		<progress value="0">69%</progress>
 		<progress value="69" max="100">69%</progress>
-		<meter></meter>
+		<meter value="69"></meter>
 
 		<hr />
 
@@ -633,7 +619,7 @@
 
 		<canvas></canvas>
 
-		<script type="application/javascript">
+		<script>
 			function draw() {
 				const canvas = document.querySelector("canvas");
 				if (canvas.getContext) {
@@ -655,7 +641,6 @@
 
 		<svg viewBox="0 0 10 10" x="200" width="100">
 			<circle cx="5" cy="5" r="4" fill="#333" />
-			Your browser doesn't support SVG.
 		</svg>
 
 		<hr />
@@ -666,7 +651,10 @@
 		<header></header>
 		<main></main>
 		<nav></nav>
-		<section></section>
+		<section>
+			<h2>h2 section heading</h2>
+			<p>paragraph in a section</p>
+		</section>
 		<footer></footer>
 
 		<hr />
@@ -685,6 +673,7 @@
 		<hr />
 
 		<article>
+			<h2>h2 heading in article</h2>
 			<p>paragraph text in an article</p>
 			<aside>
 				<p>an aside with paragraph text, in an article</p>
