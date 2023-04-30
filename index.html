@@ -369,8 +369,8 @@
 		<hr />
 
 		<!-- forms -->
-		<h2 id="forms" class="playground-header">forms</h2>
-		<form action="">
+		<h2 id="form-elements" class="playground-header">form elements</h2>
+		<form action="#">
 			<!-- Select -->
 			<label for="form-select-basic">select basic:</label>
 			<select name="form-select-basic" id="form-select-basic">
@@ -616,6 +616,30 @@
 			<!-- Submit -->
 			<input type="submit" value="submit" />
 			<input type="submit" value="disabled submit" disabled />
+		</form>
+
+		<!-- Fieldset -->
+		<h3 id="fieldset-tag" class="playground-header">fieldset tag</h3>
+		<form action="#">
+			<fieldset>
+				<legend>a legend, inside a fieldset, inside a form</legend>
+				<input type="checkbox" id="check-1" value="option 1" />
+				<label for="check-1">label for checkbox-1 inside fieldset</label>
+
+				<input type="checkbox" id="check-2" value="option 2" />
+				<label for="check-2">label for checkbox-2 inside fieldset</label>
+			</fieldset>
+		</form>
+
+		<form action="#">
+			<fieldset disabled>
+				<legend>a legend, inside a fieldset, inside a form</legend>
+				<input type="checkbox" id="check-1-disabled" value="option 1" />
+				<label for="check-1">label for checkbox-1 inside a disabled fieldset</label>
+
+				<input type="checkbox" id="check-2-disabled" value="option 2" />
+				<label for="check-2">label for checkbox-2 inside a disabled fieldset</label>
+			</fieldset>
 		</form>
 
 		<hr />
