@@ -371,6 +371,59 @@
 		<!-- forms -->
 		<h2 id="forms" class="playground-header">forms</h2>
 		<form action="">
+			<!-- Select -->
+			<label for="form-select-basic">select basic:</label>
+			<select name="form-select-basic" id="form-select-basic">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</select>
+
+			<label for="form-select-basic-selected">select basic, 2 pre-selected:</label>
+			<select name="form-select-basic-selected" id="form-select-basic-selected">
+				<option>option 1</option>
+				<option selected>option 2</option>
+				<option>option 3</option>
+			</select>
+
+			<label for="form-select-optgroup">select w. option groups:</label>
+			<select name="form-select-optgroup" id="form-select-optgroup">
+				<optgroup label="optgroup a">
+					<option>option 1</option>
+					<option>option 2</option>
+					<option>option 3</option>
+				</optgroup>
+				<optgroup label="optgroup b">
+					<option>option 1</option>
+					<option>option 2</option>
+					<option>option 3</option>
+				</optgroup>
+				<optgroup label="optgroup c">
+					<option>option 1</option>
+					<option>option 2</option>
+					<option>option 3</option>
+				</optgroup>
+			</select>
+
+			<label for="form-select-optgroup-multiple">select w. multiple option groups:</label>
+			<select name="form-select-optgroup-multiple" id="form-select-optgroup-multiple" multiple size="4">
+				<optgroup label="optgroup a">
+					<option>option 1</option>
+					<option>option 2</option>
+					<option>option 3</option>
+				</optgroup>
+				<optgroup label="optgroup b">
+					<option>option 1</option>
+					<option>option 2</option>
+					<option>option 3</option>
+				</optgroup>
+				<optgroup label="optgroup c">
+					<option>option 1</option>
+					<option>option 2</option>
+					<option>option 3</option>
+				</optgroup>
+			</select>
+
 			<!-- Image -->
 			<input type="image" id="form-image" alt="image input" src="media/images/roc-glass-button.png" />
 
@@ -565,8 +618,63 @@
 			<input type="submit" value="disabled submit" disabled />
 		</form>
 
+		<hr />
+
 		<!-- Inputs -->
 		<h2 id="input-tags" class="playground-header">input tags</h2>
+
+		<!-- Select -->
+		<label for="select-basic">select basic:</label>
+		<select name="select-basic" id="select-basic">
+			<option>option 1</option>
+			<option>option 2</option>
+			<option>option 3</option>
+		</select>
+
+		<label for="select-basic-selected">select basic, 2 pre-selected:</label>
+		<select name="select-basic-selected" id="select-basic-selected">
+			<option>option 1</option>
+			<option selected>option 2</option>
+			<option>option 3</option>
+		</select>
+
+		<label for="select-optgroup">select w. option groups:</label>
+		<select name="select-optgroup" id="select-optgroup">
+			<optgroup label="optgroup a">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</optgroup>
+			<optgroup label="optgroup b">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</optgroup>
+			<optgroup label="optgroup c">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</optgroup>
+		</select>
+
+		<label for="select-optgroup-multiple">select w. multiple option groups:</label>
+		<select name="select-optgroup-multiple" id="select-optgroup-multiple" multiple size="4">
+			<optgroup label="optgroup a">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</optgroup>
+			<optgroup label="optgroup b">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</optgroup>
+			<optgroup label="optgroup c">
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</optgroup>
+		</select>
 
 		<!-- Image -->
 		<input type="image" id="image" alt="image input" src="media/images/roc-glass-button.png" />
