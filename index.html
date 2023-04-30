@@ -10,8 +10,6 @@
 	<body>
 		<h1>HTML Elements</h1>
 
-        
-
 		<!-- text content --->
 		<h2>text content</h2>
 		<hr />
@@ -98,7 +96,7 @@
 		<p>subscript<sub>3</sub></p>
 		<p>superscript<sup>4</sup></p>
 		<p><cite>citation</cite> in paragraph.</p>
-		<p><mark>highlighted text</mark></p>
+		<p><mark>mark</mark></p>
 		<p>a time: <time datetime="20:00">20:00</time>.</p>
 		<p>a <var>variable</var></p>
 		<p>a <kbd>kbd</kbd></p>
@@ -108,12 +106,17 @@
 		<p>an inline <code>single line of code</code>.</p>
 		<p>A <samp>sample output</samp></p>
 		<p>a <q>short inline quote</q></p>
-		<p>an <abbr>abbr</abbr> of abbreviation.</p>
+		<p>an <abbr title="abbreviation">abbr</abbr> of abbreviation.</p>
 		<p><dfn>definition</dfn>, the explanation for a word.</p>
 		<p>
-			an <dfn><abbr title="hypertext markup language">abbr</abbr></dfn> in a definition.
+			an <dfn><abbr title="abbreviation">abbr</abbr></dfn> in a definition.
 		</p>
-		<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp> </ruby>
+		<p>
+			<ruby> 漢 字</ruby>
+		</p>
+		<p>
+			<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
+		</p>
 		<p><bdi>مرحبًا</bdi>: biderectional isolate</p>
 		<p><bdo dir="rtl">مرحبًا</bdo></p>
 
@@ -121,8 +124,19 @@
 			a paragraph with a <a href="link">link</a>, a <span>span</span>, a <b>bring attention</b>, a
 			<strong>strong</strong>, an <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>, a
 			<del>delete</del>, an <ins>insert</ins>, an <u>unarticulated annotation</u>, a <small>small</small>, a
-			<sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a <time>time</time>,
-			an <abbr>abbr</abbr>, a <def>definition</def>, a <kbd>kbd</kbd>, a <code>line of code</code>.
+			<sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a
+			<time>time</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a <kbd><kbd>kbd</kbd></kbd> inside a
+			<kbd><kbd>kbd</kbd></kbd
+			>, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
+			<abbr title="abreviation">abbr</abbr>, a <def>definition</def>, a
+			<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>. This is to demonstrate how
+			all these inline text modifiers display when they're wrapped in the same paragraph tag.
+		</p>
+
+		<p>
+			A seperate paragraph with <ruby> 漢 字</ruby>
+			<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>, a bdi:
+			<bdi>مرحبًا</bdi>, a bdo: <bdo dir="rtl">مرحبًا</bdo> ...
 		</p>
 
 		<hr />
@@ -134,11 +148,17 @@
 
 		<blockquote>
 			<p>
-				blockquote with a <a href="link">link</a>, a <span>span</span>, a <b>bring attention</b>, a
-				<strong>strong</strong>, an <em>emphasis</em>, a <s>strikethrough</s>, a <del>delete</del>, an
-				<ins>insert</ins>, an <u>unarticulated annotation</u>, a <small>small</small>, a <sub>subset</sub>, a
-				<sup>superset</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a <time>time</time>, an
-				<abbr>abbr</abbr>, a <def>definition</def>, a <kbd>kbd</kbd>, a <code>line of code</code>.
+				a blockquote, with a paragraph inside, with a <a href="link">link</a>, a <span>span</span>, a
+				<b>bring attention</b>, a <strong>strong</strong>, an <i>idiotmatic</i>, an <em>emphasis</em>, a
+				<s>strikethrough</s>, a <del>delete</del>, an <ins>insert</ins>, an <u>unarticulated annotation</u>, a
+				<small>small</small>, a <sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a
+				<mark>mark</mark>, a <time>time</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
+				<kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
+				>, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
+				<abbr title="abreviation">abbr</abbr>, a <def>definition</def>, a
+				<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>. This is to demonstrate
+				how all these inline text modifiers display when they're wrapped in the same paragraph tag, when it's
+				wrapped in a blockquote.
 			</p>
 		</blockquote>
 
@@ -164,8 +184,8 @@
             }
         </code></pre>
 
-        <del><p>a deleted paragraph</p></del>
-        <ins><p>an inserted paragraph</p></ins>
+		<del><p>a deleted paragraph</p></del>
+		<ins><p>an inserted paragraph</p></ins>
 
 		<hr />
 
