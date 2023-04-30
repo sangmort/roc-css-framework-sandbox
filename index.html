@@ -137,9 +137,7 @@
 		<p>
 			an <dfn><abbr title="abbreviation">abbr</abbr></dfn> in a definition.
 		</p>
-		<p>
-			<ruby> <rp>漢字</rp></ruby>
-		</p>
+		<p>a meter: <meter min="100" max="200" value="150">150 out of 200</meter></p>
 		<p>
 			<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
 		</p>
@@ -155,12 +153,13 @@
 			<kbd><kbd>kbd</kbd></kbd
 			>, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
 			<abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>, a
-			<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>. This is to demonstrate how
-			all these inline text modifiers display when they're wrapped in the same paragraph tag.
+			<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>, a meter:
+			<meter min="100" max="200" value="150">150 out of 200</meter>. This is to demonstrate how all these inline
+			text modifiers display when they're wrapped in the same paragraph tag.
 		</p>
 
 		<p>
-			A seperate paragraph with <ruby><rp>漢字</rp></ruby>
+			A seperate paragraph with
 			<ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>, a bdi:
 			<bdi>مرحبًا</bdi>, a bdo: <bdo dir="rtl">مرحبًا</bdo> ...
 		</p>
@@ -184,9 +183,10 @@
 				<kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
 				>, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
 				<abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>, a
-				<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>. This is to demonstrate
-				how all these inline text modifiers display when they're wrapped in the same paragraph tag, when it's
-				wrapped in a blockquote.
+				<dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>, a meter:
+				<meter min="100" max="200" value="150">150 out of 200</meter>. This is to demonstrate how all these
+				inline text modifiers display when they're wrapped in the same paragraph tag, when it's wrapped in a
+				blockquote.
 			</p>
 		</blockquote>
 
@@ -603,10 +603,26 @@
 		</details>
 
 		<progress>empty</progress>
-		<progress value="0">69%</progress>
+		<progress value="0">0</progress>
 		<progress value="69" max="100">69%</progress>
-		<meter value="69"></meter>
 
+		<label for="meter">meter:</label>
+		<meter min="0" max="100" low="33" high="66" optimum="70" value="100" id="meter">at 100/100</meter>
+
+		<label for="meter-empty">meter empty:</label>
+		<meter min="0" max="100" low="33" high="66" optimum="70" value="0" id="meter-empty">at 0/100</meter>
+
+		<label for="meter-below-low">meter below low:</label>
+		<meter min="0" max="100" low="60" high="80" optimum="90" value="50" id="meter-below-low">at 50/100</meter>
+
+		<label for="meter-low">meter low:</label>
+		<meter min="0" max="100" low="60" high="80" optimum="90" value="60" id="meter-low">at 60/100</meter>
+
+		<label for="meter-high">meter high:</label>
+		<meter min="0" max="100" low="60" high="80" optimum="90" value="80" id="meter-high">at 80/100</meter>
+
+		<label for="meter-optimum">meter optimum:</label>
+		<meter min="0" max="100" low="60" high="80" optimum="90" value="90" id="meter-optimum">at 90/100</meter>
 		<hr />
 
 		<!-- Script -->
