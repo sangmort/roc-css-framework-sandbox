@@ -601,10 +601,17 @@
 			<summary>A summary tag inside of a...</summary>
 			<p>...details tag whose <strong>default is open</strong> .</p>
 		</details>
+		<label for="progress">progress without value:</label>
+		<progress id="progress">loading</progress>
 
-		<progress>empty</progress>
-		<progress value="0">0</progress>
-		<progress value="69" max="100">69%</progress>
+		<label for="progress-empty">progress value 0:</label>
+		<progress id="progress-empty" value="0">0</progress>
+
+		<label for="progress-partial">progress value 69:</label>
+		<progress id="progress-partial" value="69" max="100">69%</progress>
+
+		<label for="progress-full">progress value 100"</label>
+		<progress id="progress-full" value="100" max="100">100%</progress>
 
 		<label for="meter">meter:</label>
 		<meter min="0" max="100" low="33" high="66" optimum="70" value="100" id="meter">at 100/100</meter>
