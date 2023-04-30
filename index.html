@@ -144,7 +144,9 @@
 		<!--Block Level Text -->
 		<h3 id="text-block">text - block</h3>
 
-		<p>paragraph text</p>
+		<p>a paragraph</p>
+		<del><p>a deleted paragraph</p></del>
+		<ins><p>an inserted paragraph</p></ins>
 
 		<blockquote>
 			<p>
@@ -171,6 +173,7 @@
 		</address>
 
 		<pre>pre     -     formatted text</pre>
+
 		<pre>pre tag, wrapping a:
             <samp>samp tag, wrapping a: 
                 <kbd>kbd tag</kbd>
@@ -178,14 +181,11 @@
         </pre>
 
 		<pre><code>
-            // code tag wrapped in pre tag 
-            .pre .code {
-                content: "multiple lines of code";
-            }
+// code tag wrapped in pre tag 
+    .pre.code {
+        content: "multiple lines of code";
+    }
         </code></pre>
-
-		<del><p>a deleted paragraph</p></del>
-		<ins><p>an inserted paragraph</p></ins>
 
 		<hr />
 
@@ -542,9 +542,11 @@
 
 		<hr />
 
+		<!-- Interactive elements -->
 		<!-- buttons -->
-		<h3 id="button-tags" class="playground-header">interactive elements</h3>
+		<h2 id="interactive-tags" class="playground-header">interactive elements</h2>
 
+		<h3 id="button-tags" class="playground-header">button tags</h3>
 		<button>button tag</button>
 		<button type="button">button type=button</button>
 		<button type="submit">button type=submit</button>
@@ -560,8 +562,7 @@
 			SVG Icon Button
 		</button>
 
-		<!-- Interactive elements -->
-		<h3 id="interactive" class="playground-header">interactive elements</h3>
+		<h3 id="interactive=tags-misc" class="playground-header">miscellaneous elements</h3>
 
 		<button onclick="window.dialog.show();">open dialog</button>
 
