@@ -4,7 +4,7 @@
 	padding-top: 3.25rem;
 }
 
-/* #html-tag-group-links {
+#html-tag-group-links {
 	font-size: 0.75rem;
 	display: flex;
 	align-items: center;
@@ -14,24 +14,15 @@
 	top: 0;
 	width: 100%;
 	margin-bottom: 2rem;
-}
-
-#html-tag-group-links ul {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.1rem;
+	list-style: none;
 }
 
 #html-tag-group-links li {
-	list-style: none;
-	border-right: 2px solid #000;
-	padding: 0 0.25rem;
+    list-style: none;
 }
 
-#html-tag-group-links li:last-child {
-	border-right: none;
-	padding-right: 0;
-} */
+
+ul.list-level-2,
+ul.list-level-3 {
+	display: none;
+}
