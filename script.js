@@ -31,5 +31,14 @@ document.addEventListener("DOMContentLoaded", function createNavigation() {
 		lastLevel = level;
 	}
 
+	setTimeout(function removeRedundantWords() {
+		const links = document.querySelectorAll(".nav-link");
+		for (let i = 0; i < links.length; i++) {
+			const text = links[i].textContent;
+			const updatedText = text.replace(/(tags|elements|tag|element)/g, "");
+			links[i].textContent = updatedText;
+		}
+	}, 0);
+
 	document.body.insertBefore(navList, document.body.firstChild);
 });
