@@ -1,78 +1,78 @@
 "use strict";
 // Wait for DOM to finish loading before buidling navigation
-document.addEventListener("DOMContentLoaded", function extractHeadings() {
+document.addEventListener("DOMContentLoaded", function generateNavigation() {
     // Extract headings with an ID and put them in an array
-    const headings = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
-    
+    const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
+
     // Create an unordered list from the headings array
-    const navList = createNavigation(headings);
+    const navigationList = buildNavigationList(headingsWithIDs);
 
     // Remove redundant words from navigation links
-    removeRedundantWords(navList);
+    cleanUpLinkText(navigationList);
 
     // Insert dynamically generated navigation at the beginning of the <body> element
-    document.body.insertBefore(navList, document.body.firstChild);
+    document.body.insertBefore(navigationList, document.body.firstChild);
 });
 
 // Create unordered list from array of extrated headings with unique IDs
-function createNavigation(headings) {
+function buildNavigationList(headingsArray) {
     // Create a navbar <ul> for the generated heading links
-    const navList = document.createElement("ul");
-    navList.classList.add("navbar");
+    const navigationList = document.createElement("ul");
+    navigationList.classList.add("navbar");
 
     // Variables to track current list & last heading level processed
-    let currentList = navList;
-    let lastLevel = 2;
+    let currentParentList = navigationList;
+    let prevHeadingLevel = 2;
 
     // Loop through each heading in the array
-    headings.forEach((heading) => {
+    headingsArray.forEach((heading) => {
         // Check the level of the current heading (e.g. h2 = level 2)
-        const level = parseInt(heading.tagName[1]);
+        const headingLevel = parseInt(heading.tagName[1]);
 
         // If current heading has a higher level than previous heading, create a new submenu list
-        if (level > lastLevel) {
-            const newList = document.createElement("ul");
-            newList.classList.add("has-submenu");
-            currentList.lastElementChild.appendChild(newList);
-            currentList = newList;
+        if (headingLevel > prevHeadingLevel) {
+            const submenuList = document.createElement("ul");
+            submenuList.classList.add("sub-menu");
+            currentParentList.lastElementChild.appendChild(submenuList);
+            currentParentList = submenuList;
         }
         // If current heading has a lower level than previous one, go up the tree to the correct parent list
-        else if (level < lastLevel) {
-            const diff = lastLevel - level;
-            currentList = currentList.parentElement.parentElement;
+        else if (headingLevel < prevHeadingLevel) {
+            const diff = prevHeadingLevel - headingLevel;
+            currentParentList = currentParentList.parentElement.parentElement;
             for (let i = 1; i < diff; i++) {
-                currentList = currentList.parentElement.parentElement;
+                currentParentList = currentParentList.parentElement.parentElement;
             }
         }
 
         // Create new <li> and link anchor for the current heading
-        const listItem = document.createElement("li");
-        listItem.classList.add("nav-item");
+        const navItem = document.createElement("li");
+        navItem.classList.add("nav-item");
 
-        const link = document.createElement("a");
-        link.classList.add("nav-link");
-        link.textContent = heading.textContent;
+        const navLink = document.createElement("a");
+        navLink.classList.add("nav-link");
+        navLink.textContent = heading.textContent;
 
-		// Create link target from `#` + heading ID 
-        link.href = `#${heading.id}`;
+        // Create link target from `#` + heading ID
+        navLink.href = `#${heading.id}`;
 
         // Add link to the <li> & then add the <li> to the current <ul>
-        listItem.appendChild(link);
-        currentList.appendChild(listItem);
+        navItem.appendChild(navLink);
+        currentParentList.appendChild(navItem);
 
         // Update last level to current level for the next iteration
-        lastLevel = level;
+        prevHeadingLevel = headingLevel;
     });
 
     // Return the completed navigation list
-    return navList;
+    return navigationList;
 }
 
 // Remove redundant words from navigation links for a cleaner UI
-function removeRedundantWords(navList) {
-	    // Find all links that have the class '.nav-link` & loop through them
-    const links = navList.querySelectorAll(".nav-link");
-    links.forEach((link) => {
+function cleanUpLinkText(navigationList) {
+    // Find all links that have the class '.nav-link` & loop through them
+    const navigationLinks = navigationList.querySelectorAll(".nav-link");
+    navigationLinks.forEach((link) => {
         // Replace "tags" &/or "element(s)" with an empty string & trim whitespace
         link.textContent = link.textContent.replace(/(tags|elements?)/gi, "").trim();
     });
