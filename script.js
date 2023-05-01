@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 		const link = document.createElement("a");
 		link.href = `#${heading.id}`;
 		link.textContent = heading.textContent;
-		console.log(link);
-		return link;
+		return { level: Number(heading.nodeName.charAt(1)), link };
 	});
 
 	// Add created links to <nav> ID
@@ -18,14 +17,27 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 
 	// Create unordered list for navigation
 	const navigationList = document.createElement("ul");
+	let parentListItems = [navigationList];
 
-	// Loop over each heading link and create a list item for i
-	headingLink.forEach((link) => {
+	// Loop over each heading link and create a list item for it
+	headingLink.forEach(({ level, link }) => {
 		const navigationItem = document.createElement("li");
 		navigationItem.appendChild(link);
-		navigationList.appendChild(navigationItem);
+
+		// Check parent heading level
+		if (level > 1) {
+			const parentListItem = parentListItems[level - 2];
+			if (!parentListItem.lastChild || parentListItem.lastChild.tagName !== "UL") {
+				parentListItem.appendChild(document.createElement("ul"));
+			}
+			parentListItem.lastChild.appendChild(navigationItem);
+			parentListItems[level - 1] = navigationItem;
+		} else {
+			navigationList.appendChild(navigationItem);
+			parentListItems = [navigationList];
+		}
 	});
 
-	// Append navigationList to the <nav>
+	// Append navigationList to the <nav> ID
 	linksContainer.appendChild(navigationList);
 });
