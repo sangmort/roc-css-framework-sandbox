@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-	const headings = document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]");
+document.addEventListener("DOMContentLoaded", function extractHeadings() {
+	const headings = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
 	const navList = createNavigation(headings);
 	removeRedundantWords(navList);
 
