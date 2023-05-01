@@ -1,78 +1,62 @@
-ul,
-li,
-body {
+/* navigation bar */
+.navbar {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
+    background-color: #000;
 }
 
-a {
-	color: pink;
-}
-
-.playground-header {
-	color: hsl(178, 100%, 50%);
-	text-transform: uppercase;
-	padding-top: 1.5rem;
-}
-
-#html-tag-group-links {
-	font-size: 0.75rem;
-	display: flex;
-	justify-content: center;
-	position: sticky;
-	top: 0;
-}
-
-#html-tag-group-links li {
-	font-size: 0.75rem;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	text-transform: uppercase;
-}
-
-.nav-menu {
-	display: flex;
-	list-style: none;
-	flex-direction: row;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-}
-
+/* top-level <li> nav items */
 .nav-item {
-	position: relative;
-}
-
-#html-tag-group-links > ul > li > a {
-	padding-left: 4rem;
-}
-
-.nav-item > ul {
-	display: none;
-	position: absolute;
-	top: 100%;
-}
-
-.nav-item:hover > ul {
 	display: flex;
 	flex-direction: column;
-	position: absolute;
-	background-color: green;
-	width: 10rem;
+    position: relative;
+    background-color: #ccc
 }
 
-.nav-item > ul > li > ul {
-	display: none;
+/* top-level nav <a> links */
+.nav-link {
+	display: flex;
+	padding: 1rem;
+	text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* dropdown menus */
+.has-submenu {
 	position: absolute;
+	left: 0;
+	top: 100%;
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+/* show dropdown on hover */
+.nav-item:hover .has-submenu {
+	display: block;
+}
+
+/* submenu items */
+.has-submenu .nav-item {
+	display: block;
+}
+
+/* submenu links */
+.has-submenu .nav-link {
+	padding: 5px 10px;
+}
+
+/* submenu items with nested submenus */
+.has-submenu .has-submenu {
 	top: 0;
 	left: 100%;
-	list-style: none;
-	margin: 0;
-}
-
-.nav-item > ul > li > ul > li {
-	position: relative;
-	margin-left: 2.5rem;
+	margin-left: 1px;
+	margin-top: -1px;
 }
