@@ -35,7 +35,7 @@ function createNavigation(headings) {
 		const link = document.createElement("a");
 		link.classList.add("nav-link");
 		link.textContent = heading.textContent;
-		link.href = "#" + heading.id;
+		link.href = `#${heading.id}`;
 
 		listItem.appendChild(link);
 		currentList.appendChild(listItem);
