@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 		// Check parent heading level
 		if (level > 1) {
 			const parentListItem = parentListItems[level - 2];
-			if (!parentListItem.lastChild || parentListItem.lastChild.tagName !== "UL") {
+			if (!parentListItem || !parentListItem.lastChild || parentListItem.lastChild.tagName !== "UL") {
 				const newUl = document.createElement("ul");
 
 				// Add `nav-menu` class to every `ul` element
@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 				} else {
 					parentListItem.appendChild(newUl);
 				}
+				parentListItems[level - 1] = newUl;
 			}
-			parentListItem.lastChild.appendChild(navigationItem);
-			parentListItems[level - 1] = navigationItem;
+			parentListItems[level - 1].appendChild(navigationItem);
 		} else {
 			navigationList.appendChild(navigationItem);
 			parentListItems = [navigationList];

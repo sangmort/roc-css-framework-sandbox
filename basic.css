@@ -1,15 +1,26 @@
+ul,
+li,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: pink;
+}
+
 .playground-header {
-	color: hsl(0, 68%, 46%);
+	color: hsl(178, 100%, 50%);
 	text-transform: uppercase;
-	padding-top: 3.25rem;
+	padding-top: 1.5rem;
 }
 
 #html-tag-group-links {
 	font-size: 0.75rem;
 	display: flex;
-	justify-self: center;
+	justify-content: center;
 	position: sticky;
-	width: 73rem;
+	top: 0;
 }
 
 #html-tag-group-links li {
@@ -18,46 +29,38 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	background-color: #ffa1a1;
-	position: sticky;
-	flex-direction: column;
-	top: 0;
-	width: max-content;
-	min-width: 7vw;
+	text-transform: uppercase;
 }
 
 .nav-menu {
 	display: flex;
 	list-style: none;
-	background-color: #fff000;
+	flex-direction: row;
 	text-align: center;
 	align-items: center;
-	gap: 0.25rem;
+	justify-content: center;
 }
 
 .nav-item {
 	position: relative;
 }
 
+#html-tag-group-links > ul > li > a {
+	padding-left: 4rem;
+}
+
 .nav-item > ul {
 	display: none;
 	position: absolute;
 	top: 100%;
-	margin: 0;
-	padding: 0;
-	z-index: 10;
 }
 
 .nav-item:hover > ul {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	padding: 1rem;
 	background-color: green;
-}
-
-.nav-item > ul > li {
-	position: relative;
+	width: 10rem;
 }
 
 .nav-item > ul > li > ul {
@@ -67,22 +70,9 @@
 	left: 100%;
 	list-style: none;
 	margin: 0;
-	padding: 0;
 }
 
-.nav-item > ul > li:hover > ul {
-	display: block;
-	margin-top: -1px;
-	margin-left: -0.25rem;
-	padding: 1rem;
-	background-color: red;
-	width: max-content;
-}
-
-.nav-item > a:hover {
-	background-color: inherit;
-}
-
-.nav-item:hover > a {
-	background-color: #ccc;
+.nav-item > ul > li > ul > li {
+	position: relative;
+	margin-left: 2.5rem;
 }
