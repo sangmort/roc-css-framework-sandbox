@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 		if (level > 1) {
 			const parentListItem = parentListItems[level - 2];
 			if (!parentListItem.lastChild || parentListItem.lastChild.tagName !== "UL") {
-				parentListItem.appendChild(document.createElement("ul"));
+				const newUl = document.createElement("ul");
+
+				// Set a unique id for the new <ul> element, -1
+				newUl.id = `list-level-${level - 1}`;
+				parentListItem.appendChild(newUl);
 			}
 			parentListItem.lastChild.appendChild(navigationItem);
 			parentListItems[level - 1] = navigationItem;
