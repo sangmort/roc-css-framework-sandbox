@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function createNavigation() {
 	let headings = document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]");
 	let navList = document.createElement("ul");
 	navList.classList.add("navbar");
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		link.href = "#" + heading.id;
 		listItem.appendChild(link);
 		currentList.appendChild(listItem);
-
 		lastLevel = level;
 	}
 
