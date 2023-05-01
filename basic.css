@@ -5,25 +5,26 @@
 }
 
 #html-tag-group-links {
-	font-size: 0.75rem;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #ccc;
-	position: sticky;
-	flex-direction: row;
-	top: 0;
-	width: 100%;
-	margin-bottom: 2rem;
-}
-
-.nav-menu {
+    font-size: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ccc;
+    position: sticky;
+    flex-direction: row;
+    top: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .nav-menu {
     display: flex;
     justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 1rem;
   }
   
   .nav-item {
@@ -42,5 +43,25 @@
   
   .nav-item:hover > ul {
     display: block;
+  }
+  
+  .nav-item > ul > li {
+    position: relative;
+  }
+  
+  .nav-item > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item > ul > li:hover > ul {
+    display: block;
+    margin-top: -1px;
+    margin-left: 1rem;
   }
   
