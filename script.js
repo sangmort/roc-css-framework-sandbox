@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded"),
 
 		// Create an array of links where the href is the heading ID
 		const links = Array.from(headings).map((heading) => {
-			const link = document.createElement(a);
+			const link = document.createElement("a");
 		});
 	};
