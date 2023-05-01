@@ -15,13 +15,17 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 	// Add created links to <nav> ID
 	const linksContainer = document.getElementById("html-tag-group-links");
 
-	// Create unordered list for navigation
+	// Create an unordered list for navigation
 	const navigationList = document.createElement("ul");
+
+	// Add a `nav-menu` class to outermost unordered list
+	navigationList.classList.add("nav-menu");
 	let parentListItems = [navigationList];
 
 	// Loop over each heading link and create a list item for it
 	headingLink.forEach(({ level, link }) => {
 		const navigationItem = document.createElement("li");
+		navigationItem.classList.add("nav-item"); // Add class to list item
 		navigationItem.appendChild(link);
 
 		// Check parent heading level
@@ -30,13 +34,14 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 			if (!parentListItem.lastChild || parentListItem.lastChild.tagName !== "UL") {
 				const newUl = document.createElement("ul");
 
-				// Set a unique class for the new <ul> element, -1
+				// Add `nav-menu` class to every `ul` element
+				newUl.classList.add("nav-menu");
+
 				if (level === 2) {
 					const newLi = document.createElement("li");
 					newLi.appendChild(newUl);
 					parentListItem.appendChild(newLi);
 				} else {
-					newUl.className = `list-level-${level - 1}`;
 					parentListItem.appendChild(newUl);
 				}
 			}

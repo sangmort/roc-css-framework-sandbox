@@ -7,21 +7,40 @@
 #html-tag-group-links {
 	font-size: 0.75rem;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	background-color: #ccc;
 	position: sticky;
+	flex-direction: row;
 	top: 0;
 	width: 100%;
 	margin-bottom: 2rem;
-	list-style: none;
 }
 
-#html-tag-group-links li {
-	list-style: none;
-}
-
-ul.list-level-2,
-ul.list-level-3 {
-	display: none;
-}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-item > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item:hover > ul {
+    display: block;
+  }
+  
