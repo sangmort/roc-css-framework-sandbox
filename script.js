@@ -1,5 +1,5 @@
 "use strict";
-// wait for DOM to load
+// Wait for DOM to load
 document.addEventListener("DOMContentLoaded", function createNav() {
 	// Grab all headings that have an ID
 	const headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
@@ -16,9 +16,16 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 	// Add created links to <nav> ID
 	const linksContainer = document.getElementById("html-tag-group-links");
 
+	// Create unordered list for navigation
+	const navigationList = document.createElement("ul");
+
 	// Loop over each heading link and append it to the <nav> ID
 	headingLink.forEach((link) => {
-		linksContainer.appendChild(link);
-		linksContainer.appendChild(document.createElement("br"));
+		const navigationItem = document.createElement("li");
+		navigationItem.appendChild(link);
+		navigationList.appendChild(navigationItem);
 	});
+
+	// Append navigationList to the <nav>
+	linksContainer.appendChild(navigationList);
 });
