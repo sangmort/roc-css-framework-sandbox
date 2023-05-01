@@ -1,6 +1,7 @@
 .playground-header {
 	color: hsl(0, 68%, 46%);
 	text-transform: uppercase;
+	padding-top: 3.25rem;
 }
 
 #html-tag-group-links {
@@ -12,6 +13,7 @@
 	position: sticky;
 	top: 0;
 	width: 100%;
+	margin-bottom: 2rem;
 }
 
 #html-tag-group-links ul {
