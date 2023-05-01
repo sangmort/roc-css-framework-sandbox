@@ -7,8 +7,9 @@
 #html-tag-group-links {
 	font-size: 0.75rem;
 	display: flex;
+	justify-self: center;
 	position: sticky;
-	width: 97.5vw;
+	width: 73rem;
 }
 
 #html-tag-group-links li {
@@ -21,12 +22,12 @@
 	position: sticky;
 	flex-direction: column;
 	top: 0;
-	width: 100%;
+	width: max-content;
+	min-width: 7vw;
 }
 
 .nav-menu {
 	display: flex;
-	justify-content: space-between;
 	list-style: none;
 	background-color: #fff000;
 	text-align: center;
@@ -42,19 +43,17 @@
 	display: none;
 	position: absolute;
 	top: 100%;
-	left: 0;
-	list-style: none;
 	margin: 0;
 	padding: 0;
+	z-index: 10;
 }
 
 .nav-item:hover > ul {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	position: absolute;
-	background-color: green;
 	padding: 1rem;
-	z-index: -1;
-	width: max-content;
+	background-color: green;
 }
 
 .nav-item > ul > li {
