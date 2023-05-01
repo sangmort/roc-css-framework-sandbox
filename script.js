@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function createNav() {
 	// Create unordered list for navigation
 	const navigationList = document.createElement("ul");
 
-	// Loop over each heading link and append it to the <nav> ID
+	// Loop over each heading link and create a list item for i
 	headingLink.forEach((link) => {
 		const navigationItem = document.createElement("li");
 		navigationItem.appendChild(link);
