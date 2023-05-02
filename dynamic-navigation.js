@@ -1,5 +1,4 @@
-"use strict";
-// Create custom HTML element & attach shadow root to it
+// Creates a custom HTML element and attaches a shadow root with a navigation list to it.
 class Navigation extends HTMLElement {
     constructor() {
         super();
@@ -8,6 +7,22 @@ class Navigation extends HTMLElement {
         const navigationList = createNavigationList(headingsWithIDs);
         cleanUpLinkText(navigationList);
         shadow.appendChild(navigationList);
+
+        
+    // Create <nav> to insert shadow root
+    const container = document.createElement("nav");
+
+    // Create link element for CSS
+    const linkElem = document.createElement("link");
+    linkElem.setAttribute("rel", "stylesheet");
+    linkElem.setAttribute("href", "basic.css");
+
+    // Append navigation & stylesheet to shadow root
+    shadow.appendChild(linkElem);
+    shadow.appendChild(container);
+    shadow.appendChild(navigationList);
+
+    document.body.insertBefore(container, document.body.firstChild);
     }
 }
 
@@ -18,21 +33,9 @@ document.addEventListener("DOMContentLoaded", function generateNavigation() {
     cleanUpLinkText(navigationList);
     insertNavigationList(navigationList);
 
-    // Create <nav> to insert shadow root
-    const container = document.createElement("nav");
-    const shadowRoot = container.attachShadow({ mode: "open" });
-
-    // Create link element for CSS
-    const linkElem = document.createElement("link");
-    linkElem.setAttribute("rel", "stylesheet");
-    linkElem.setAttribute("href", "basic.css");
-
-    // Append navigation & stylesheet to shadow root
-    shadow.appendChild(linkElem);
-    shadowRoot.appendChild(navigationList);
 
     // insert shadow root at the beginning of the <body>
-    document.body.insertBefore(container, document.body.firstChild);
+
 });
 
 // Create unordered list from array of extrated headings with unique IDs
