@@ -10,14 +10,15 @@ class DynamicNavigation extends HTMLElement {
         linkElem.setAttribute("href", "basic.css");
 
         container.appendChild(linkElem);
-        container.appendChild(this.createNavigationList([]));
+
         shadow.appendChild(container);
     }
 
     // Add navigation list to shadow DOM container after cleaning up link text
     connectedCallback() {
-        //extract page headings with ID
+        //extract page headings from ID
         const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
+
         const navigationList = this.createNavigationList(headingsWithIDs);
         this.cleanUpLinkText(navigationList);
         const container = this.shadowRoot.querySelector("nav");
