@@ -13,6 +13,7 @@ class DynamicNavigation extends HTMLElement {
         shadow.appendChild(container);
     }
 
+
     connectedCallback() {
         const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
         const navigationList = this.createNavigationList(headingsWithIDs);
@@ -21,13 +22,17 @@ class DynamicNavigation extends HTMLElement {
         container.appendChild(navigationList);
     }
 
+    // Dynamically generate navigation after DOM Load using heading ID's for Links
     createNavigationList(headingsArray) {
+        // Create a parent navbar <ul> for the generated heading links
         const navigationList = document.createElement("ul");
         navigationList.classList.add("navbar");
 
         let currentHeadingList = navigationList;
         let previousHeadingLevel = 2;
 
+        
+        // If current heading has a higher level than previous heading, create a new submenu list
         headingsArray.forEach((heading) => {
             const currentHeadingLevel = parseInt(heading.tagName[1]);
             if (currentHeadingLevel > previousHeadingLevel) {
