@@ -1,16 +1,15 @@
 "use strict";
+
 // Dynamically generate navigation after DOM Load using heading ID's for Links
 document.addEventListener("DOMContentLoaded", function generateNavigation() {
     const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
-    const navigationList = buildNavigationList(headingsWithIDs);
+    const navigationList = createNavigationList(headingsWithIDs);
     cleanUpLinkText(navigationList);
-
-    // Insert dynamically generated navigation at the beginning of the <body> element
-    document.body.insertBefore(navigationList, document.body.firstChild);
+    insertNavigationList(navigationList);
 });
 
 // Create unordered list from array of extrated headings with unique IDs
-function buildNavigationList(headingsArray) {
+function createNavigationList(headingsArray) {
     // Create a parent navbar <ul> for the generated heading links
     const navigationList = document.createElement("ul");
     navigationList.classList.add("navbar");
@@ -23,39 +22,61 @@ function buildNavigationList(headingsArray) {
 
         // If current heading has a higher level than previous heading, create a new submenu list
         if (currentHeadingLevel > previousHeadingLevel) {
-            const submenuList = document.createElement("ul");
-            submenuList.classList.add("sub-menu");
-            currentHeadingList.lastElementChild.appendChild(submenuList);
-            currentHeadingList = submenuList;
+            currentHeadingList = createSubmenuList(currentHeadingList);
         }
+
         // If current heading has a lower level than previous heading, go up the tree to the correct parent list
         else if (currentHeadingLevel < previousHeadingLevel) {
-            const diff = previousHeadingLevel - currentHeadingLevel;
-            currentHeadingList = currentHeadingList.parentElement.parentElement;
-            for (let i = 1; i < diff; i++) {
-                currentHeadingList = currentHeadingList.parentElement.parentElement;
-            }
+            currentHeadingList = navigateToParentList(currentHeadingList, previousHeadingLevel - currentHeadingLevel);
         }
 
-        // Create new <li> and link anchor for the current heading
-        const navItem = document.createElement("li");
-        navItem.classList.add("nav-item");
-
-        const navLink = document.createElement("a");
-        navLink.classList.add("nav-link");
-        navLink.textContent = heading.textContent;
-        navLink.href = `#${heading.id}`;
-
-        // Add link to the <li> & then add the <li> to the current <ul>
-        navItem.appendChild(navLink);
+        const navItem = createNavItem(heading);
         currentHeadingList.appendChild(navItem);
 
-        // Update previous level to current level for the next iteration
         previousHeadingLevel = currentHeadingLevel;
     });
 
-    // Return the completed navigation list
     return navigationList;
+}
+
+// Create new <li> for the heading & Add link to it
+function createNavItem(heading) {
+    const navItem = document.createElement("li");
+    navItem.classList.add("nav-item");
+
+    const navLink = createNavLink(heading);
+    navItem.appendChild(navLink);
+
+    return navItem;
+}
+
+// Create new link anchor text & href for the heading
+function createNavLink(heading) {
+    const navLink = document.createElement("a");
+    navLink.classList.add("nav-link");
+    navLink.textContent = heading.textContent;
+    navLink.href = `#${heading.id}`;
+
+    return navLink;
+}
+
+// Add the <li> containing link to the current <ul>
+function createSubmenuList(currentHeadingList) {
+    const submenuList = document.createElement("ul");
+    submenuList.classList.add("sub-menu");
+    currentHeadingList.lastElementChild.appendChild(submenuList);
+
+    return submenuList;
+}
+
+// Navigate to the parent list based on the heading level difference
+function navigateToParentList(currentHeadingList, headingLevelDifference) {
+    let parentList = currentHeadingList.parentElement.parentElement;
+    for (let i = 1; i < headingLevelDifference; i++) {
+        parentList = parentList.parentElement.parentElement;
+    }
+
+    return parentList;
 }
 
 // Remove redundant words from navigation links for a cleaner UI
@@ -64,4 +85,9 @@ function cleanUpLinkText(navigationList) {
     navigationLinks.forEach((link) => {
         link.textContent = link.textContent.replace(/(tags|elements?)/gi, "").trim();
     });
+}
+
+// Remove redundant words from navigation links for a cleaner UI
+function insertNavigationList(navigationList) {
+    document.body.insertBefore(navigationList, document.body.firstChild);
 }
