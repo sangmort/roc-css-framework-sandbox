@@ -1,5 +1,4 @@
-// Creates a custom HTML element and attaches a shadow root with a navigation list to it.
-class Navigation extends HTMLElement {
+class DynamicNavigation extends HTMLElement {
     constructor() {
         super();
         const shadow = this.attachShadow({ mode: "open" });
@@ -9,23 +8,20 @@ class Navigation extends HTMLElement {
         linkElem.setAttribute("rel", "stylesheet");
         linkElem.setAttribute("href", "basic.css");
 
-        shadow.appendChild(linkElem);
+        container.appendChild(linkElem);
+        container.appendChild(this.createNavigationList([]));
         shadow.appendChild(container);
-        this.navigationList = this.createNavigationList([]);
-        shadow.appendChild(this.navigationList);
-
-        document.body.insertBefore(container, document.body.firstChild);
     }
 
     connectedCallback() {
         const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
         const navigationList = this.createNavigationList(headingsWithIDs);
         this.cleanUpLinkText(navigationList);
-        this.insertNavigationList(navigationList);
+        const container = this.shadowRoot.querySelector("nav");
+        container.appendChild(navigationList);
     }
 
     createNavigationList(headingsArray) {
-        // Create a parent navbar <ul> for the generated heading links
         const navigationList = document.createElement("ul");
         navigationList.classList.add("navbar");
 
@@ -34,14 +30,9 @@ class Navigation extends HTMLElement {
 
         headingsArray.forEach((heading) => {
             const currentHeadingLevel = parseInt(heading.tagName[1]);
-
-            // If current heading has a higher level than previous heading, create a new submenu list
             if (currentHeadingLevel > previousHeadingLevel) {
                 currentHeadingList = this.createSubmenuList(currentHeadingList);
-            }
-
-            // If current heading has a lower level than previous heading, go up the tree to the correct parent list
-            else if (currentHeadingLevel < previousHeadingLevel) {
+            } else if (currentHeadingLevel < previousHeadingLevel) {
                 currentHeadingList = this.navigateToParentList(
                     currentHeadingList,
                     previousHeadingLevel - currentHeadingLevel
@@ -93,18 +84,12 @@ class Navigation extends HTMLElement {
         return parentList;
     }
 
-    // Remove redundant words from navigation links for a cleaner UI
     cleanUpLinkText(navigationList) {
         const navigationLinks = navigationList.querySelectorAll(".nav-link");
         navigationLinks.forEach((link) => {
             link.textContent = link.textContent.replace(/(tags|elements?)/gi, "").trim();
         });
     }
-
-    // Remove redundant words from navigation links for a cleaner UI
-    insertNavigationList(navigationList) {
-        document.body.insertBefore(navigationList, document.body.firstChild);
-    }
 }
 
-customElements.define("navigation", Navigation);
+customElements.define("dynamic-navigation", DynamicNavigation);
