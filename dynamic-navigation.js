@@ -1,5 +1,16 @@
 "use strict";
 
+class Navigation extends HTMLElement {
+    constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: "open" });
+
+        const navigationList = createNavigationList(headingsWithIDs);
+        cleanUpLinkText(navigationList);
+        shadow.appendChild(navigationList);
+    }
+}
+
 // Dynamically generate navigation after DOM Load using heading ID's for Links
 document.addEventListener("DOMContentLoaded", function generateNavigation() {
     const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
@@ -10,6 +21,14 @@ document.addEventListener("DOMContentLoaded", function generateNavigation() {
     // Create <nav> to insert shadow root
     const container = document.createElement("nav");
     const shadowRoot = container.attachShadow({ mode: "open" });
+
+    // Create link element for CSS
+    const linkElem = document.createElement("link");
+    linkElem.setAttribute("rel", "stylesheet");
+    linkElem.setAttribute("href", "basic.css");
+
+    // Append navigation & stylesheet to shadow root
+    shadow.appendChild(linkElem);
     shadowRoot.appendChild(navigationList);
 
     // insert shadow root at the beginning of the <body>
