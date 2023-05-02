@@ -1,5 +1,5 @@
 "use strict";
-
+// Create custom HTML element & attach shadow root to it
 class Navigation extends HTMLElement {
     constructor() {
         super();
