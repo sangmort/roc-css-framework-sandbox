@@ -1,3 +1,4 @@
+// Creates a custom HTML element & attach shadow root with generated navigation list
 class DynamicNavigation extends HTMLElement {
     constructor() {
         super();
@@ -13,8 +14,9 @@ class DynamicNavigation extends HTMLElement {
         shadow.appendChild(container);
     }
 
-
+    // Add navigation list to shadow DOM container after cleaning up link text
     connectedCallback() {
+        //extract page headings with ID
         const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
         const navigationList = this.createNavigationList(headingsWithIDs);
         this.cleanUpLinkText(navigationList);
@@ -22,7 +24,7 @@ class DynamicNavigation extends HTMLElement {
         container.appendChild(navigationList);
     }
 
-    // Dynamically generate navigation after DOM Load using heading ID's for Links
+    // Create navigation list from headings with IDs
     createNavigationList(headingsArray) {
         // Create a parent navbar <ul> for the generated heading links
         const navigationList = document.createElement("ul");
@@ -31,12 +33,13 @@ class DynamicNavigation extends HTMLElement {
         let currentHeadingList = navigationList;
         let previousHeadingLevel = 2;
 
-        
         // If current heading has a higher level than previous heading, create a new submenu list
         headingsArray.forEach((heading) => {
             const currentHeadingLevel = parseInt(heading.tagName[1]);
             if (currentHeadingLevel > previousHeadingLevel) {
                 currentHeadingList = this.createSubmenuList(currentHeadingList);
+
+                // If the current heading level is less than previous heading level, go up parent list to the correct level
             } else if (currentHeadingLevel < previousHeadingLevel) {
                 currentHeadingList = this.navigateToParentList(
                     currentHeadingList,
@@ -47,12 +50,14 @@ class DynamicNavigation extends HTMLElement {
             const navItem = this.createNavItem(heading);
             currentHeadingList.appendChild(navItem);
 
+            // Update previous level to current level for the next iteration
             previousHeadingLevel = currentHeadingLevel;
         });
 
         return navigationList;
     }
 
+    // Create new <li> for the heading & Add link to it
     createNavItem(heading) {
         const navItem = document.createElement("li");
         navItem.classList.add("nav-item");
@@ -63,6 +68,7 @@ class DynamicNavigation extends HTMLElement {
         return navItem;
     }
 
+    // Create new link anchor text & href for the heading
     createNavLink(heading) {
         const navLink = document.createElement("a");
         navLink.classList.add("nav-link");
@@ -72,6 +78,7 @@ class DynamicNavigation extends HTMLElement {
         return navLink;
     }
 
+    // Add the <li> containing link to the current <ul>
     createSubmenuList(currentHeadingList) {
         const submenuList = document.createElement("ul");
         submenuList.classList.add("sub-menu");
@@ -80,6 +87,7 @@ class DynamicNavigation extends HTMLElement {
         return submenuList;
     }
 
+    // Navigate to the parent list based on the heading level difference
     navigateToParentList(currentHeadingList, headingLevelDifference) {
         let parentList = currentHeadingList.parentElement.parentElement;
         for (let i = 1; i < headingLevelDifference; i++) {
@@ -89,6 +97,7 @@ class DynamicNavigation extends HTMLElement {
         return parentList;
     }
 
+    // Remove redundant words from navigation links for a cleaner UI
     cleanUpLinkText(navigationList) {
         const navigationLinks = navigationList.querySelectorAll(".nav-link");
         navigationLinks.forEach((link) => {
@@ -97,4 +106,5 @@ class DynamicNavigation extends HTMLElement {
     }
 }
 
+// Make this component usable with <dynamic-navigation></dynamic-navigation>
 customElements.define("dynamic-navigation", DynamicNavigation);
