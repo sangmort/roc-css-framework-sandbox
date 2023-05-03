@@ -7,7 +7,7 @@ class DynamicNavigation extends HTMLElement {
         const container = document.createElement("nav");
         const linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
-        linkElem.setAttribute("href", "basic.css");
+        linkElem.setAttribute("href", "./dynamic-navigation-bar/dynamic-navigation.css");
 
         container.appendChild(linkElem);
 
