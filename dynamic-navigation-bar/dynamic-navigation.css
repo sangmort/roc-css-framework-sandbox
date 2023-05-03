@@ -1,5 +1,8 @@
 ul,
-li {
+li,
+nav,
+body,
+* {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -14,27 +17,41 @@ nav {
 .navbar {
     display: flex;
     justify-content: space-evenly;
-    align-items: auto;
+    align-items: center;
     flex-direction: row;
 }
 
 .nav-item {
     display: flex;
     position: relative;
-    width: max-content;
+    align-items: center;
+    min-width: 4rem;
+    width: 4rem;
     background-color: orangered;
+}
+
+li.nav-item {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .sub-menu {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7rem;
+    text-align: center; /* Center the contents of the sub-menu */
+    word-wrap: break-word;
 }
 
 .nav-item:hover .sub-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    overflow: hidden; /* Hide the overflow of the sub-menu */
+    background-color: yellow;
 }
