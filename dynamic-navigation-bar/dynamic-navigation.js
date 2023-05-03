@@ -7,7 +7,10 @@ class DynamicNavigation extends HTMLElement {
         const container = document.createElement("nav");
         const linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
-        linkElem.setAttribute("href", "./dynamic-navigation-bar/dynamic-navigation.css");
+        linkElem.setAttribute(
+            "href",
+            "./dynamic-navigation-bar/dynamic-navigation.css"
+        );
 
         container.appendChild(linkElem);
 
@@ -17,7 +20,9 @@ class DynamicNavigation extends HTMLElement {
     // Add navigation list to shadow DOM container after cleaning up link text
     connectedCallback() {
         //extract page headings from ID
-        const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
+        const headingsWithIDs = Array.from(
+            document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        );
 
         const navigationList = this.createNavigationList(headingsWithIDs);
         this.cleanUpLinkText(navigationList);
@@ -102,7 +107,9 @@ class DynamicNavigation extends HTMLElement {
     cleanUpLinkText(navigationList) {
         const navigationLinks = navigationList.querySelectorAll(".nav-link");
         navigationLinks.forEach((link) => {
-            link.textContent = link.textContent.replace(/(tags|elements?)/gi, "").trim();
+            link.textContent = link.textContent
+                .replace(/(tags|elements?)/gi, "")
+                .trim();
         });
     }
 }

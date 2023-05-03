@@ -5,7 +5,9 @@
         <title>CSS Framework Playground</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
-        <script src="./dynamic-navigation-bar/dynamic-navigation.js" defer></script>
+        <script
+            src="./dynamic-navigation-bar/dynamic-navigation.js"
+            defer></script>
     </head>
     <body>
         <dynamic-navigation></dynamic-navigation>
@@ -63,43 +65,88 @@
 
         <h3 id="links" class="roc-heading">links</h3>
 
-        <h4 id="links-no-paragraph" class="roc-heading">links - not wrapped in paragraph tags</h4>
+        <h4 id="links-no-paragraph" class="roc-heading">
+            links - not wrapped in paragraph tags
+        </h4>
 
         <a href="#links">internal link</a>
         <a href="#links">internal link</a>
         <a href="#links">internal link</a>
-        <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a>
-        <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a>
-        <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a>
+        <a
+            href="https://github.com/sangmort/css-framework-sandbox"
+            target="_blank"
+            >external link</a
+        >
+        <a
+            href="https://github.com/sangmort/css-framework-sandbox"
+            target="_blank"
+            >external link</a
+        >
+        <a
+            href="https://github.com/sangmort/css-framework-sandbox"
+            target="_blank"
+            >external link</a
+        >
         <a href="mailto:test@test.com">test@test.com</a>
         <a href="tel:+1(111)5557777">(111) 555-7777</a>
-        <a href="/media/images/image-horizontal-1.jpg" download>download link</a>
+        <a href="/media/images/image-horizontal-1.jpg" download
+            >download link</a
+        >
 
         <!-- Links - Paragraph - Text -->
-        <h4 id="links-in-paragraph" class="roc-heading">links - wrapped in paragraph tags</h4>
+        <h4 id="links-in-paragraph" class="roc-heading">
+            links - wrapped in paragraph tags
+        </h4>
         <p><a href="#links">internal link</a></p>
         <p>
-            <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a> // external
-            link in one paragraph
+            <a
+                href="https://github.com/sangmort/css-framework-sandbox"
+                target="_blank"
+                >external link</a
+            >
+            // external link in one paragraph
         </p>
         <p>
             <a href="#links">internal link</a>
             <a href="#links">internal link</a>
-            <a href="#links">internal link</a> // three internal links in one paragraph
+            <a href="#links">internal link</a> // three internal links in one
+            paragraph
         </p>
         <p>
-            <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a>
-            <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a>
-            <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a> // three
-            internal links in one paragraph
+            <a
+                href="https://github.com/sangmort/css-framework-sandbox"
+                target="_blank"
+                >external link</a
+            >
+            <a
+                href="https://github.com/sangmort/css-framework-sandbox"
+                target="_blank"
+                >external link</a
+            >
+            <a
+                href="https://github.com/sangmort/css-framework-sandbox"
+                target="_blank"
+                >external link</a
+            >
+            // three internal links in one paragraph
         </p>
         <p>
             An <a href="#links">internal link</a> in the same paragraph as an
-            <a href="https://github.com/sangmort/css-framework-sandbox" target="_blank">external link</a>.
+            <a
+                href="https://github.com/sangmort/css-framework-sandbox"
+                target="_blank"
+                >external link</a
+            >.
         </p>
 
-        <p><a href="tel:+1(111)5557777">(111) 555-7777</a> // tel link in paragraph</p>
-        <p><a href="mailto:test@test.com">test@test.com</a> // mailto link in paragraph</p>
+        <p>
+            <a href="tel:+1(111)5557777">(111) 555-7777</a> // tel link in
+            paragraph
+        </p>
+        <p>
+            <a href="mailto:test@test.com">test@test.com</a> // mailto link in
+            paragraph
+        </p>
 
         <p>
             <a href="/media/images/image-horizontal-1.jpg" download>download</a>
@@ -137,33 +184,50 @@
         <p>an <abbr title="abbreviation">abbr</abbr> of abbreviation.</p>
         <p><dfn>definition</dfn>, the explanation for a word.</p>
         <p>
-            an <dfn><abbr title="abbreviation">abbr</abbr></dfn> in a definition.
+            an <dfn><abbr title="abbreviation">abbr</abbr></dfn> in a
+            definition.
         </p>
-        <p>a meter: <meter min="100" max="200" value="150">150 out of 200</meter></p>
         <p>
-            <ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
+            a meter:
+            <meter min="100" max="200" value="150">150 out of 200</meter>
+        </p>
+        <p>
+            <ruby>
+                漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt
+                ><rp>)</rp></ruby
+            >
         </p>
         <p><bdi>مرحبًا</bdi>: biderectional isolate</p>
         <p><bdo dir="rtl">مرحبًا</bdo></p>
 
         <p>
-            a paragraph with a <a href="link">link</a>, a <span>span</span>, a <b>bring attention</b>, a
-            <strong>strong</strong>, an <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>, a
-            <del>delete</del>, an <ins>insert</ins>, an <u>unarticulated annotation</u>, a <small>small</small>, a
-            <sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a time:
-            <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a <kbd><kbd>kbd</kbd></kbd> inside a
-            <kbd><kbd>kbd</kbd></kbd
-            >, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
-            <abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>, a
-            <dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>, a meter:
-            <meter min="100" max="200" value="150">150 out of 200</meter>. This is to demonstrate how all these inline
-            text modifiers display when they're wrapped in the same paragraph tag.
+            a paragraph with a <a href="link">link</a>, a <span>span</span>, a
+            <b>bring attention</b>, a <strong>strong</strong>, an
+            <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>, a
+            <del>delete</del>, an <ins>insert</ins>, an
+            <u>unarticulated annotation</u>, a <small>small</small>, a
+            <sub>subscript</sub>, a <sup>superscript</sup>, a
+            <cite>citation</cite>, a <mark>mark</mark>, a time:
+            <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
+            <kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
+            >, a <code>line of code</code>, A <samp>sample output</samp>, a
+            <q>short inline quote</q>, an <abbr title="abreviation">abbr</abbr>,
+            a <dfn>definition</dfn>, a
+            <dfn
+                ><abbr title="abreviation in a definition">abbr</abbr> in a
+                definition</dfn
+            >, a meter:
+            <meter min="100" max="200" value="150">150 out of 200</meter>. This
+            is to demonstrate how all these inline text modifiers display when
+            they're wrapped in the same paragraph tag.
         </p>
 
         <p>
             A seperate paragraph with
-            <ruby> 漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>, a bdi:
-            <bdi>مرحبًا</bdi>, a bdo: <bdo dir="rtl">مرحبًا</bdo> ...
+            <ruby>
+                漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt
+                ><rp>)</rp></ruby
+            >, a bdi: <bdi>مرحبًا</bdi>, a bdo: <bdo dir="rtl">مرحبًا</bdo> ...
         </p>
 
         <hr />
@@ -177,9 +241,11 @@
 
         <blockquote>
             <p>
-                A realistic example of a blockqoute in use. Let's put a tomlinism here to take up some dummy space &
-                qoute him in the citation below. “It’s not about what happens to you. It’s about how you respond to it.
-                We’re a group that stays solid in spite of circumstance. As long as we keep bringing that stay-solid
+                A realistic example of a blockqoute in use. Let's put a
+                tomlinism here to take up some dummy space & qoute him in the
+                citation below. “It’s not about what happens to you. It’s about
+                how you respond to it. We’re a group that stays solid in spite
+                of circumstance. As long as we keep bringing that stay-solid
                 mentality, it’s in front of us.”
             </p>
             <p><cite>Mike Tomlin</cite></p>
@@ -187,19 +253,29 @@
 
         <blockquote>
             <p>
-                a blockquote that contains all the inline text element modifiers, all wrapped in a paragraph tag. Here
-                we go: a <a href="link">link</a>, a <span>span</span>, a <b>bring attention</b>, a
-                <strong>strong</strong>, an <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>, a
-                <del>delete</del>, an <ins>insert</ins>, an <u>unarticulated annotation</u>, a <small>small</small>, a
-                <sub>subscript</sub>, a <sup>superscript</sup>, a <cite>citation</cite>, a <mark>mark</mark>, a time:
-                <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a <kbd><kbd>kbd</kbd></kbd> inside a
-                <kbd><kbd>kbd</kbd></kbd
-                >, a <code>line of code</code>, A <samp>sample output</samp>, a <q>short inline quote</q>, an
-                <abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>, a
-                <dfn><abbr title="abreviation in a definition">abbr</abbr> in a definition</dfn>, a meter:
-                <meter min="100" max="200" value="150">150 out of 200</meter>. This is to demonstrate how all these
-                inline text modifiers display when they're wrapped in the same paragraph tag, when it's wrapped in a
-                blockquote.
+                a blockquote that contains all the inline text element
+                modifiers, all wrapped in a paragraph tag. Here we go: a
+                <a href="link">link</a>, a <span>span</span>, a
+                <b>bring attention</b>, a <strong>strong</strong>, an
+                <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>,
+                a <del>delete</del>, an <ins>insert</ins>, an
+                <u>unarticulated annotation</u>, a <small>small</small>, a
+                <sub>subscript</sub>, a <sup>superscript</sup>, a
+                <cite>citation</cite>, a <mark>mark</mark>, a time:
+                <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
+                <kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
+                >, a <code>line of code</code>, A <samp>sample output</samp>, a
+                <q>short inline quote</q>, an
+                <abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>,
+                a
+                <dfn
+                    ><abbr title="abreviation in a definition">abbr</abbr> in a
+                    definition</dfn
+                >, a meter:
+                <meter min="100" max="200" value="150">150 out of 200</meter>.
+                This is to demonstrate how all these inline text modifiers
+                display when they're wrapped in the same paragraph tag, when
+                it's wrapped in a blockquote.
             </p>
         </blockquote>
 
@@ -521,8 +597,12 @@
                 <option>option 3</option>
             </select>
 
-            <label for="form-select-basic-selected">select basic, 2 pre-selected:</label>
-            <select name="form-select-basic-selected" id="form-select-basic-selected">
+            <label for="form-select-basic-selected"
+                >select basic, 2 pre-selected:</label
+            >
+            <select
+                name="form-select-basic-selected"
+                id="form-select-basic-selected">
                 <option>option 1</option>
                 <option selected>option 2</option>
                 <option>option 3</option>
@@ -547,8 +627,14 @@
                 </optgroup>
             </select>
 
-            <label for="form-select-optgroup-multiple">select w. multiple option groups:</label>
-            <select name="form-select-optgroup-multiple" id="form-select-optgroup-multiple" multiple size="4">
+            <label for="form-select-optgroup-multiple"
+                >select w. multiple option groups:</label
+            >
+            <select
+                name="form-select-optgroup-multiple"
+                id="form-select-optgroup-multiple"
+                multiple
+                size="4">
                 <optgroup label="optgroup a">
                     <option>option 1</option>
                     <option>option 2</option>
@@ -567,26 +653,37 @@
             </select>
 
             <!-- Image -->
-            <input type="image" id="form-image" alt="image input" src="media/images/roc-glass-button.png" />
+            <input
+                type="image"
+                id="form-image"
+                alt="image input"
+                src="media/images/roc-glass-button.png" />
 
             <input
                 type="image"
                 id="form-image-disabled"
                 alt="disabled image input"
                 src="media/images/roc-glass-button.png"
-                disabled
-            />
+                disabled />
 
             <!-- Name -->
             <label for="form-text">text:</label>
             <input type="text" value="some text" id="form-text" />
 
             <label for="form-text-disabled">disabled text:</label>
-            <input type="text" value="some text" id="form-text-disabled" disabled />
+            <input
+                type="text"
+                value="some text"
+                id="form-text-disabled"
+                disabled />
 
             <!-- Email -->
             <label for="form-mail">email:</label>
-            <input type="email" value="example123@example.com" id="form-mail" list="example-emails" />
+            <input
+                type="email"
+                value="example123@example.com"
+                id="form-mail"
+                list="example-emails" />
             <datalist id="form-example-emails">
                 <option value="a-example@example.com"></option>
                 <option value="b-example@example.com"></option>
@@ -596,11 +693,20 @@
             </datalist>
 
             <label for="form-mail-disabled">disabled email:</label>
-            <input type="email" value="disabled@example.com" id="form-mail-disabled" list="example-emails" disabled />
+            <input
+                type="email"
+                value="disabled@example.com"
+                id="form-mail-disabled"
+                list="example-emails"
+                disabled />
 
             <!-- URL -->
             <label for="form-url">url:</label>
-            <input type="url" id="form-url" placeholder="form-https://example.com" pattern="https://.*" />
+            <input
+                type="url"
+                id="form-url"
+                placeholder="form-https://example.com"
+                pattern="https://.*" />
 
             <label for="form-url-disabled">url:</label>
             <input
@@ -608,29 +714,48 @@
                 id="form-url-disabled"
                 placeholder="form-https://disabled-example.com"
                 pattern="https://.*"
-                disabled
-            />
+                disabled />
 
             <!-- Search -->
             <label for="form-search">search:</label>
-            <input type="search" id="form-search" placeholder="form-search..." />
+            <input
+                type="search"
+                id="form-search"
+                placeholder="form-search..." />
 
             <label for="form-search">disabled search:</label>
-            <input type="search" id="form-search-disabled" placeholder="form-disabled search..." disabled />
+            <input
+                type="search"
+                id="form-search-disabled"
+                placeholder="form-disabled search..."
+                disabled />
 
             <!-- Tel / Phone -->
             <label for="form-tel">phone number:</label>
-            <input type="tel" id="form-tel" autocomplete="off" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+            <input
+                type="tel"
+                id="form-tel"
+                autocomplete="off"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
 
             <label for="form-tel-disabled">disabled phone number:</label>
-            <input type="tel" id="form-tel-disabled" autocomplete="off" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" disabled />
+            <input
+                type="tel"
+                id="form-tel-disabled"
+                autocomplete="off"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                disabled />
 
             <!-- Number -->
             <label for="form-number">number:</label>
             <input type="number" id="form-number" value="777" />
 
             <label for="form-number-disabled">number:</label>
-            <input type="number" id="form-number-disabled" value="666" disabled />
+            <input
+                type="number"
+                id="form-number-disabled"
+                value="666"
+                disabled />
 
             <!-- Checkbox -->
             <input type="checkbox" id="form-checkbox1" />
@@ -645,8 +770,14 @@
             <input type="checkbox" id="form-checkbox-checked" checked />
             <label for="form-checkbox-checked">checkbox-checked</label>
 
-            <input type="checkbox" id="form-checkbox-checked-disabled" checked disabled />
-            <label for="form-checkbox-checked-disabled">checkbox-checked-disabled</label>
+            <input
+                type="checkbox"
+                id="form-checkbox-checked-disabled"
+                checked
+                disabled />
+            <label for="form-checkbox-checked-disabled"
+                >checkbox-checked-disabled</label
+            >
 
             <!-- Radio -->
             <input type="radio" name="radiobuttons" id="form-radio1" />
@@ -655,14 +786,30 @@
             <input type="radio" name="radiobuttons" id="form-radio2" />
             <label for="form-radio2">radio2</label>
 
-            <input type="radio" name="radiobuttons" id="form-radio-checked" checked />
+            <input
+                type="radio"
+                name="radiobuttons"
+                id="form-radio-checked"
+                checked />
             <label for="form-radio-checked">radio-checked</label>
 
-            <input type="radio" name="radiobuttons-2" id="form-radio-disabled" checked disabled />
+            <input
+                type="radio"
+                name="radiobuttons-2"
+                id="form-radio-disabled"
+                checked
+                disabled />
             <label for="form-radio-checked-disabled">radio-disabled</label>
 
-            <input type="radio" name="radiobuttons-2" id="form-radio-checked-disabled" checked disabled />
-            <label for="form-radio-checked-disabled">radio-checked-disabled</label>
+            <input
+                type="radio"
+                name="radiobuttons-2"
+                id="form-radio-checked-disabled"
+                checked
+                disabled />
+            <label for="form-radio-checked-disabled"
+                >radio-checked-disabled</label
+            >
 
             <!-- Time -->
             <label for="form-time">time:</label>
@@ -681,14 +828,27 @@
             <input type="date" id="form-date" value="2023-01-01" />
 
             <label for="form-date-disabled">disabled date:</label>
-            <input type="date" id="form-date-disabled" value="2023-01-01" disabled />
+            <input
+                type="date"
+                id="form-date-disabled"
+                value="2023-01-01"
+                disabled />
 
             <!-- Datetime Local-->
             <label for="form-date-time-local">datetime-local:</label>
-            <input type="datetime-local" id="form-date-time-local" value="2023-01-01T00:01" />
+            <input
+                type="datetime-local"
+                id="form-date-time-local"
+                value="2023-01-01T00:01" />
 
-            <label for="form-date-time-local-disabled">disabled datetime-local:</label>
-            <input type="datetime-local" id="form-date-time-local-disabled" value="2023-01-01T00:01" disabled />
+            <label for="form-date-time-local-disabled"
+                >disabled datetime-local:</label
+            >
+            <input
+                type="datetime-local"
+                id="form-date-time-local-disabled"
+                value="2023-01-01T00:01"
+                disabled />
 
             <!-- Week -->
             <label for="form-week">week:</label>
@@ -706,7 +866,13 @@
 
             <!--- Range -->
             <label for="form-range">range:</label>
-            <input type="range" min="0" max="100" step="5" id="form-range" list="range-markers" />
+            <input
+                type="range"
+                min="0"
+                max="100"
+                step="5"
+                id="form-range"
+                list="range-markers" />
             <datalist id="form-range-markers">
                 <option value="0" label="0"></option>
                 <option value="25" label="25"></option>
@@ -716,13 +882,33 @@
             </datalist>
 
             <label for="form-range-disabled">disabled range:</label>
-            <input type="range" min="0" max="100" step="5" id="form-range-disabled" list="range-markers" disabled />
+            <input
+                type="range"
+                min="0"
+                max="100"
+                step="5"
+                id="form-range-disabled"
+                list="range-markers"
+                disabled />
 
             <label for="form-range-no-datalist">no datalist range:</label>
-            <input type="range" min="0" max="100" step="5" id="form-range-no-datalist" />
+            <input
+                type="range"
+                min="0"
+                max="100"
+                step="5"
+                id="form-range-no-datalist" />
 
-            <label for="form-range-disabled-no-datalist">no datalist + disabled range:</label>
-            <input type="range" min="0" max="100" step="5" id="form-range-disabled-no-datalist" disabled />
+            <label for="form-range-disabled-no-datalist"
+                >no datalist + disabled range:</label
+            >
+            <input
+                type="range"
+                min="0"
+                max="100"
+                step="5"
+                id="form-range-disabled-no-datalist"
+                disabled />
 
             <!--- Color -->
             <label for="form-color">color:</label>
@@ -734,7 +920,11 @@
             </datalist>
 
             <label for="form-color-disabled">disabled color:</label>
-            <input type="color" id="form-color-disabled" list="color-list" disabled />
+            <input
+                type="color"
+                id="form-color-disabled"
+                list="color-list"
+                disabled />
 
             <!--- Textarea -->
             <label for="form-textarea">textarea:</label>
@@ -766,10 +956,14 @@
             <fieldset>
                 <legend>a legend, inside a fieldset, inside a form</legend>
                 <input type="checkbox" id="check-1" value="option 1" />
-                <label for="check-1">label for checkbox-1 inside fieldset</label>
+                <label for="check-1"
+                    >label for checkbox-1 inside fieldset</label
+                >
 
                 <input type="checkbox" id="check-2" value="option 2" />
-                <label for="check-2">label for checkbox-2 inside fieldset</label>
+                <label for="check-2"
+                    >label for checkbox-2 inside fieldset</label
+                >
             </fieldset>
         </form>
 
@@ -777,10 +971,14 @@
             <fieldset disabled>
                 <legend>a legend, inside a fieldset, inside a form</legend>
                 <input type="checkbox" id="check-1-disabled" value="option 1" />
-                <label for="check-1">label for checkbox-1 inside a disabled fieldset</label>
+                <label for="check-1"
+                    >label for checkbox-1 inside a disabled fieldset</label
+                >
 
                 <input type="checkbox" id="check-2-disabled" value="option 2" />
-                <label for="check-2">label for checkbox-2 inside a disabled fieldset</label>
+                <label for="check-2"
+                    >label for checkbox-2 inside a disabled fieldset</label
+                >
             </fieldset>
         </form>
 
@@ -823,8 +1021,14 @@
             </optgroup>
         </select>
 
-        <label for="select-optgroup-multiple">select w. multiple option groups:</label>
-        <select name="select-optgroup-multiple" id="select-optgroup-multiple" multiple size="4">
+        <label for="select-optgroup-multiple"
+            >select w. multiple option groups:</label
+        >
+        <select
+            name="select-optgroup-multiple"
+            id="select-optgroup-multiple"
+            multiple
+            size="4">
             <optgroup label="optgroup a">
                 <option>option 1</option>
                 <option>option 2</option>
@@ -843,15 +1047,18 @@
         </select>
 
         <!-- Image -->
-        <input type="image" id="image" alt="image input" src="media/images/roc-glass-button.png" />
+        <input
+            type="image"
+            id="image"
+            alt="image input"
+            src="media/images/roc-glass-button.png" />
 
         <input
             type="image"
             id="image-disabled"
             alt="disabled image input"
             src="media/images/roc-glass-button.png"
-            disabled
-        />
+            disabled />
 
         <!-- Name -->
         <label for="text">text:</label>
@@ -862,7 +1069,11 @@
 
         <!-- Email -->
         <label for="mail">email:</label>
-        <input type="email" value="example123@example.com" id="mail" list="example-emails" />
+        <input
+            type="email"
+            value="example123@example.com"
+            id="mail"
+            list="example-emails" />
         <datalist id="example-emails">
             <option value="a-example@example.com"></option>
             <option value="b-example@example.com"></option>
@@ -872,28 +1083,55 @@
         </datalist>
 
         <label for="mail-disabled">disabled email:</label>
-        <input type="email" value="disabled@example.com" id="mail-disabled" list="example-emails" disabled />
+        <input
+            type="email"
+            value="disabled@example.com"
+            id="mail-disabled"
+            list="example-emails"
+            disabled />
 
         <!-- URL -->
         <label for="url">url:</label>
-        <input type="url" id="url" placeholder="https://example.com" pattern="https://.*" />
+        <input
+            type="url"
+            id="url"
+            placeholder="https://example.com"
+            pattern="https://.*" />
 
         <label for="url-disabled">url:</label>
-        <input type="url" id="url-disabled" placeholder="https://disabled-example.com" pattern="https://.*" disabled />
+        <input
+            type="url"
+            id="url-disabled"
+            placeholder="https://disabled-example.com"
+            pattern="https://.*"
+            disabled />
 
         <!-- Search -->
         <label for="search">search:</label>
         <input type="search" id="search" placeholder="search..." />
 
         <label for="search">disabled search:</label>
-        <input type="search" id="search-disabled" placeholder="disabled search..." disabled />
+        <input
+            type="search"
+            id="search-disabled"
+            placeholder="disabled search..."
+            disabled />
 
         <!-- Tel / Phone -->
         <label for="tel">phone number:</label>
-        <input type="tel" autocomplete="off" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+        <input
+            type="tel"
+            autocomplete="off"
+            id="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
 
         <label for="tel-disabled">disabled phone number:</label>
-        <input type="tel" autocomplete="off" id="tel-disabled" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" disabled />
+        <input
+            type="tel"
+            autocomplete="off"
+            id="tel-disabled"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            disabled />
 
         <!-- Number -->
         <label for="number">number:</label>
@@ -915,7 +1153,11 @@
         <input type="checkbox" id="checkbox-checked" checked />
         <label for="checkbox-checked">checkbox-checked</label>
 
-        <input type="checkbox" id="checkbox-checked-disabled" checked disabled />
+        <input
+            type="checkbox"
+            id="checkbox-checked-disabled"
+            checked
+            disabled />
         <label for="checkbox-checked-disabled">checkbox-checked-disabled</label>
 
         <!-- Radio -->
@@ -928,10 +1170,20 @@
         <input type="radio" name="radiobuttons" id="radio-checked" checked />
         <label for="radio-checked">radio-checked</label>
 
-        <input type="radio" name="radiobuttons-2" id="radio-disabled" checked disabled />
+        <input
+            type="radio"
+            name="radiobuttons-2"
+            id="radio-disabled"
+            checked
+            disabled />
         <label for="radio-checked-disabled">radio-disabled</label>
 
-        <input type="radio" name="radiobuttons-2" id="radio-checked-disabled" checked disabled />
+        <input
+            type="radio"
+            name="radiobuttons-2"
+            id="radio-checked-disabled"
+            checked
+            disabled />
         <label for="radio-checked-disabled">radio-checked-disabled</label>
 
         <!-- Time -->
@@ -955,10 +1207,17 @@
 
         <!-- Datetime Local-->
         <label for="date-time-local">datetime-local:</label>
-        <input type="datetime-local" id="date-time-local" value="2023-01-01T00:01" />
+        <input
+            type="datetime-local"
+            id="date-time-local"
+            value="2023-01-01T00:01" />
 
         <label for="date-time-local-disabled">disabled datetime-local:</label>
-        <input type="datetime-local" id="date-time-local-disabled" value="2023-01-01T00:01" disabled />
+        <input
+            type="datetime-local"
+            id="date-time-local-disabled"
+            value="2023-01-01T00:01"
+            disabled />
 
         <!-- Week -->
         <label for="week">week:</label>
@@ -976,7 +1235,13 @@
 
         <!--- Range -->
         <label for="range">range:</label>
-        <input type="range" min="0" max="100" step="5" id="range" list="range-markers" />
+        <input
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            id="range"
+            list="range-markers" />
         <datalist id="range-markers">
             <option value="0" label="0"></option>
             <option value="25" label="25"></option>
@@ -986,13 +1251,28 @@
         </datalist>
 
         <label for="range-disabled">disabled range:</label>
-        <input type="range" min="0" max="100" step="5" id="range-disabled" list="range-markers" disabled />
+        <input
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            id="range-disabled"
+            list="range-markers"
+            disabled />
 
         <label for="range-no-datalist">no datalist range:</label>
         <input type="range" min="0" max="100" step="5" id="range-no-datalist" />
 
-        <label for="range-disabled-no-datalist">no datalist + disabled range:</label>
-        <input type="range" min="0" max="100" step="5" id="range-disabled-no-datalist" disabled />
+        <label for="range-disabled-no-datalist"
+            >no datalist + disabled range:</label
+        >
+        <input
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            id="range-disabled-no-datalist"
+            disabled />
 
         <!--- Color -->
         <label for="color">color:</label>
@@ -1044,8 +1324,7 @@
             <svg viewBox="0 0 20 20">
                 <path
                     fill="#000"
-                    d="M10.544,8.717l1.166-0.855l1.166,0.855l-0.467-1.399l1.012-0.778h-1.244L11.71,5.297l-0.466,1.244H10l1.011,0.778L10.544,8.717z M15.986,9.572l-0.467,1.244h-1.244l1.011,0.777l-0.467,1.4l1.167-0.855l1.165,0.855l-0.466-1.4l1.011-0.777h-1.244L15.986,9.572z M7.007,6.552c0-2.259,0.795-4.33,2.117-5.955C4.34,1.042,0.594,5.07,0.594,9.98c0,5.207,4.211,9.426,9.406,9.426c2.94,0,5.972-1.354,7.696-3.472c-0.289,0.026-0.987,0.044-1.283,0.044C11.219,15.979,7.007,11.759,7.007,6.552 M10,18.55c-4.715,0-8.551-3.845-8.551-8.57c0-3.783,2.407-6.999,5.842-8.131C6.549,3.295,6.152,4.911,6.152,6.552c0,5.368,4.125,9.788,9.365,10.245C13.972,17.893,11.973,18.55,10,18.55 M19.406,2.304h-1.71l-0.642-1.71l-0.642,1.71h-1.71l1.39,1.069l-0.642,1.924l1.604-1.176l1.604,1.176l-0.642-1.924L19.406,2.304z"
-                ></path>
+                    d="M10.544,8.717l1.166-0.855l1.166,0.855l-0.467-1.399l1.012-0.778h-1.244L11.71,5.297l-0.466,1.244H10l1.011,0.778L10.544,8.717z M15.986,9.572l-0.467,1.244h-1.244l1.011,0.777l-0.467,1.4l1.167-0.855l1.165,0.855l-0.466-1.4l1.011-0.777h-1.244L15.986,9.572z M7.007,6.552c0-2.259,0.795-4.33,2.117-5.955C4.34,1.042,0.594,5.07,0.594,9.98c0,5.207,4.211,9.426,9.406,9.426c2.94,0,5.972-1.354,7.696-3.472c-0.289,0.026-0.987,0.044-1.283,0.044C11.219,15.979,7.007,11.759,7.007,6.552 M10,18.55c-4.715,0-8.551-3.845-8.551-8.57c0-3.783,2.407-6.999,5.842-8.131C6.549,3.295,6.152,4.911,6.152,6.552c0,5.368,4.125,9.788,9.365,10.245C13.972,17.893,11.973,18.55,10,18.55 M19.406,2.304h-1.71l-0.642-1.71l-0.642,1.71h-1.71l1.39,1.069l-0.642,1.924l1.604-1.176l1.604,1.176l-0.642-1.924L19.406,2.304z"></path>
             </svg>
             SVG Icon Button
         </button>
@@ -1055,9 +1334,18 @@
         <button onclick="window.dialog.show();">open dialog</button>
 
         <dialog id="dialog">
-            <p>I'm a dialog opened using JS onlick="window.dialog.show();" inside an html button.</p>
-            <p>I can be closed with JS using onlick="window.dialog.close()" inside an html button.</p>
-            <p>...or I can be closed using form method ="dialog", with a button inside.</p>
+            <p>
+                I'm a dialog opened using JS onlick="window.dialog.show();"
+                inside an html button.
+            </p>
+            <p>
+                I can be closed with JS using onlick="window.dialog.close()"
+                inside an html button.
+            </p>
+            <p>
+                ...or I can be closed using form method ="dialog", with a button
+                inside.
+            </p>
             <p><code>id="dialog"</code></p>
             <button onclick="window.dialog.close();">close with JS</button>
             <form method="dialog">
@@ -1099,22 +1387,76 @@
         <h3 id="meter-tags" class="roc-heading">meter tags</h3>
 
         <label for="meter-empty">meter empty:</label>
-        <meter min="0" max="100" low="33" high="66" optimum="70" value="0" id="meter-empty">at 0/100</meter>
+        <meter
+            min="0"
+            max="100"
+            low="33"
+            high="66"
+            optimum="70"
+            value="0"
+            id="meter-empty">
+            at 0/100
+        </meter>
 
         <label for="meter-below-low">meter below low:</label>
-        <meter min="0" max="100" low="60" high="80" optimum="90" value="50" id="meter-below-low">at 50/100</meter>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="50"
+            id="meter-below-low">
+            at 50/100
+        </meter>
 
         <label for="meter-low">meter low:</label>
-        <meter min="0" max="100" low="60" high="80" optimum="90" value="60" id="meter-low">at 60/100</meter>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="60"
+            id="meter-low">
+            at 60/100
+        </meter>
 
         <label for="meter-high">meter high:</label>
-        <meter min="0" max="100" low="60" high="80" optimum="90" value="80" id="meter-high">at 80/100</meter>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="80"
+            id="meter-high">
+            at 80/100
+        </meter>
 
         <label for="meter-optimum">meter optimum:</label>
-        <meter min="0" max="100" low="60" high="80" optimum="90" value="90" id="meter-optimum">at 90/100</meter>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="90"
+            id="meter-optimum">
+            at 90/100
+        </meter>
 
         <label for="meter-full">meter full:</label>
-        <meter min="0" max="100" low="33" high="66" optimum="70" value="100" id="meter-full">at 100/100</meter>
+        <meter
+            min="0"
+            max="100"
+            low="33"
+            high="66"
+            optimum="70"
+            value="100"
+            id="meter-full">
+            at 100/100
+        </meter>
 
         <hr />
 
@@ -1237,6 +1579,8 @@
             <!-- anchor linking to external file -->
             <em>if you see this, that means scriping is disabled</em>
         </noscript>
-        <p>noscript tag, disable javascript to see it appear above this text.</p>
+        <p>
+            noscript tag, disable javascript to see it appear above this text.
+        </p>
     </body>
 </html>
