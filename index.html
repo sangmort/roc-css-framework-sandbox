@@ -63,15 +63,27 @@
         <!-- Link - Text -->
         <!-- Links - No Paragraph - Text -->
 
-        <h3 id="links" class="roc-heading">links</h3>
+        <h3 id="links-tags" class="roc-heading">links</h3>
 
         <h4 id="links-no-paragraph" class="roc-heading">
             links - not wrapped in paragraph tags
         </h4>
 
-        <a href="#links">internal link</a>
-        <a href="#links">internal link</a>
-        <a href="#links">internal link</a>
+        <a
+            href="#links-tags
+        "
+            >internal link</a
+        >
+        <a
+            href="#links-tags
+        "
+            >internal link</a
+        >
+        <a
+            href="#links-tags
+        "
+            >internal link</a
+        >
         <a
             href="https://github.com/sangmort/css-framework-sandbox"
             target="_blank"
@@ -97,7 +109,13 @@
         <h4 id="links-in-paragraph" class="roc-heading">
             links - wrapped in paragraph tags
         </h4>
-        <p><a href="#links">internal link</a></p>
+        <p>
+            <a
+                href="#links-tags
+            "
+                >internal link</a
+            >
+        </p>
         <p>
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
@@ -107,10 +125,22 @@
             // external link in one paragraph
         </p>
         <p>
-            <a href="#links">internal link</a>
-            <a href="#links">internal link</a>
-            <a href="#links">internal link</a> // three internal links in one
-            paragraph
+            <a
+                href="#links-tags
+            "
+                >internal link</a
+            >
+            <a
+                href="#links-tags
+            "
+                >internal link</a
+            >
+            <a
+                href="#links-tags
+            "
+                >internal link</a
+            >
+            // three internal links in one paragraph
         </p>
         <p>
             <a
@@ -131,7 +161,13 @@
             // three internal links in one paragraph
         </p>
         <p>
-            An <a href="#links">internal link</a> in the same paragraph as an
+            An
+            <a
+                href="#links-tags
+            "
+                >internal link</a
+            >
+            in the same paragraph as an
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
                 target="_blank"
@@ -1465,7 +1501,26 @@
 
         <!-- Nav -->
         <h3 id="nav-tags" class="roc-heading">nav tags</h3>
-        <nav></nav>
+        <nav>
+            <a href="#layout-tags">internal in a nav</a>
+            <a
+                href="https://github.com/sangmort/css-framework-sandbox"
+                target="_blank"
+                >external link in a nav</a
+            >
+        </nav>
+
+        <nav>
+            <p>
+                Paragraph text in a nav, these links are in the same paragraph:
+                <a href="#layout-tags">internal</a>
+                <a
+                    href="https://github.com/sangmort/css-framework-sandbox"
+                    target="_blank">
+                    external link
+                </a>
+            </p>
+        </nav>
 
         <!-- Header -->
         <h3 id="header-tags" class="roc-heading">header tags</h3>
@@ -1539,7 +1594,19 @@
 
         <!-- Footer -->
         <h3 id="footer-tags" class="roc-heading">footer tags</h3>
-        <footer></footer>
+        <footer>
+            <h4>h4 in a footer</h4>
+            <a href="#layout-tags">internal link in a footer</a>
+            <p>paragraph in a footer</p>
+        </footer>
+
+        <!-- Div -->
+        <h3 id="div-tags" class="roc-heading">div tags</h3>
+        <div>
+            <h4>h4 in a header</h4>
+            <a href="#layout-tags">internal link in a header</a>
+            <p>paragraph in a header</p>
+        </div>
 
         <hr />
 
