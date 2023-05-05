@@ -2,32 +2,53 @@ ul,
 li,
 nav,
 body,
+a,
 * {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 nav {
+    display: flex;
+    justify-content: center;
+    font-family: "fira code";
     position: sticky;
     top: 0;
-    width: 100%;
 }
 
 .navbar {
     display: flex;
+    background-color: white;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    /* background-image: linear-gradient(to top, #0d0d0d 0%, #575757 100%); */
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    width: 70vw;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
-.nav-item {
+ul.navbar > li.nav-item {
     display: flex;
+    position: relative;
+    align-items: center;
+    padding: 1rem 0;
+    min-width: 4rem;
+    width: 4rem;
+}
+
+.nav-item a {
+    color: rgb(36, 36, 36);
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
     position: relative;
     align-items: center;
     min-width: 4rem;
     width: 4rem;
-    background-color: orangered;
 }
 
 li.nav-item {
@@ -38,20 +59,85 @@ li.nav-item {
     width: 100%;
 }
 
+/* first sub-menu */
 .sub-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 7rem;
-    text-align: center; /* Center the contents of the sub-menu */
+    width: 10vw;
+    text-align: center;
     word-wrap: break-word;
+    background-image: linear-gradient(to bottom, #3a3a3a 0%, #a1a1a1 100%);
+    text-transform: uppercase;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.nav-item:hover .sub-menu {
+/* second sub-menu */
+.nav-item .sub-menu .nav-item .sub-menu {
+    display: none;
+    position: absolute;
+    top: 00%;
+    left: 100%;
+    transform: translateX(0%);
+    width: 10vw;
+    text-align: center;
+    word-wrap: break-word;
+    background-image: linear-gradient(to bottom, #3a3a3a 0%, #a1a1a1 100%);
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* second sub-menu, reveal on hover */
+.nav-item .sub-menu .nav-item:hover ul.sub-menu {
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Hide the overflow of the sub-menu */
-    background-color: yellow;
+}
+
+/* sub-menu ul nav-item li */
+ul.sub-menu > li.nav-item {
+    transform-origin: top;
+}
+
+/* sub-menu ul nav-item li on hover */
+ul.sub-menu > li.nav-item:hover {
+    text-transform: uppercase;
+    animation: enter 0.5s ease forwards;
+}
+
+/* reveal sub-menu on hover */
+nav .nav-item:hover > ul.sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* sub-menu link */
+.sub-menu a.nav-link {
+    display: flex;
+    color: white;
+    padding: 1rem;
+}
+
+ul.sub-menu li.nav-item {
+    border-bottom: 0.05rem solid rgb(66, 66, 66);
+}
+
+ul.sub-menu li.nav-item:last-of-type {
+    border-bottom: none;
+}
+
+@keyframes enter {
+    0% {
+        background-color: black;
+        opacity: 0;
+        transform: none;
+    }
+    100% {
+        opacity: 1;
+        background-color: black;
+        transform: scalex(1.25) translatey(-0.125rem);
+    }
 }
