@@ -1612,6 +1612,44 @@
         <!-- Media -->
         <h2 id="media-tags" class="roc-heading">media tags</h2>
 
+        <!-- Image -->
+        <h3 id="image-tags" class="roc-heading">img tags</h3>
+        <img src="/media/images/thumbnail-vertical-1.jpg" />
+        <img src="/media/images/thumbnail-vertical-2.jpg" />
+        <img src="/media/images/thumbnail-vertical-3.jpg" />
+        <img src="/media/images/thumbnail-vertical-4.jpg" />
+        <img src="/media/images/thumbnail-vertical-5.jpg" />
+        <img src="/media/images/thumbnail-vertical-6.jpg" />
+
+        <img src="media/images/720p-horizontal-4.jpg" alt="" />
+
+        <!-- Audio -->
+        <h3 id="audio-tags" class="roc-heading">audio tags</h3>
+        <audio controls src="/media/audio/audio-1.mp3"></audio>
+
+        <!-- Video -->
+        <h3 id="video-tags" class="roc-heading">video tags</h3>
+        <video controls>
+            <source src="/media/videos/video-1.webm" type="video/webm" />
+            <source src="/media/videos/video-1.mp4" type="video/mp4" />
+            Download the <a href="/media/videos/video-1.mp4">MP4 video here</a>.
+        </video>
+
+        <!-- Figure -->
+        <h3 id="figure-tags" class="roc-heading">figure tags</h3>
+        <figure>
+            <img
+                src="media/images/thumbnail-horizontal-1.jpg"
+                alt="a figure tag with an image" />
+        </figure>
+
+        <figure>
+            <img
+                src="media/images/thumbnail-horizontal-2.jpg"
+                alt="a figure tag with an image & a figcaption below" />
+            <figcaption>A figcaption under the image, in a figure.</figcaption>
+        </figure>
+
         <!-- SVG -->
         <h3 id="svg-tags" class="roc-heading">svg tags</h3>
 
@@ -1638,6 +1676,33 @@
             onload = draw();
         </script>
 
+        <!-- Map -->
+        <h3 id="map-tags" class="roc-heading">map tags</h3>
+        <map name="image-map">
+            <area
+                target="_blank"
+                alt="#bfbfbf"
+                title="#bfbfbf"
+                href="https://www.google.com/search?q=%23bfbfbf"
+                coords="0,-1,200,199"
+                shape="rect" />
+            <area
+                target="_blank"
+                alt="#808080"
+                title="#808080"
+                href="https://www.google.com/search?q=%23808080"
+                coords="200,-1,400,199"
+                shape="rect" />
+            <area
+                target="_blank"
+                alt="#404040"
+                title="#404040"
+                href="https://www.google.com/search?q=%23404040"
+                coords="400,2,599,199"
+                shape="rect" />
+        </map>
+        <img usemap="#image-map" src="media/images/html-map-1.jpg" />
+
         <!-- Embed -->
         <h3 id="embed-tags" class="roc-heading">embed tags</h3>
 
@@ -1645,7 +1710,7 @@
         <embed src="the-roc.html" type="text/html" />
 
         <h4 id="embed-image-tags" class="roc-heading">embed img tags</h4>
-        <embed src="media/images/roc-logo-small-temp.png" type="image/png" />
+        <embed src="media/images/thumbnail-horizontal-6.jpg" type="image/jpg" />
 
         <!-- No Script -->
 
