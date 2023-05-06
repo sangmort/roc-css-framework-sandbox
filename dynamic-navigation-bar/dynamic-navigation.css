@@ -19,12 +19,18 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: "fira code";
+    font-size: 17px;
+    text-transform: uppercase;
     position: sticky;
     top: 0.5rem;
-    --menu-width: 7rem;
-    --menu-shadow: 0px 20px 30px -10px rgba(38, 57, 77, 0.5);
-    --color-dark: hsla(0, 0%, 8%, 1);
-    --color-light: hsla(0, 0%, 91%, 0.218);
+
+    --menu-width: 10vw;
+    --menu-shadow: rgba(0, 0, 0, 0.25) 0 2.5rem 2.5rem,
+        rgba(0, 0, 0, 0.12) 0 -1rem 2rem, rgba(0, 0, 0, 0.12) 0 0.1rem 0.2rem,
+        rgba(0, 0, 0, 0.17) 0 1rem 0.5rem, rgba(0, 0, 0, 0.09) 0 -0.1rem 0.2rem;
+    --color-dark: rgb(18, 18, 18);
+    --color-mid: rgb(106, 106, 106);
+    --color-light: rgb(255, 255, 255);
     --border-color-lt: hsla(180, 100%, 50%, 1);
 }
 
@@ -33,88 +39,82 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    text-transform: uppercase;
-    width: 70vw;
-
+    border-radius: 0.5rem;
+    height: 7vh;
+    min-width: 50vw;
     background: var(--color-dark);
-    border: var(--border-color-lt);
-    border-radius: 1rem;
-    box-shadow: var(--menu-shadow);
 }
 
-.nav-item {
+li.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: var(--menu-width);
-    transition: all 180ms ease-in;
-    transform-origin: bottom;
+    color: var(--color-light);
+    height: 7vh;
+    font-size: 1rem;
+    transition: all 180ms linear;
+    filter: drop-shadow(0rem 0rem 0.8rem rgba(0, 0, 0, 0.5));
 }
-
 .nav-item a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #242424;
+    position: relative;
+    width: var(--menu-width);
+    color: var(--color-light);
+    height: 7vh;
     font-size: 1rem;
-    font-weight: 600;
-    padding: 1rem;
+    transition: all 490ms linear;
 }
 
 .nav-item:hover {
-    color: #fff;
-    background: var(--color-dark);
-    transform: scale(1.125);
+    width: var(--menu-width);
+    background-color: var(--color-light);
+    box-shadow: var(--menu-shadow);
+    z-index: 0;
 }
 
 .sub-menu {
     display: none;
     position: absolute;
-    top: 99%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: var(--menu-width);
     text-align: center;
     word-wrap: break-word;
-    background-color: #3a3a3a;
     text-transform: uppercase;
-    box-shadow: var(--menu-shadow);
 }
 
 .nav-item:hover > .sub-menu {
     display: flex;
     flex-direction: column;
-    background: var(--color-dark);
+    background-color: var(--color-light);
+    width: var(--menu-width);
 }
 
 .sub-menu > .nav-item > a {
-    color: #fff;
+    color: var(--color-dark);
     font-size: 0.75rem;
-    padding: 1rem;
+    width: var(--menu-width);
 }
 
 .sub-menu > .nav-item:hover > a {
-    color: #000;
+    color: var(--color-light);
     background-color: var(--color-dark);
     transform-origin: bottom;
+    width: var(--menu-width);
 }
 
 .sub-menu .sub-menu {
-    left: 99%;
+    left: 100%;
     top: 0;
     transform: translateX(0%);
+    box-shadow: var(--menu-shadow);
 }
 
-@media screen and (max-width: 768px) {
-    .navbar {
-        width: 100%;
-    }
-
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .sub-menu {
-        position: static;
-        width: 100%;
-    }
+a.nav-link:hover {
+    color: var(--color-dark);
 }
