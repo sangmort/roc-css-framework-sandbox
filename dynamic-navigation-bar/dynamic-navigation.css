@@ -8,14 +8,24 @@ body,
     list-style: none;
 }
 
-a {
-    color: red;
-}
-
 /* Contains the UL navbar */
 nav {
     display: flex;
     justify-content: center;
+}
+
+li.nav-item {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    position: relative;
+}
+
+/* general navigation link styling */
+
+a.nav-link {
+    color: pink;
+    line-height: 1.5rem;
 }
 
 /* Nav Unorder List */
@@ -31,6 +41,8 @@ ul.navbar {
 ul.sub-menu,
 ul.nested-sub-menu {
     display: none;
+    position: absolute;
+    top: 100%; 
 }
 
 /* display sub menus on hover */
@@ -40,8 +52,12 @@ li:hover > ul.nested-sub-menu {
     flex-direction: column;
 }
 
+ul.sub-menu {
+    border: 1px solid blue;
+}
+
 /* list item  */
-li {
+ul.sub-menu > li {
     position: relative;
 }
 
@@ -50,4 +66,6 @@ ul.nested-sub-menu {
     position: absolute;
     top: 0;
     left: 100%; /* display to the right */
+    padding: 1rem;
+    border: 1px solid red;
 }
