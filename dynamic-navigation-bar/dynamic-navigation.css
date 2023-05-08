@@ -28,15 +28,16 @@ ul.navbar {
 }
 
 /* hide sub menus */
-ul.sub-menu {
+ul.sub-menu,
+ul.nested-sub-menu {
     display: none;
 }
 
 /* display sub menus on hover */
-li:hover > ul.sub-menu {
+li:hover > ul.sub-menu,
+li:hover > ul.nested-sub-menu {
     display: flex;
     flex-direction: column;
-    background-color: rgb(43, 141, 226);
 }
 
 
