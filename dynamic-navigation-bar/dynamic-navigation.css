@@ -14,18 +14,19 @@ nav {
     justify-content: center;
 }
 
-li.nav-item {
-    display: flex;
-    justify-content: center;
-    width: 5rem;
-    position: relative;
-}
-
 /* general navigation link styling */
 
 a.nav-link {
     color: pink;
     line-height: 1.5rem;
+}
+
+
+li.nav-item {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    position: relative;
 }
 
 /* Nav Unorder List */
@@ -34,7 +35,7 @@ ul.navbar {
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #000;
-    width: 30rem;
+    width: 36rem;
 }
 
 /* hide sub menus */
@@ -42,7 +43,7 @@ ul.sub-menu,
 ul.nested-sub-menu {
     display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
 }
 
 /* display sub menus on hover */
@@ -50,22 +51,17 @@ li:hover > ul.sub-menu,
 li:hover > ul.nested-sub-menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 ul.sub-menu {
     border: 1px solid blue;
 }
 
-/* list item  */
-ul.sub-menu > li {
-    position: relative;
-}
-
 /* sets nest-sub-menu to the right of sub-menu */
 ul.nested-sub-menu {
     position: absolute;
     top: 0;
-    left: 100%; /* display to the right */
-    padding: 1rem;
+    left: 100%;
     border: 1px solid red;
 }

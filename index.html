@@ -11,13 +11,10 @@
     </head>
     <body>
         <dynamic-navigation></dynamic-navigation>
-
         <h1 id="html-elements" class="roc-heading">HTML Elements</h1>
-
         <!-- text content -->
         <h2 id="text-elements" class="roc-heading">text elements</h2>
         <hr />
-
         <!-- headings -->
         <h3 id="headings" class="roc-heading">heading tags</h3>
         <h1>heading 1</h1>
@@ -26,202 +23,251 @@
         <h4>heading 4</h4>
         <h5>heading 5</h5>
         <h6>heading 6</h6>
-
         <hgroup>
             <h2>heading group h2</h2>
             <p>heading group p</p>
         </hgroup>
-
         <hr />
-
-        <h4 id="headings-with-paragraph" class="roc-heading">headings + p</h4>
+        <h4 id="headings-with-paragraph" class="roc-heading">h1-h6 + p</h4>
         <h1>heading 1</h1>
         <p>Some text under heading 1.</p>
-
         <h2>heading 2</h2>
         <p>Some text under heading 2.</p>
-
         <h3>heading 3</h3>
         <p>Some text under heading 3.</p>
-
         <h4>heading 4</h4>
         <p>Some text under heading 4.</p>
-
         <h5>heading 5</h5>
         <p>Some text under heading 5.</p>
-
         <h6>heading 6</h6>
         <p>Some text under heading 6.</p>
-
         <hgroup>
             <h2>heading group h2</h2>
             <p>heading group p</p>
         </hgroup>
         <p>Some text under heading group.</p>
         <hr />
-
         <!-- Link - Text -->
         <!-- Links - No Paragraph - Text -->
-
         <h3 id="links-tags" class="roc-heading">links</h3>
-
-        <h4 id="links-no-paragraph" class="roc-heading">
-            links - not wrapped in paragraph tags
-        </h4>
-
+        <h4 id="links-no-paragraph" class="roc-heading">block links</h4>
         <a
             href="#links-tags
-        "
-            >internal link</a
-        >
+            ">
+            internal link
+        </a>
         <a
             href="#links-tags
-        "
-            >internal link</a
-        >
+            ">
+            internal link
+        </a>
         <a
             href="#links-tags
-        "
-            >internal link</a
-        >
+            ">
+            internal link
+        </a>
         <a
             href="https://github.com/sangmort/css-framework-sandbox"
-            target="_blank"
-            >external link</a
-        >
+            target="_blank">
+            external link
+        </a>
         <a
             href="https://github.com/sangmort/css-framework-sandbox"
-            target="_blank"
-            >external link</a
-        >
+            target="_blank">
+            external link
+        </a>
         <a
             href="https://github.com/sangmort/css-framework-sandbox"
-            target="_blank"
-            >external link</a
-        >
+            target="_blank">
+            external link
+        </a>
         <a href="mailto:test@test.com">test@test.com</a>
         <a href="tel:+1(111)5557777">(111) 555-7777</a>
-        <a href="/media/images/image-horizontal-1.jpg" download
-            >download link</a
-        >
-
+        <a href="/media/images/image-horizontal-1.jpg" download>
+            download link
+        </a>
         <!-- Links - Paragraph - Text -->
-        <h4 id="links-in-paragraph" class="roc-heading">
-            links - wrapped in paragraph tags
-        </h4>
+        <h4 id="links-in-paragraph" class="roc-heading">inline links</h4>
         <p>
             <a
                 href="#links-tags
-            "
-                >internal link</a
-            >
+                ">
+                internal link
+            </a>
         </p>
         <p>
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
-                target="_blank"
-                >external link</a
-            >
+                target="_blank">
+                external link
+            </a>
             // external link in one paragraph
         </p>
         <p>
             <a
                 href="#links-tags
-            "
-                >internal link</a
-            >
+                ">
+                internal link
+            </a>
             <a
                 href="#links-tags
-            "
-                >internal link</a
-            >
+                ">
+                internal link
+            </a>
             <a
                 href="#links-tags
-            "
-                >internal link</a
-            >
+                ">
+                internal link
+            </a>
             // three internal links in one paragraph
         </p>
         <p>
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
-                target="_blank"
-                >external link</a
-            >
+                target="_blank">
+                external link
+            </a>
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
-                target="_blank"
-                >external link</a
-            >
+                target="_blank">
+                external link
+            </a>
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
-                target="_blank"
-                >external link</a
-            >
+                target="_blank">
+                external link
+            </a>
             // three internal links in one paragraph
         </p>
         <p>
             An
             <a
                 href="#links-tags
-            "
-                >internal link</a
-            >
+                ">
+                internal link
+            </a>
             in the same paragraph as an
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
-                target="_blank"
-                >external link</a
-            >.
-        </p>
-
-        <p>
-            <a href="tel:+1(111)5557777">(111) 555-7777</a> // tel link in
-            paragraph
+                target="_blank">
+                external link
+            </a>
+            .
         </p>
         <p>
-            <a href="mailto:test@test.com">test@test.com</a> // mailto link in
-            paragraph
+            <a href="tel:+1(111)5557777">(111) 555-7777</a>
+            // tel link in paragraph
         </p>
-
         <p>
-            <a href="/media/images/image-horizontal-1.jpg" download>download</a>
+            <a href="mailto:test@test.com">test@test.com</a>
+            // mailto link in paragraph
+        </p>
+        <p>
+            <a href="/media/images/image-horizontal-1.jpg" download>
+                download
+            </a>
             // download link in paragraph
         </p>
-
         <hr />
-
         <!-- Inline Text Modifiers-->
         <h3 id="text-inline" class="roc-heading">inline elements</h3>
-
-        <p>a <span>span</span> text</p>
-        <p>a <b>bring attention</b> text</p>
-        <p>a <strong>strong</strong> text</p>
-        <p>an <i>idiotmatic</i> text</p>
-        <p>an <em>emphasis</em> text</p>
-        <p><s>strikethrough</s></p>
-        <p>some <del>deleted text</del></p>
-        <p>some <ins>inserted text</ins></p>
-        <p>an <u>unarticulated annotation</u></p>
-        <p><small>small</small></p>
-        <p>subscript<sub>3</sub></p>
-        <p>superscript<sup>4</sup></p>
-        <p><cite>citation</cite> in paragraph.</p>
-        <p><mark>mark</mark></p>
-        <p>a time: <time datetime="20:00">20:00</time>.</p>
-        <p>a <var>variable</var></p>
-        <p>a <kbd>kbd</kbd></p>
         <p>
-            a <kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd>
+            a
+            <span>span</span>
+            text
         </p>
-        <p>an inline <code>single line of code</code>.</p>
-        <p>A <samp>sample output</samp></p>
-        <p>a <q>short inline quote</q></p>
-        <p>an <abbr title="abbreviation">abbr</abbr> of abbreviation.</p>
-        <p><dfn>definition</dfn>, the explanation for a word.</p>
         <p>
-            an <dfn><abbr title="abbreviation">abbr</abbr></dfn> in a
-            definition.
+            a
+            <b>bring attention</b>
+            text
+        </p>
+        <p>
+            a
+            <strong>strong</strong>
+            text
+        </p>
+        <p>
+            an
+            <i>idiotmatic</i>
+            text
+        </p>
+        <p>
+            an
+            <em>emphasis</em>
+            text
+        </p>
+        <p><s>strikethrough</s></p>
+        <p>
+            some
+            <del>deleted text</del>
+        </p>
+        <p>
+            some
+            <ins>inserted text</ins>
+        </p>
+        <p>
+            an
+            <u>unarticulated annotation</u>
+        </p>
+        <p><small>small</small></p>
+        <p>
+            subscript
+            <sub>3</sub>
+        </p>
+        <p>
+            superscript
+            <sup>4</sup>
+        </p>
+        <p>
+            <cite>citation</cite>
+            in paragraph.
+        </p>
+        <p><mark>mark</mark></p>
+        <p>
+            a time:
+            <time datetime="20:00">20:00</time>
+            .
+        </p>
+        <p>
+            a
+            <var>variable</var>
+        </p>
+        <p>
+            a
+            <kbd>kbd</kbd>
+        </p>
+        <p>
+            a
+            <kbd><kbd>kbd</kbd></kbd>
+            inside a
+            <kbd><kbd>kbd</kbd></kbd>
+        </p>
+        <p>
+            an inline
+            <code>single line of code</code>
+            .
+        </p>
+        <p>
+            A
+            <samp>sample output</samp>
+        </p>
+        <p>
+            a
+            <q>short inline quote</q>
+        </p>
+        <p>
+            an
+            <abbr title="abbreviation">abbr</abbr>
+            of abbreviation.
+        </p>
+        <p>
+            <dfn>definition</dfn>
+            , the explanation for a word.
+        </p>
+        <p>
+            an
+            <dfn><abbr title="abbreviation">abbr</abbr></dfn>
+            in a definition.
         </p>
         <p>
             a meter:
@@ -229,52 +275,110 @@
         </p>
         <p>
             <ruby>
-                漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt
-                ><rp>)</rp></ruby
-            >
+                漢
+                <rp>(</rp>
+                <rt>kan</rt>
+                <rp>)</rp>
+                字
+                <rp>(</rp>
+                <rt>ji</rt>
+                <rp>)</rp>
+            </ruby>
         </p>
-        <p><bdi>مرحبًا</bdi>: biderectional isolate</p>
-        <p><bdo dir="rtl">مرحبًا</bdo></p>
-
         <p>
-            a paragraph with a <a href="link">link</a>, a <span>span</span>, a
-            <b>bring attention</b>, a <strong>strong</strong>, an
-            <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>, a
-            <del>delete</del>, an <ins>insert</ins>, an
-            <u>unarticulated annotation</u>, a <small>small</small>, a
-            <sub>subscript</sub>, a <sup>superscript</sup>, a
-            <cite>citation</cite>, a <mark>mark</mark>, a time:
-            <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
-            <kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
-            >, a <code>line of code</code>, A <samp>sample output</samp>, a
-            <q>short inline quote</q>, an <abbr title="abreviation">abbr</abbr>,
-            a <dfn>definition</dfn>, a
-            <dfn
-                ><abbr title="abreviation in a definition">abbr</abbr> in a
-                definition</dfn
-            >, a meter:
-            <meter min="100" max="200" value="150">150 out of 200</meter>. This
-            is to demonstrate how all these inline text modifiers display when
-            they're wrapped in the same paragraph tag.
+            <bdi>مرحبًا</bdi>
+            : biderectional isolate
         </p>
-
+        <p><bdo dir="rtl">مرحبًا</bdo></p>
+        <p>
+            a paragraph with a
+            <a href="link">link</a>
+            , a
+            <span>span</span>
+            , a
+            <b>bring attention</b>
+            , a
+            <strong>strong</strong>
+            , an
+            <i>idiotmatic</i>
+            , an
+            <em>emphasis</em>
+            , a
+            <s>strikethrough</s>
+            , a
+            <del>delete</del>
+            , an
+            <ins>insert</ins>
+            , an
+            <u>unarticulated annotation</u>
+            , a
+            <small>small</small>
+            , a
+            <sub>subscript</sub>
+            , a
+            <sup>superscript</sup>
+            , a
+            <cite>citation</cite>
+            , a
+            <mark>mark</mark>
+            , a time:
+            <time>20:20</time>
+            , a
+            <var>variable</var>
+            , a
+            <kbd>kbd</kbd>
+            , a
+            <kbd><kbd>kbd</kbd></kbd>
+            inside a
+            <kbd><kbd>kbd</kbd></kbd>
+            , a
+            <code>line of code</code>
+            , A
+            <samp>sample output</samp>
+            , a
+            <q>short inline quote</q>
+            , an
+            <abbr title="abreviation">abbr</abbr>
+            , a
+            <dfn>definition</dfn>
+            , a
+            <dfn>
+                <abbr title="abreviation in a definition">abbr</abbr>
+                in a definition
+            </dfn>
+            , a meter:
+            <meter min="100" max="200" value="150">150 out of 200</meter>
+            . This is to demonstrate how all these inline text modifiers display
+            when they're wrapped in the same paragraph tag.
+        </p>
         <p>
             A seperate paragraph with
             <ruby>
-                漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt
-                ><rp>)</rp></ruby
-            >, a bdi: <bdi>مرحبًا</bdi>, a bdo: <bdo dir="rtl">مرحبًا</bdo> ...
+                漢
+                <rp>(</rp>
+                <rt>kan</rt>
+                <rp>)</rp>
+                字
+                <rp>(</rp>
+                <rt>ji</rt>
+                <rp>)</rp>
+            </ruby>
+            , a bdi:
+            <bdi>مرحبًا</bdi>
+            , a bdo:
+            <bdo dir="rtl">مرحبًا</bdo>
+            ...
         </p>
-
         <hr />
-
         <!--Block Level Text -->
         <h3 id="text-block" class="roc-heading">block elements</h3>
-
         <p>a paragraph</p>
-        <del><p>a deleted paragraph</p></del>
-        <ins><p>an inserted paragraph</p></ins>
-
+        <del>
+            <p>a deleted paragraph</p>
+        </del>
+        <ins>
+            <p>an inserted paragraph</p>
+        </ins>
         <blockquote>
             <p>
                 A realistic example of a blockqoute in use. Let's put a
@@ -286,63 +390,98 @@
             </p>
             <p><cite>Mike Tomlin</cite></p>
         </blockquote>
-
         <blockquote>
             <p>
                 a blockquote that contains all the inline text element
                 modifiers, all wrapped in a paragraph tag. Here we go: a
-                <a href="link">link</a>, a <span>span</span>, a
-                <b>bring attention</b>, a <strong>strong</strong>, an
-                <i>idiotmatic</i>, an <em>emphasis</em>, a <s>strikethrough</s>,
-                a <del>delete</del>, an <ins>insert</ins>, an
-                <u>unarticulated annotation</u>, a <small>small</small>, a
-                <sub>subscript</sub>, a <sup>superscript</sup>, a
-                <cite>citation</cite>, a <mark>mark</mark>, a time:
-                <time>20:20</time>, a <var>variable</var>, a <kbd>kbd</kbd>, a
-                <kbd><kbd>kbd</kbd></kbd> inside a <kbd><kbd>kbd</kbd></kbd
-                >, a <code>line of code</code>, A <samp>sample output</samp>, a
-                <q>short inline quote</q>, an
-                <abbr title="abreviation">abbr</abbr>, a <dfn>definition</dfn>,
-                a
-                <dfn
-                    ><abbr title="abreviation in a definition">abbr</abbr> in a
-                    definition</dfn
-                >, a meter:
-                <meter min="100" max="200" value="150">150 out of 200</meter>.
-                This is to demonstrate how all these inline text modifiers
+                <a href="link">link</a>
+                , a
+                <span>span</span>
+                , a
+                <b>bring attention</b>
+                , a
+                <strong>strong</strong>
+                , an
+                <i>idiotmatic</i>
+                , an
+                <em>emphasis</em>
+                , a
+                <s>strikethrough</s>
+                , a
+                <del>delete</del>
+                , an
+                <ins>insert</ins>
+                , an
+                <u>unarticulated annotation</u>
+                , a
+                <small>small</small>
+                , a
+                <sub>subscript</sub>
+                , a
+                <sup>superscript</sup>
+                , a
+                <cite>citation</cite>
+                , a
+                <mark>mark</mark>
+                , a time:
+                <time>20:20</time>
+                , a
+                <var>variable</var>
+                , a
+                <kbd>kbd</kbd>
+                , a
+                <kbd><kbd>kbd</kbd></kbd>
+                inside a
+                <kbd><kbd>kbd</kbd></kbd>
+                , a
+                <code>line of code</code>
+                , A
+                <samp>sample output</samp>
+                , a
+                <q>short inline quote</q>
+                , an
+                <abbr title="abreviation">abbr</abbr>
+                , a
+                <dfn>definition</dfn>
+                , a
+                <dfn>
+                    <abbr title="abreviation in a definition">abbr</abbr>
+                    in a definition
+                </dfn>
+                , a meter:
+                <meter min="100" max="200" value="150">150 out of 200</meter>
+                . This is to demonstrate how all these inline text modifiers
                 display when they're wrapped in the same paragraph tag, when
                 it's wrapped in a blockquote.
             </p>
         </blockquote>
-
         <address>address</address>
         <address>
-            address with multiple breaks: <br />
-            Email: <a href="mailto:test@test.com">test@test.com</a> <br />
-            Phone Number: <a href="tel:+1(111)5557777">(111) 555-7777</a> <br />
+            address with multiple breaks:
+            <br />
+            Email:
+            <a href="mailto:test@test.com">test@test.com</a>
+            <br />
+            Phone Number:
+            <a href="tel:+1(111)5557777">(111) 555-7777</a>
+            <br />
             Orlando, Fl
         </address>
-
         <pre>pre     -     formatted text</pre>
-
         <pre>pre tag, wrapping a:
             <samp>samp tag, wrapping a: 
                 <kbd>kbd tag</kbd>
             </samp>
         </pre>
-
         <pre><code>
 // code tag wrapped in pre tag 
     .pre.code {
         content: "multiple lines of code";
     }
         </code></pre>
-
         <hr />
-
         <!-- lists -->
         <h2 id="list-tags" class="roc-heading">list</h2>
-
         <!--- Unordered Lists -->
         <h3 id="lists-unordered" class="roc-heading">unordered</h3>
         <ul>
@@ -350,7 +489,6 @@
             <li>list item 2</li>
             <li>list item 3</li>
         </ul>
-
         <ul>
             <li>list item 1</li>
             <li>list item 2</li>
@@ -364,7 +502,6 @@
             </li>
             <li>list item 4</li>
         </ul>
-
         <ul>
             <li>list item 1</li>
             <li>list item 2</li>
@@ -385,7 +522,6 @@
             </li>
             <li>list item 4</li>
         </ul>
-
         <ul>
             <li>list item 1</li>
             <li>
@@ -398,7 +534,6 @@
             </li>
             <li>list item 3</li>
         </ul>
-
         <!-- Ordered Lists -->
         <h3 id="lists-ordered" class="roc-heading">ordered</h3>
         <ol>
@@ -406,7 +541,6 @@
             <li>list item 2</li>
             <li>list item 3</li>
         </ol>
-
         <ol>
             <li>list item a</li>
             <li>list item b</li>
@@ -420,7 +554,6 @@
             </li>
             <li>list item d</li>
         </ol>
-
         <ol>
             <li>list item a</li>
             <li>list item b</li>
@@ -441,7 +574,6 @@
             </li>
             <li>list item d</li>
         </ol>
-
         <ol>
             <li>list item a</li>
             <li>
@@ -454,22 +586,17 @@
             </li>
             <li>list item c</li>
         </ol>
-
         <!-- Descriptive Lists-->
         <h3 id="lists-description" class="roc-heading">description</h3>
-
         <dl>
             <dt>description term 1</dt>
             <dd>description details 1</dd>
-
             <dt>description term 2</dt>
             <dd>description details 2</dd>
-
             <dt>description term 3</dt>
             <dt>description term 4</dt>
             <dd>description details 4</dd>
         </dl>
-
         <!-- Menu -->
         <h3 id="lists-menu" class="roc-heading">menu</h3>
         <menu>
@@ -477,12 +604,9 @@
             <li>menu list item 2</li>
             <li>menu list item 3</li>
         </menu>
-
         <hr />
-
         <!-- tables -->
         <h2 id="tables" class="roc-heading">table element</h2>
-
         <p>table with thead, tbody, & tfoot:</p>
         <table>
             <thead>
@@ -526,9 +650,7 @@
         &lt;/tfoot&gt;
     &lt;/table&gt;
         </code></pre>
-
         <p>table with colgroup:</p>
-
         <table>
             <colgroup>
                 <col span="2" />
@@ -546,7 +668,6 @@
                 <td>content 2b</td>
             </tr>
         </table>
-
         <pre><code>		
     &lt;table&gt;
         &lt;colgroup&gt;
@@ -566,9 +687,7 @@
         &lt;/tr&gt;
     &lt;/table&gt;
     </code></pre>
-
         <p>table with only tr & td:</p>
-
         <table>
             <tr>
                 <td>content 1a</td>
@@ -583,7 +702,6 @@
                 <td>content 2c</td>
             </tr>
         </table>
-
         <pre><code>
     &lt;table&gt;
         &lt;tr&gt;
@@ -600,7 +718,6 @@
         &lt;/tr&gt;
     &lt;/table&gt;
         </code></pre>
-
         <p>table with caption:</p>
         <table>
             <caption>
@@ -610,7 +727,6 @@
                 <td>some content here</td>
             </tr>
         </table>
-
         <pre><code>
     &lt;table&gt;
         &lt;caption&gt;caption text&lt;/caption&gt;
@@ -619,9 +735,7 @@
         &lt;/tr&gt;
     &lt;/table&gt;
         </code></pre>
-
         <hr />
-
         <!-- forms -->
         <h2 id="form-elements" class="roc-heading">form elements</h2>
         <form action="#">
@@ -632,10 +746,9 @@
                 <option>option 2</option>
                 <option>option 3</option>
             </select>
-
-            <label for="form-select-basic-selected"
-                >select basic, 2 pre-selected:</label
-            >
+            <label for="form-select-basic-selected">
+                select basic, 2 pre-selected:
+            </label>
             <select
                 name="form-select-basic-selected"
                 id="form-select-basic-selected">
@@ -643,7 +756,6 @@
                 <option selected>option 2</option>
                 <option>option 3</option>
             </select>
-
             <label for="form-select-optgroup">select w. option groups:</label>
             <select name="form-select-optgroup" id="form-select-optgroup">
                 <optgroup label="optgroup a">
@@ -662,10 +774,9 @@
                     <option>option 3</option>
                 </optgroup>
             </select>
-
-            <label for="form-select-optgroup-multiple"
-                >select w. multiple option groups:</label
-            >
+            <label for="form-select-optgroup-multiple">
+                select w. multiple option groups:
+            </label>
             <select
                 name="form-select-optgroup-multiple"
                 id="form-select-optgroup-multiple"
@@ -687,32 +798,27 @@
                     <option>option 3</option>
                 </optgroup>
             </select>
-
             <!-- Image -->
             <input
                 type="image"
                 id="form-image"
                 alt="image input"
                 src="media/images/roc-glass-button.png" />
-
             <input
                 type="image"
                 id="form-image-disabled"
                 alt="disabled image input"
                 src="media/images/roc-glass-button.png"
                 disabled />
-
             <!-- Name -->
             <label for="form-text">text:</label>
             <input type="text" value="some text" id="form-text" />
-
             <label for="form-text-disabled">disabled text:</label>
             <input
                 type="text"
                 value="some text"
                 id="form-text-disabled"
                 disabled />
-
             <!-- Email -->
             <label for="form-mail">email:</label>
             <input
@@ -727,7 +833,6 @@
                 <option value="d-example@example.com"></option>
                 <option value="e-example@example.com"></option>
             </datalist>
-
             <label for="form-mail-disabled">disabled email:</label>
             <input
                 type="email"
@@ -735,7 +840,6 @@
                 id="form-mail-disabled"
                 list="example-emails"
                 disabled />
-
             <!-- URL -->
             <label for="form-url">url:</label>
             <input
@@ -743,7 +847,6 @@
                 id="form-url"
                 placeholder="form-https://example.com"
                 pattern="https://.*" />
-
             <label for="form-url-disabled">url:</label>
             <input
                 type="url"
@@ -751,21 +854,18 @@
                 placeholder="form-https://disabled-example.com"
                 pattern="https://.*"
                 disabled />
-
             <!-- Search -->
             <label for="form-search">search:</label>
             <input
                 type="search"
                 id="form-search"
                 placeholder="form-search..." />
-
             <label for="form-search">disabled search:</label>
             <input
                 type="search"
                 id="form-search-disabled"
                 placeholder="form-disabled search..."
                 disabled />
-
             <!-- Tel / Phone -->
             <label for="form-tel">phone number:</label>
             <input
@@ -773,7 +873,6 @@
                 id="form-tel"
                 autocomplete="off"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
-
             <label for="form-tel-disabled">disabled phone number:</label>
             <input
                 type="tel"
@@ -781,54 +880,43 @@
                 autocomplete="off"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 disabled />
-
             <!-- Number -->
             <label for="form-number">number:</label>
             <input type="number" id="form-number" value="777" />
-
             <label for="form-number-disabled">number:</label>
             <input
                 type="number"
                 id="form-number-disabled"
                 value="666"
                 disabled />
-
             <!-- Checkbox -->
             <input type="checkbox" id="form-checkbox1" />
             <label for="form-checkbox1">checkbox1</label>
-
             <input type="checkbox" id="form-checkbox2" />
             <label for="form-checkbox2">checkbox2</label>
-
             <input type="checkbox" id="form-checkbox-disabled" disabled />
             <label for="form-checkbox-disabled">checkbox-disabled</label>
-
             <input type="checkbox" id="form-checkbox-checked" checked />
             <label for="form-checkbox-checked">checkbox-checked</label>
-
             <input
                 type="checkbox"
                 id="form-checkbox-checked-disabled"
                 checked
                 disabled />
-            <label for="form-checkbox-checked-disabled"
-                >checkbox-checked-disabled</label
-            >
-
+            <label for="form-checkbox-checked-disabled">
+                checkbox-checked-disabled
+            </label>
             <!-- Radio -->
             <input type="radio" name="radiobuttons" id="form-radio1" />
             <label for="form-radio1">radio1</label>
-
             <input type="radio" name="radiobuttons" id="form-radio2" />
             <label for="form-radio2">radio2</label>
-
             <input
                 type="radio"
                 name="radiobuttons"
                 id="form-radio-checked"
                 checked />
             <label for="form-radio-checked">radio-checked</label>
-
             <input
                 type="radio"
                 name="radiobuttons-2"
@@ -836,17 +924,15 @@
                 checked
                 disabled />
             <label for="form-radio-checked-disabled">radio-disabled</label>
-
             <input
                 type="radio"
                 name="radiobuttons-2"
                 id="form-radio-checked-disabled"
                 checked
                 disabled />
-            <label for="form-radio-checked-disabled"
-                >radio-checked-disabled</label
-            >
-
+            <label for="form-radio-checked-disabled">
+                radio-checked-disabled
+            </label>
             <!-- Time -->
             <label for="form-time">time:</label>
             <input type="time" id="form-time" list="example-times" />
@@ -855,51 +941,41 @@
                 <option value="13:00"></option>
                 <option value="17:00"></option>
             </datalist>
-
             <label for="form-time-disabled">disabled time:</label>
             <input type="time" id="form-time-disabled" disabled />
-
             <!--- Date -->
             <label for="form-date">date:</label>
             <input type="date" id="form-date" value="2023-01-01" />
-
             <label for="form-date-disabled">disabled date:</label>
             <input
                 type="date"
                 id="form-date-disabled"
                 value="2023-01-01"
                 disabled />
-
             <!-- Datetime Local-->
             <label for="form-date-time-local">datetime-local:</label>
             <input
                 type="datetime-local"
                 id="form-date-time-local"
                 value="2023-01-01T00:01" />
-
-            <label for="form-date-time-local-disabled"
-                >disabled datetime-local:</label
-            >
+            <label for="form-date-time-local-disabled">
+                disabled datetime-local:
+            </label>
             <input
                 type="datetime-local"
                 id="form-date-time-local-disabled"
                 value="2023-01-01T00:01"
                 disabled />
-
             <!-- Week -->
             <label for="form-week">week:</label>
             <input type="week" id="form-week" />
-
             <label for="form-week-disabled">disabled week:</label>
             <input type="week" id="form-week-disabled" disabled />
-
             <!-- Month -->
             <label for="form-month">month:</label>
             <input type="month" id="form-month" />
-
             <label for="form-month-disabled">disabled month:</label>
             <input type="month" id="form-month-disabled" disabled />
-
             <!--- Range -->
             <label for="form-range">range:</label>
             <input
@@ -916,7 +992,6 @@
                 <option value="75" label="75"></option>
                 <option value="100" label="100"></option>
             </datalist>
-
             <label for="form-range-disabled">disabled range:</label>
             <input
                 type="range"
@@ -926,7 +1001,6 @@
                 id="form-range-disabled"
                 list="range-markers"
                 disabled />
-
             <label for="form-range-no-datalist">no datalist range:</label>
             <input
                 type="range"
@@ -934,10 +1008,9 @@
                 max="100"
                 step="5"
                 id="form-range-no-datalist" />
-
-            <label for="form-range-disabled-no-datalist"
-                >no datalist + disabled range:</label
-            >
+            <label for="form-range-disabled-no-datalist">
+                no datalist + disabled range:
+            </label>
             <input
                 type="range"
                 min="0"
@@ -945,7 +1018,6 @@
                 step="5"
                 id="form-range-disabled-no-datalist"
                 disabled />
-
             <!--- Color -->
             <label for="form-color">color:</label>
             <input type="color" id="form-color" list="color-list" />
@@ -954,74 +1026,61 @@
                 <option value="#00ff00" label="#00ff00"></option>
                 <option value="#0000ff" label="#0000ff"></option>
             </datalist>
-
             <label for="form-color-disabled">disabled color:</label>
             <input
                 type="color"
                 id="form-color-disabled"
                 list="color-list"
                 disabled />
-
             <!--- Textarea -->
             <label for="form-textarea">textarea:</label>
             <textarea id="form-textarea"></textarea>
-
             <label for="form-textarea-disabled">disabled textarea:</label>
             <textarea id="form-textarea-disabled" disabled></textarea>
-
             <!-- File -->
             <label for="form-file">file:</label>
             <input type="file" id="form-file" accept=".jpg, .jpeg, .png" />
-
             <!-- Button -->
             <input type="button" value="input button" />
             <input type="button" value="disabled input button" disabled />
-
             <!-- Reset -->
             <input type="reset" value="form reset" />
             <input type="reset" value="disabled form reset" disabled />
-
             <!-- Submit -->
             <input type="submit" value="submit" />
             <input type="submit" value="disabled submit" disabled />
         </form>
-
         <!-- Fieldset -->
         <h3 id="fieldset-tag" class="roc-heading">fieldset tags</h3>
         <form action="#">
             <fieldset>
                 <legend>a legend, inside a fieldset, inside a form</legend>
                 <input type="checkbox" id="check-1" value="option 1" />
-                <label for="check-1"
-                    >label for checkbox-1 inside fieldset</label
-                >
-
+                <label for="check-1">
+                    label for checkbox-1 inside fieldset
+                </label>
                 <input type="checkbox" id="check-2" value="option 2" />
-                <label for="check-2"
-                    >label for checkbox-2 inside fieldset</label
-                >
+                <label for="check-2">
+                    label for checkbox-2 inside fieldset
+                </label>
             </fieldset>
         </form>
-
         <form action="#">
             <fieldset disabled>
                 <legend>a legend, inside a fieldset, inside a form</legend>
                 <input type="checkbox" id="check-1-disabled" value="option 1" />
-                <label for="check-1"
-                    >label for checkbox-1 inside a disabled fieldset</label
-                >
-
+                <label for="check-1">
+                    label for checkbox-1 inside a disabled fieldset
+                </label>
                 <input type="checkbox" id="check-2-disabled" value="option 2" />
-                <label for="check-2"
-                    >label for checkbox-2 inside a disabled fieldset</label
-                >
+                <label for="check-2">
+                    label for checkbox-2 inside a disabled fieldset
+                </label>
             </fieldset>
         </form>
-
         <!-- Inputs -->
         <h3 id="input-tags" class="roc-heading">input tags</h3>
         <p>not in a form</p>
-
         <!-- Select -->
         <label for="select-basic">select basic:</label>
         <select name="select-basic" id="select-basic">
@@ -1029,14 +1088,12 @@
             <option>option 2</option>
             <option>option 3</option>
         </select>
-
         <label for="select-basic-selected">select basic, 2 pre-selected:</label>
         <select name="select-basic-selected" id="select-basic-selected">
             <option>option 1</option>
             <option selected>option 2</option>
             <option>option 3</option>
         </select>
-
         <label for="select-optgroup">select w. option groups:</label>
         <select name="select-optgroup" id="select-optgroup">
             <optgroup label="optgroup a">
@@ -1055,7 +1112,6 @@
                 <option>option 3</option>
             </optgroup>
         </select>
-
         <label for="select-optgroup-multiple">
             select w. multiple option groups:
         </label>
@@ -1080,28 +1136,23 @@
                 <option>option 3</option>
             </optgroup>
         </select>
-
         <!-- Image -->
         <input
             type="image"
             id="image"
             alt="image input"
             src="media/images/roc-glass-button.png" />
-
         <input
             type="image"
             id="image-disabled"
             alt="disabled image input"
             src="media/images/roc-glass-button.png"
             disabled />
-
         <!-- Name -->
         <label for="text">text:</label>
         <input type="text" value="some text" id="text" />
-
         <label for="text-disabled">disabled text:</label>
         <input type="text" value="some text" id="text-disabled" disabled />
-
         <!-- Email -->
         <label for="mail">email:</label>
         <input
@@ -1116,7 +1167,6 @@
             <option value="d-example@example.com"></option>
             <option value="e-example@example.com"></option>
         </datalist>
-
         <label for="mail-disabled">disabled email:</label>
         <input
             type="email"
@@ -1124,7 +1174,6 @@
             id="mail-disabled"
             list="example-emails"
             disabled />
-
         <!-- URL -->
         <label for="url">url:</label>
         <input
@@ -1132,7 +1181,6 @@
             id="url"
             placeholder="https://example.com"
             pattern="https://.*" />
-
         <label for="url-disabled">url:</label>
         <input
             type="url"
@@ -1140,18 +1188,15 @@
             placeholder="https://disabled-example.com"
             pattern="https://.*"
             disabled />
-
         <!-- Search -->
         <label for="search">search:</label>
         <input type="search" id="search" placeholder="search..." />
-
         <label for="search">disabled search:</label>
         <input
             type="search"
             id="search-disabled"
             placeholder="disabled search..."
             disabled />
-
         <!-- Tel / Phone -->
         <label for="tel">phone number:</label>
         <input
@@ -1159,7 +1204,6 @@
             autocomplete="off"
             id="tel"
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
-
         <label for="tel-disabled">disabled phone number:</label>
         <input
             type="tel"
@@ -1167,44 +1211,33 @@
             id="tel-disabled"
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             disabled />
-
         <!-- Number -->
         <label for="number">number:</label>
         <input type="number" id="number" value="777" />
-
         <label for="number-disabled">number:</label>
         <input type="number" id="number-disabled" value="666" disabled />
-
         <!-- Checkbox -->
         <input type="checkbox" id="checkbox1" />
         <label for="checkbox1">checkbox1</label>
-
         <input type="checkbox" id="checkbox2" />
         <label for="checkbox2">checkbox2</label>
-
         <input type="checkbox" id="checkbox-disabled" disabled />
         <label for="checkbox-disabled">checkbox-disabled</label>
-
         <input type="checkbox" id="checkbox-checked" checked />
         <label for="checkbox-checked">checkbox-checked</label>
-
         <input
             type="checkbox"
             id="checkbox-checked-disabled"
             checked
             disabled />
         <label for="checkbox-checked-disabled">checkbox-checked-disabled</label>
-
         <!-- Radio -->
         <input type="radio" name="radiobuttons" id="radio1" />
         <label for="radio1">radio1</label>
-
         <input type="radio" name="radiobuttons" id="radio2" />
         <label for="radio2">radio2</label>
-
         <input type="radio" name="radiobuttons" id="radio-checked" checked />
         <label for="radio-checked">radio-checked</label>
-
         <input
             type="radio"
             name="radiobuttons-2"
@@ -1212,7 +1245,6 @@
             checked
             disabled />
         <label for="radio-checked-disabled">radio-disabled</label>
-
         <input
             type="radio"
             name="radiobuttons-2"
@@ -1220,7 +1252,6 @@
             checked
             disabled />
         <label for="radio-checked-disabled">radio-checked-disabled</label>
-
         <!-- Time -->
         <label for="time">time:</label>
         <input type="time" id="time" list="example-times" />
@@ -1229,45 +1260,35 @@
             <option value="13:00"></option>
             <option value="17:00"></option>
         </datalist>
-
         <label for="time-disabled">disabled time:</label>
         <input type="time" id="time-disabled" disabled />
-
         <!--- Date -->
         <label for="date">date:</label>
         <input type="date" id="date" value="2023-01-01" />
-
         <label for="date-disabled">disabled date:</label>
         <input type="date" id="date-disabled" value="2023-01-01" disabled />
-
         <!-- Datetime Local-->
         <label for="date-time-local">datetime-local:</label>
         <input
             type="datetime-local"
             id="date-time-local"
             value="2023-01-01T00:01" />
-
         <label for="date-time-local-disabled">disabled datetime-local:</label>
         <input
             type="datetime-local"
             id="date-time-local-disabled"
             value="2023-01-01T00:01"
             disabled />
-
         <!-- Week -->
         <label for="week">week:</label>
         <input type="week" id="week" />
-
         <label for="week-disabled">disabled week:</label>
         <input type="week" id="week-disabled" disabled />
-
         <!-- Month -->
         <label for="month">month:</label>
         <input type="month" id="month" />
-
         <label for="month-disabled">disabled month:</label>
         <input type="month" id="month-disabled" disabled />
-
         <!--- Range -->
         <label for="range">range:</label>
         <input
@@ -1284,7 +1305,6 @@
             <option value="75" label="75"></option>
             <option value="100" label="100"></option>
         </datalist>
-
         <label for="range-disabled">disabled range:</label>
         <input
             type="range"
@@ -1294,13 +1314,11 @@
             id="range-disabled"
             list="range-markers"
             disabled />
-
         <label for="range-no-datalist">no datalist range:</label>
         <input type="range" min="0" max="100" step="5" id="range-no-datalist" />
-
-        <label for="range-disabled-no-datalist"
-            >no datalist + disabled range:</label
-        >
+        <label for="range-disabled-no-datalist">
+            no datalist + disabled range:
+        </label>
         <input
             type="range"
             min="0"
@@ -1308,7 +1326,6 @@
             step="5"
             id="range-disabled-no-datalist"
             disabled />
-
         <!--- Color -->
         <label for="color">color:</label>
         <input type="color" id="color" list="color-list" />
@@ -1317,38 +1334,28 @@
             <option value="#00ff00" label="#00ff00"></option>
             <option value="#0000ff" label="#0000ff"></option>
         </datalist>
-
         <label for="color-disabled">disabled color:</label>
         <input type="color" id="color-disabled" list="color-list" disabled />
-
         <!--- Textarea -->
         <label for="textarea">textarea:</label>
         <textarea id="textarea"></textarea>
-
         <label for="textarea-disabled">disabled textarea:</label>
         <textarea id="textarea-disabled" disabled></textarea>
-
         <!-- File -->
         <label for="file">file:</label>
         <input type="file" id="file" accept=".jpg, .jpeg, .png" />
-
         <!-- Button -->
         <input type="button" value="input button" />
         <input type="button" value="disabled input button" disabled />
-
         <!-- Reset -->
         <input type="reset" value="form reset" />
         <input type="reset" value="disabled form reset" disabled />
-
         <!-- Submit -->
         <input type="submit" value="submit" />
         <input type="submit" value="disabled submit" disabled />
-
         <hr />
-
         <!-- buttons -->
         <h3 id="button-tags" class="roc-heading">button tags</h3>
-
         <button>button</button>
         <button type="button">button type=button</button>
         <button type="submit">button type=submit</button>
@@ -1361,7 +1368,6 @@
             </svg>
             SVG Icon Button
         </button>
-
         <h4 class="roc-heading">button tags in a form</h4>
         <form action="">
             <button>button</button>
@@ -1377,151 +1383,21 @@
                 SVG Icon Button
             </button>
         </form>
-        <!-- Miscellaneous elements -->
-        <h2 id="miscellaneous-tags" class="roc-heading">misc. elements</h2>
-
-        <!-- Dialog -->
-        <h3 id="dialog-tags" class="roc-heading">dialog tags</h3>
-        <button onclick="window.dialog.show();">open dialog</button>
-
-        <dialog id="dialog">
-            <p>
-                I'm a dialog opened using JS onlick="window.dialog.show();"
-                inside an html button.
-            </p>
-            <p>
-                I can be closed with JS using onlick="window.dialog.close()"
-                inside an html button.
-            </p>
-            <p>
-                ...or I can be closed using form method ="dialog", with a button
-                inside.
-            </p>
-            <p><code>id="dialog"</code></p>
-            <button onclick="window.dialog.close();">close with JS</button>
-            <form method="dialog">
-                <button>close with html</button>
-            </form>
-        </dialog>
-
-        <!-- Details -->
-        <h3 id="detail-tags" class="roc-heading">details tags</h3>
-        <details>
-            <summary>A <strong>summary tag</strong> inside of a...</summary>
-            <p>...details tag.</p>
-        </details>
-
-        <details open>
-            <summary>A summary tag inside of a...</summary>
-            <p>...details tag whose <strong>default is open</strong> .</p>
-        </details>
-
-        <!-- Progress -->
-        <h3 id="progress-tags" class="roc-heading">progress tags</h3>
-
-        <label for="progress">progress without value:</label>
-        <progress id="progress">loading</progress>
-
-        <label for="progress-empty">progress value 0:</label>
-        <progress id="progress-empty" value="0">0</progress>
-
-        <label for="progress-partial">progress value 69:</label>
-        <progress id="progress-partial" value="69" max="100">69%</progress>
-
-        <label for="progress-full">progress value 100:</label>
-        <progress id="progress-full" value="100" max="100">100%</progress>
-
-        <!-- Meter -->
-        <h3 id="meter-tags" class="roc-heading">meter tags</h3>
-
-        <label for="meter-empty">meter empty:</label>
-        <meter
-            min="0"
-            max="100"
-            low="33"
-            high="66"
-            optimum="70"
-            value="0"
-            id="meter-empty">
-            at 0/100
-        </meter>
-
-        <label for="meter-below-low">meter below low:</label>
-        <meter
-            min="0"
-            max="100"
-            low="60"
-            high="80"
-            optimum="90"
-            value="50"
-            id="meter-below-low">
-            at 50/100
-        </meter>
-
-        <label for="meter-low">meter low:</label>
-        <meter
-            min="0"
-            max="100"
-            low="60"
-            high="80"
-            optimum="90"
-            value="60"
-            id="meter-low">
-            at 60/100
-        </meter>
-
-        <label for="meter-high">meter high:</label>
-        <meter
-            min="0"
-            max="100"
-            low="60"
-            high="80"
-            optimum="90"
-            value="80"
-            id="meter-high">
-            at 80/100
-        </meter>
-
-        <label for="meter-optimum">meter optimum:</label>
-        <meter
-            min="0"
-            max="100"
-            low="60"
-            high="80"
-            optimum="90"
-            value="90"
-            id="meter-optimum">
-            at 90/100
-        </meter>
-
-        <label for="meter-full">meter full:</label>
-        <meter
-            min="0"
-            max="100"
-            low="33"
-            high="66"
-            optimum="70"
-            value="100"
-            id="meter-full">
-            at 100/100
-        </meter>
 
         <hr />
 
         <!-- Structural Elements -->
         <h2 id="layout-tags" class="roc-heading">layout elements</h2>
-
         <!-- Nav -->
         <h3 id="nav-tags" class="roc-heading">nav tags</h3>
         <nav>
             <a href="#layout-tags">internal in a nav</a>
             <a
                 href="https://github.com/sangmort/css-framework-sandbox"
-                target="_blank"
-                >external link in a nav</a
-            >
+                target="_blank">
+                external link in a nav
+            </a>
         </nav>
-
         <nav>
             <p>
                 Paragraph text in a nav, these links are in the same paragraph:
@@ -1533,7 +1409,6 @@
                 </a>
             </p>
         </nav>
-
         <!-- Header -->
         <h3 id="header-tags" class="roc-heading">header tags</h3>
         <header>
@@ -1541,7 +1416,6 @@
             <a href="#layout-tags">internal link in a header</a>
             <p>paragraph in a header</p>
         </header>
-
         <!-- Main -->
         <h3 id="main-tags" class="roc-heading">main tags</h3>
         <main>
@@ -1553,7 +1427,6 @@
                 <p>paragraph text in article, in main</p>
             </article>
         </main>
-
         <!-- Section -->
         <h3 id="section-tags" class="roc-heading">section tags</h3>
         <section>
@@ -1561,7 +1434,6 @@
             <a href="#layout-tags">internal link in a section</a>
             <p>paragraph in a section</p>
         </section>
-
         <!-- article -->
         <h3 id="article-tags" class="roc-heading">article tags</h3>
         <article>
@@ -1572,12 +1444,10 @@
             </aside>
             <p>more paragraph text in the article, not in aside</p>
         </article>
-
         <article>
             <h4>h4, no-section article</h4>
             <p>paragraph text in article a</p>
         </article>
-
         <article>
             <h4>h4, two-section article</h4>
             <section>
@@ -1592,18 +1462,17 @@
                 <p>paragraph in article section2</p>
             </section>
         </article>
-
         <!-- Aside -->
         <h3 id="aside-tags" class="roc-heading">aside tags</h3>
-        <aside><p>Some paragraph text in an aside</p></aside>
-
+        <aside>
+            <p>Some paragraph text in an aside</p>
+        </aside>
         <article>
             <h3>h3 heading in article</h3>
             <aside>
                 <p>an aside with paragraph text, in an article</p>
             </aside>
         </article>
-
         <!-- Footer -->
         <h3 id="footer-tags" class="roc-heading">footer tags</h3>
         <footer>
@@ -1611,7 +1480,6 @@
             <a href="#layout-tags">internal link in a footer</a>
             <p>paragraph in footer</p>
         </footer>
-
         <!-- Div -->
         <h3 id="div-tags" class="roc-heading">div tags</h3>
         <div>
@@ -1619,12 +1487,9 @@
             <a href="#layout-tags">internal link in div</a>
             <p>paragraph in div</p>
         </div>
-
         <hr />
-
         <!-- Media -->
         <h2 id="media-tags" class="roc-heading">media tags</h2>
-
         <!-- Image -->
         <h3 id="image-tags" class="roc-heading">img tags</h3>
         <img src="/media/images/thumbnail-vertical-1.jpg" />
@@ -1633,21 +1498,19 @@
         <img src="/media/images/thumbnail-vertical-4.jpg" />
         <img src="/media/images/thumbnail-vertical-5.jpg" />
         <img src="/media/images/thumbnail-vertical-6.jpg" />
-
         <img src="media/images/720p-horizontal-4.jpg" alt="" />
-
         <!-- Audio -->
         <h3 id="audio-tags" class="roc-heading">audio tags</h3>
         <audio controls src="/media/audio/audio-1.mp3"></audio>
-
         <!-- Video -->
         <h3 id="video-tags" class="roc-heading">video tags</h3>
         <video controls>
             <source src="/media/videos/video-1.webm" type="video/webm" />
             <source src="/media/videos/video-1.mp4" type="video/mp4" />
-            Download the <a href="/media/videos/video-1.mp4">MP4 video here</a>.
+            Download the
+            <a href="/media/videos/video-1.mp4">MP4 video here</a>
+            .
         </video>
-
         <!-- Figure -->
         <h3 id="figure-tags" class="roc-heading">figure tags</h3>
         <figure>
@@ -1655,21 +1518,17 @@
                 src="media/images/thumbnail-horizontal-1.jpg"
                 alt="a figure tag with an image" />
         </figure>
-
         <figure>
             <img
                 src="media/images/thumbnail-horizontal-2.jpg"
                 alt="a figure tag with an image & a figcaption below" />
             <figcaption>A figcaption under the image, in a figure.</figcaption>
         </figure>
-
         <!-- SVG -->
         <h3 id="svg-tags" class="roc-heading">svg tags</h3>
-
         <svg viewBox="0 0 10 10" x="200" width="100">
             <circle cx="5" cy="5" r="4" fill="#333" />
         </svg>
-
         <!-- Canvas -->
         <h3 id="canvas-tags" class="roc-heading">canvas tags</h3>
         <canvas></canvas>
@@ -1688,7 +1547,6 @@
             }
             onload = draw();
         </script>
-
         <!-- Map -->
         <h3 id="map-tags" class="roc-heading">map tags</h3>
         <map name="image-map">
@@ -1715,18 +1573,13 @@
                 shape="rect" />
         </map>
         <img usemap="#image-map" src="media/images/html-map-1.jpg" />
-
         <!-- Embed -->
         <h3 id="embed-tags" class="roc-heading">embed tags</h3>
-
         <h4 id="embed-html-tags" class="roc-heading">embed html tags</h4>
         <embed src="the-roc.html" type="text/html" />
-
         <h4 id="embed-image-tags" class="roc-heading">embed img tags</h4>
         <embed src="media/images/thumbnail-horizontal-6.jpg" type="image/jpg" />
-
         <!-- No Script -->
-
         <h3 id="noscript-tags" class="roc-heading">noscript tags</h3>
         <noscript>
             <!-- anchor linking to external file -->
@@ -1735,5 +1588,127 @@
         <p>
             noscript tag, disable javascript to see it appear above this text.
         </p>
+        <hr />
+
+        <!-- Miscellaneous elements -->
+        <h2 id="miscellaneous-tags" class="roc-heading">misc. elements</h2>
+        <!-- Dialog -->
+        <h3 id="dialog-tags" class="roc-heading">dialog tags</h3>
+        <button onclick="window.dialog.show();">open dialog</button>
+        <dialog id="dialog">
+            <p>
+                I'm a dialog opened using JS onlick="window.dialog.show();"
+                inside an html button.
+            </p>
+            <p>
+                I can be closed with JS using onlick="window.dialog.close()"
+                inside an html button.
+            </p>
+            <p>
+                ...or I can be closed using form method ="dialog", with a button
+                inside.
+            </p>
+            <p><code>id="dialog"</code></p>
+            <button onclick="window.dialog.close();">close with JS</button>
+            <form method="dialog">
+                <button>close with html</button>
+            </form>
+        </dialog>
+        <!-- Details -->
+        <h3 id="detail-tags" class="roc-heading">details tags</h3>
+        <details>
+            <summary>
+                A
+                <strong>summary tag</strong>
+                inside of a...
+            </summary>
+            <p>...details tag.</p>
+        </details>
+        <details open>
+            <summary>A summary tag inside of a...</summary>
+            <p>
+                ...details tag whose
+                <strong>default is open</strong>
+                .
+            </p>
+        </details>
+        <!-- Progress -->
+        <h3 id="progress-tags" class="roc-heading">progress tags</h3>
+        <label for="progress">progress without value:</label>
+        <progress id="progress">loading</progress>
+        <label for="progress-empty">progress value 0:</label>
+        <progress id="progress-empty" value="0">0</progress>
+        <label for="progress-partial">progress value 69:</label>
+        <progress id="progress-partial" value="69" max="100">69%</progress>
+        <label for="progress-full">progress value 100:</label>
+        <progress id="progress-full" value="100" max="100">100%</progress>
+        <!-- Meter -->
+        <h3 id="meter-tags" class="roc-heading">meter tags</h3>
+        <label for="meter-empty">meter empty:</label>
+        <meter
+            min="0"
+            max="100"
+            low="33"
+            high="66"
+            optimum="70"
+            value="0"
+            id="meter-empty">
+            at 0/100
+        </meter>
+        <label for="meter-below-low">meter below low:</label>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="50"
+            id="meter-below-low">
+            at 50/100
+        </meter>
+        <label for="meter-low">meter low:</label>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="60"
+            id="meter-low">
+            at 60/100
+        </meter>
+        <label for="meter-high">meter high:</label>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="80"
+            id="meter-high">
+            at 80/100
+        </meter>
+        <label for="meter-optimum">meter optimum:</label>
+        <meter
+            min="0"
+            max="100"
+            low="60"
+            high="80"
+            optimum="90"
+            value="90"
+            id="meter-optimum">
+            at 90/100
+        </meter>
+        <label for="meter-full">meter full:</label>
+        <meter
+            min="0"
+            max="100"
+            low="33"
+            high="66"
+            optimum="70"
+            value="100"
+            id="meter-full">
+            at 100/100
+        </meter>
     </body>
 </html>
