@@ -40,4 +40,14 @@ li:hover > ul.nested-sub-menu {
     flex-direction: column;
 }
 
+/* list item  */
+li {
+    position: relative;
+}
 
+/* sets nest-sub-menu to the right of sub-menu */
+ul.nested-sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* display to the right */
+}
