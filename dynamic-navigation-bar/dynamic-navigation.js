@@ -84,19 +84,18 @@ class DynamicNavigation extends HTMLElement {
         return navLink;
     }
 
-// Add the <li> containing link to the current <ul>
-createSubmenuList(currentHeadingList) {
-    const submenuList = document.createElement("ul");
-    if (currentHeadingList.classList.contains("navbar")) {
-        submenuList.classList.add("sub-menu");
-    } else {
-        submenuList.classList.add("nested-sub-menu");
+    // Add the <li> containing link to the current <ul>
+    createSubmenuList(currentHeadingList) {
+        const submenuList = document.createElement("ul");
+        if (currentHeadingList.classList.contains("navbar")) {
+            submenuList.classList.add("sub-menu");
+        } else {
+            submenuList.classList.add("nested-sub-menu");
+        }
+        currentHeadingList.lastElementChild.appendChild(submenuList);
+
+        return submenuList;
     }
-    currentHeadingList.lastElementChild.appendChild(submenuList);
-
-    return submenuList;
-}
-
 
     // Navigate to the parent list based on the heading level difference
     navigateToParentList(currentHeadingList, headingLevelDifference) {
