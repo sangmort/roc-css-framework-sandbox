@@ -18,6 +18,7 @@ nav {
     justify-content: center;
     position: sticky;
     top: 0.5rem;
+    font-family: fira code, sans-serif;
 }
 
 ul {
@@ -91,7 +92,7 @@ a.nav-link {
 /*  link - navbar */
 ul.navbar > li.nav-item > a.nav-link {
     color: #fcfcfc;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 2.5;
 }
 
