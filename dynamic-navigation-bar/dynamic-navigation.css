@@ -1,3 +1,12 @@
+:host {
+    --color-dk: hsl(0, 0%, 10%);
+    --color-md: hsl(0, 0%, 20%);
+    --color-lt: hsl(0, 0%, 90%);
+    --color-primary: hsl(37, 100%, 50%);
+    --color-secondary: hsl(324, 100%, 50%);
+    --width: 6rem;
+}
+
 ul,
 li,
 body,
@@ -22,13 +31,35 @@ nav {
 }
 
 ul {
-    background-color: #000;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dk),
+        var(--color-md)
+    );
+}
+
+ul.sub-menu {
+    border-radius: 0 0 1rem 1rem;
+}
+
+ul.sub-menu:hover {
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--color-primary);
+}
+
+ul.navbar > li:hover {
+    border-radius: 1rem 1rem 0 0;
+}
+
+ul.navbar > li:hover {
+    border-radius: 1rem 1rem 0 0;
 }
 
 /* Nav Unorder List */
 ul.navbar {
     display: flex;
     flex-direction: row;
+    border-radius: 1rem;
 }
 
 /* hide sub menus */
@@ -37,14 +68,17 @@ ul.nested-sub-menu {
     display: none;
     position: absolute;
     top: 100%;
-    border: 1px solid orange;
-    box-sizing: border-box;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dk),
+        var(--color-md)
+    );
 }
 
-/* sets nest-sub-menu to the right of sub-menu */
+/* sets nested-sub-menu to the right of sub-menu */
 ul.nested-sub-menu {
     position: absolute;
-    top: -1px;
+    top: 0px;
     left: 100%;
 }
 
@@ -59,47 +93,61 @@ li:hover > ul.nested-sub-menu {
 /* nav-item container - all */
 li.nav-item {
     display: flex;
-    justify-content: space-evenly;
-    width: 7rem;
+    justify-content: space-around;
+    width: var(--width);
     position: relative;
 }
 
 /* nav-item container - all */
 /* hover */
 li.nav-item:hover {
-    width: 7rem;
-    background-color: blueviolet;
+    width: var(--width);
+    background-color: var(--color-primary);
 }
 
 li.nav-item:hover > ul {
-    background-color: blueviolet;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dk),
+        var(--color-md)
+    );
 }
 
 /* nav-item container - sub-menu & nested-sub-menu */
 ul.sub-menu > li.nav-item,
 ul.nested-sub-menu > li.nav-item {
-    border: 1px solid orange;
     box-sizing: content-box;
 }
 
 /*  link - general */
 a.nav-link {
-    color: #35ff02;
+    color: var(--color-secondary);
     text-transform: uppercase;
     box-sizing: border-box;
 }
 
+a.nav-link:hover {
+    color: var(--color-dk);
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+ul a.nav-link:hover {
+    color: var(--color-dk);
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
 /*  link - navbar */
 ul.navbar > li.nav-item > a.nav-link {
-    color: #fcfcfc;
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 2.5;
 }
 
 /*  link - sub-menu & nested-sub-menu */
 ul.sub-menu > li.nav-item > a.nav-link,
 ul.nested-sub-menu > li.nav-item > a.nav-link {
-    color: rgb(255, 0, 43);
-    font-size: 1rem;
+    font-size: 0.75rem;
     line-height: 2.5;
 }
