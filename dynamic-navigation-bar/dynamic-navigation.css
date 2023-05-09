@@ -1,10 +1,12 @@
 :host {
-    --color-dk: hsl(0, 0%, 10%);
-    --color-md: hsl(0, 0%, 20%);
+    --color-dk: hsl(330, 14%, 8%);
+    --color-md: hsl(327, 11%, 16%);
     --color-lt: hsl(0, 0%, 90%);
     --color-primary: hsl(37, 100%, 50%);
     --color-secondary: hsl(324, 100%, 50%);
-    --width: 6rem;
+    --color-secondary-dk: hsla(324, 100%, 30%);
+    --width: 5.75rem;
+    --border-radius: 0.5rem;
 }
 
 ul,
@@ -39,27 +41,22 @@ ul {
 }
 
 ul.sub-menu {
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 ul.sub-menu:hover {
-    border-radius: 0 0 1rem 1rem;
-    background-color: var(--color-primary);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 ul.navbar > li:hover {
-    border-radius: 1rem 1rem 0 0;
-}
-
-ul.navbar > li:hover {
-    border-radius: 1rem 1rem 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 /* Nav Unorder List */
 ul.navbar {
     display: flex;
     flex-direction: row;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
 }
 
 /* hide sub menus */
@@ -68,11 +65,6 @@ ul.nested-sub-menu {
     display: none;
     position: absolute;
     top: 100%;
-    background-image: linear-gradient(
-        to bottom,
-        var(--color-dk),
-        var(--color-md)
-    );
 }
 
 /* sets nested-sub-menu to the right of sub-menu */
@@ -80,6 +72,7 @@ ul.nested-sub-menu {
     position: absolute;
     top: 0px;
     left: 100%;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
 /* display sub menus on hover */
@@ -102,10 +95,15 @@ li.nav-item {
 /* hover */
 li.nav-item:hover {
     width: var(--width);
-    background-color: var(--color-primary);
+    background-image: linear-gradient(
+        to bottom right,
+        var(--color-primary),
+        var(--color-secondary)
+    );
 }
 
-li.nav-item:hover > ul {
+ul.sub-menu > li.nav-item:hover {
+    width: var(--width);
     background-image: linear-gradient(
         to bottom,
         var(--color-dk),
@@ -113,15 +111,56 @@ li.nav-item:hover > ul {
     );
 }
 
+ul.nested-sub-menu > li.nav-item:hover {
+    width: var(--width);
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dk),
+        var(--color-md)
+    );
+    opacity: 0.2;
+}
+
+ul.nested-sub-menu > li.nav-item:hover {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    background-color: var(--color-md);
+}
+
+li.nav-item:hover > ul {
+    background-image: linear-gradient(
+        to top right,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+    box-shadow: var(--color-dk) 0px 20px 30px -10px;
+    z-index: 0;
+}
+
+li.nav-item:hover > ul.nested-sub-menu {
+    background-image: linear-gradient(
+        to right,
+        var(--color-secondary-dk) 5%,
+        var(--color-secondary),
+        var(--color-primary)
+    );
+    box-shadow: var(--color-dk) 0px 20px 30px -10px;
+    z-index: 0;
+}
+
 /* nav-item container - sub-menu & nested-sub-menu */
-ul.sub-menu > li.nav-item,
+ul.sub-menu > li.nav-item {
+    box-sizing: content-box;
+    padding: 0.5rem 0;
+}
+
 ul.nested-sub-menu > li.nav-item {
     box-sizing: content-box;
+    padding: 0.5rem 0.5rem;
 }
 
 /*  link - general */
 a.nav-link {
-    color: var(--color-secondary);
+    color: var(--color-lt);
     text-transform: uppercase;
     box-sizing: border-box;
 }
@@ -133,21 +172,21 @@ a.nav-link:hover {
 }
 
 ul a.nav-link:hover {
-    color: var(--color-dk);
+    color: var(--color-lt);
     text-transform: uppercase;
     box-sizing: border-box;
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
 }
 
 /*  link - navbar */
 ul.navbar > li.nav-item > a.nav-link {
     font-size: 1rem;
-    line-height: 2.5;
+    line-height: 2.25;
 }
 
 /*  link - sub-menu & nested-sub-menu */
 ul.sub-menu > li.nav-item > a.nav-link,
 ul.nested-sub-menu > li.nav-item > a.nav-link {
     font-size: 0.75rem;
-    line-height: 2.5;
+    line-height: 1.5;
 }
