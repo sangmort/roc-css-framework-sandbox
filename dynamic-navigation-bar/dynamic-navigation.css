@@ -5,22 +5,19 @@
     --color-primary: hsl(37, 100%, 50%);
     --color-secondary: hsl(324, 100%, 50%);
     --color-secondary-dk: hsla(324, 100%, 30%);
-    --width: 5.75rem;
-    --border-radius: 0.5rem;
+    --width: 6.5rem;
+    --border-radius: 0.25rem;
 }
 
 ul,
 li,
-body,
 a,
-p,
-* {
+p {
     border: 0;
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 /* Contains the UL navbar */
@@ -29,9 +26,10 @@ nav {
     justify-content: center;
     position: sticky;
     top: 0.5rem;
-    font-family: fira code, sans-serif;
+    font-family: "fira code", sans-serif;
 }
 
+/* Top-level navigation container */
 ul.navbar {
     display: flex;
     flex-direction: row;
@@ -43,6 +41,7 @@ ul.navbar {
     );
 }
 
+/* hover rounds corners for top-level nav */
 ul.navbar > li:hover {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
@@ -55,20 +54,26 @@ ul.nested-sub-menu {
     top: 100%;
 }
 
-/* sets nested-sub-menu to the right of sub-menu */
-ul.nested-sub-menu {
-    position: absolute;
-    top: 0%;
-    left: 100%;
-    width: calc(var(--width) + 4rem);
-}
-
-/* display sub menus on hover */
+/* hover displays sub menus */
 li:hover > ul.sub-menu,
 li:hover > ul.nested-sub-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+/* set nested-sub-menu to the right */
+ul.nested-sub-menu {
+    position: absolute;
+    top: 0%;
+    left: 95%;
+    padding: 0 1rem;
+    z-index: -1;
+}
+
+ul.nested-sub-menu > li.nav-item {
+    width: calc(var(--width) + 2rem);
 }
 
 /* nav-item container - all */
@@ -79,29 +84,20 @@ li.nav-item {
     position: relative;
 }
 
-/* hover dark background gradient - sub-menu  */
-ul.sub-menu > li.nav-item:hover {
-    background-image: linear-gradient(
-        to bottom,
-        var(--color-dk),
-        var(--color-md)
-    );
+/*  link - general */
+a.nav-link {
+    color: var(--color-lt);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0.5rem 0rem;
 }
 
-/* hover dark background gradient - nested-sub-Menu  */
-ul.nested-sub-menu > li.nav-item:hover {
-    background-image: linear-gradient(
-        to bottom,
-        var(--color-dk),
-        var(--color-md)
-    );
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    background-color: var(--color-md);
+a.nav-link:hover {
+    color: var(--color-lt);
 }
 
-/* background gradient - top level */
+/* hover bg gradient - nav */
 li.nav-item:hover {
-    width: var(--width);
     background-image: linear-gradient(
         to bottom right,
         var(--color-primary),
@@ -109,7 +105,7 @@ li.nav-item:hover {
     );
 }
 
-/* background gradient - sub-menus */
+/* hover bg gradient - sub-menu */
 li.nav-item:hover > ul {
     background-image: linear-gradient(
         to top right,
@@ -120,43 +116,32 @@ li.nav-item:hover > ul {
     border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
-/* li.nav-item:hover > ul.nested-sub-menu {
+/* hover bg gradient - nested-sub-menu */
+li.nav-item:hover > ul.nested-sub-menu {
     background-image: linear-gradient(
         to right,
         var(--color-secondary-dk) 5%,
         var(--color-secondary),
         var(--color-primary)
     );
-    box-shadow: var(--color-dk) 0px 20px 30px -10px;
-} */
-
-/* nav-item container - sub-menu & nested-sub-menu */
-ul.sub-menu > li.nav-item,
-ul.nested-sub-menu > li.nav-item {
-    box-sizing: content-box;
-    padding: 0.5rem 0;
+    border-radius: var(--border-radius);
 }
 
-/*  link - general */
-a.nav-link {
-    color: var(--color-lt);
-    text-transform: uppercase;
-    box-sizing: border-box;
+/* hover dark bg gradient - sub-menu  */
+ul.sub-menu > li.nav-item:hover {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dk),
+        var(--color-md)
+    );
 }
 
-a.nav-link:hover {
-    color: var(--color-lt);
-}
-
-/*  link - navbar */
-ul.navbar > li.nav-item > a.nav-link {
-    font-size: 1rem;
-    line-height: 2;
-}
-
-/*  link - sub-menu & nested-sub-menu */
-ul.sub-menu > li.nav-item > a.nav-link,
-ul.nested-sub-menu > li.nav-item > a.nav-link {
-    font-size: 1rem;
-    line-height: 1.25;
+/* hover dark bg gradient - nested-sub-Menu  */
+ul.nested-sub-menu > li.nav-item:hover {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dk),
+        var(--color-md)
+    );
+    border-radius: inherit;
 }
