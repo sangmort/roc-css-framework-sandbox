@@ -30,10 +30,12 @@ nav {
     position: sticky;
     top: 0.5rem;
     font-family: fira code, sans-serif;
-    z-index: 1;
 }
 
-ul {
+ul.navbar {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.75rem;
     background-image: linear-gradient(
         to bottom,
         var(--color-dk),
@@ -41,28 +43,11 @@ ul {
     );
 }
 
-ul.sub-menu {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    z-index: 3;
-}
-
-ul.sub-menu:hover {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-}
-
 ul.navbar > li:hover {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-/* Nav Unorder List */
-ul.navbar {
-    display: flex;
-    flex-direction: row;
-    border-radius: 0.75rem;
-    z-index: 2;
-}
-
-/* hide sub menus */
+/* hide both sub menus */
 ul.sub-menu,
 ul.nested-sub-menu {
     display: none;
@@ -73,10 +58,9 @@ ul.nested-sub-menu {
 /* sets nested-sub-menu to the right of sub-menu */
 ul.nested-sub-menu {
     position: absolute;
-    top: 0px;
-    left: 80%;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    z-index: 2;
+    top: 0%;
+    left: 100%;
+    width: calc(var(--width) + 4rem);
 }
 
 /* display sub menus on hover */
@@ -95,11 +79,8 @@ li.nav-item {
     position: relative;
 }
 
-
-
-/* hover */
+/* hover dark background gradient - sub-menu  */
 ul.sub-menu > li.nav-item:hover {
-    width: var(--width);
     background-image: linear-gradient(
         to bottom,
         var(--color-dk),
@@ -107,9 +88,8 @@ ul.sub-menu > li.nav-item:hover {
     );
 }
 
-/* hover */
+/* hover dark background gradient - nested-sub-Menu  */
 ul.nested-sub-menu > li.nav-item:hover {
-    width: var(--width);
     background-image: linear-gradient(
         to bottom,
         var(--color-dk),
@@ -119,18 +99,7 @@ ul.nested-sub-menu > li.nav-item:hover {
     background-color: var(--color-md);
 }
 
-
-li.nav-item:hover > ul {
-    background-image: linear-gradient(
-        to top right,
-        var(--color-primary),
-        var(--color-secondary)
-    );
-    box-shadow: var(--color-dk) 0px 20px 30px -10px;
-    z-index: 0;
-}
-
-/* hover */
+/* background gradient - top level */
 li.nav-item:hover {
     width: var(--width);
     background-image: linear-gradient(
@@ -140,7 +109,18 @@ li.nav-item:hover {
     );
 }
 
-li.nav-item:hover > ul.nested-sub-menu {
+/* background gradient - sub-menus */
+li.nav-item:hover > ul {
+    background-image: linear-gradient(
+        to top right,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+    box-shadow: var(--color-dk) 0px 20px 30px -10px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* li.nav-item:hover > ul.nested-sub-menu {
     background-image: linear-gradient(
         to right,
         var(--color-secondary-dk) 5%,
@@ -148,18 +128,13 @@ li.nav-item:hover > ul.nested-sub-menu {
         var(--color-primary)
     );
     box-shadow: var(--color-dk) 0px 20px 30px -10px;
-    z-index: 0;
-}
+} */
 
 /* nav-item container - sub-menu & nested-sub-menu */
-ul.sub-menu > li.nav-item {
-    box-sizing: content-box;
-    padding: 0.5rem 0;
-}
-
+ul.sub-menu > li.nav-item,
 ul.nested-sub-menu > li.nav-item {
     box-sizing: content-box;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0;
 }
 
 /*  link - general */
@@ -170,27 +145,18 @@ a.nav-link {
 }
 
 a.nav-link:hover {
-    color: var(--color-dk);
-    text-transform: uppercase;
-    box-sizing: border-box;
-}
-
-ul a.nav-link:hover {
     color: var(--color-lt);
-    text-transform: uppercase;
-    box-sizing: border-box;
-    border-radius: var(--border-radius);
 }
 
 /*  link - navbar */
 ul.navbar > li.nav-item > a.nav-link {
     font-size: 1rem;
-    line-height: 2.25;
+    line-height: 2;
 }
 
 /*  link - sub-menu & nested-sub-menu */
 ul.sub-menu > li.nav-item > a.nav-link,
 ul.nested-sub-menu > li.nav-item > a.nav-link {
-    font-size: 0.75rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.25;
 }
