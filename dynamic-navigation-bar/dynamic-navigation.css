@@ -1,7 +1,7 @@
 :host {
     --color-dk: hsl(330, 14%, 8%);
-    --color-md: hsl(327, 11%, 16%);
-    --color-lt: hsl(0, 0%, 90%);
+    --color-md: hsl(323, 10%, 25%);
+    --color-lt: hsl(58, 100%, 98%);
     --color-primary: hsl(37, 100%, 50%);
     --color-secondary: hsl(324, 100%, 50%);
     --color-secondary-dk: hsla(324, 100%, 30%);
@@ -41,6 +41,14 @@ ul.navbar {
     );
 }
 
+/* nav-item container - all */
+li.nav-item {
+    display: flex;
+    justify-content: space-around;
+    width: var(--width);
+    position: relative;
+}
+
 /* hover rounds corners for top-level nav */
 ul.navbar > li:hover {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -68,20 +76,12 @@ ul.nested-sub-menu {
     position: absolute;
     top: 0%;
     left: 95%;
-    padding: 0 1rem;
     z-index: -1;
 }
 
+/* ensures nested-sub-menu is wide enoughs */
 ul.nested-sub-menu > li.nav-item {
     width: calc(var(--width) + 2rem);
-}
-
-/* nav-item container - all */
-li.nav-item {
-    display: flex;
-    justify-content: space-around;
-    width: var(--width);
-    position: relative;
 }
 
 /*  link - general */
@@ -130,16 +130,31 @@ li.nav-item:hover > ul.nested-sub-menu {
 /* hover dark bg gradient - sub-menu  */
 ul.sub-menu > li.nav-item:hover {
     background-image: linear-gradient(
-        to bottom,
+        to left,
         var(--color-dk),
         var(--color-md)
     );
+
 }
+
+/* hover dark bg gradient - sub-menu last item round bottom corners  */
+ul.sub-menu > li.nav-item:hover:last-of-type {
+    border-radius: inherit;
+}
+
+/* hover dark bg gradient - sub-menu last item round bottom corners  */
+ul.sub-menu > li.nav-item:hover:first-child {
+    border-right: 1px solid var(--color-secondary);
+}
+
+
+
 
 /* hover dark bg gradient - nested-sub-Menu  */
 ul.nested-sub-menu > li.nav-item:hover {
     background-image: linear-gradient(
-        to bottom,
+        to right,
+        #000 5%,
         var(--color-dk),
         var(--color-md)
     );
