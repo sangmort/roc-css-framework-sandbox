@@ -1,21 +1,21 @@
 // Wait for DOM to load before executing user-styling script
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function getUserStyles() {
     // Target the input & create an empty variable to store the css
     const fileInput = document.getElementById("file-input");
     let css;
 
     // Wait for a file to be inputted
-    fileInput.addEventListener("change", (event) => {
+    fileInput.addEventListener("change", (cssInputEvent) => {
         // Use first file inputted
-        const file = event.target.files[0];
+        const file = cssInputEvent.target.files[0];
 
         // Call FileReader constructor into variable to read file
         const reader = new FileReader();
         reader.readAsText(file); // Read the file as text
 
         // Trigger FileReader when the file has been read
-        reader.onload = (event) => {
-            css = event.target.result; // Store in css variable
+        reader.onload = (cssLoadEvent) => {
+            css = cssLoadEvent.target.result; // Store in css variable
         };
     });
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const applyStylesButton = document.getElementById("apply-styles");
 
     // Wait for apply styles but to be clicked
-    applyStylesButton.addEventListener("click", () => {
+    applyStylesButton.addEventListener("click", function applyUserStyles() {
         // If css variable is initialized, store contents of inputed file in a data URI
         if (css) {
             const cssDataUri =
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Target remove styles button & wait for it to be clicked
     const removeStylesButton = document.getElementById("remove-styles");
 
-    removeStylesButton.addEventListener("click", () => {
+    removeStylesButton.addEventListener("click", function removeUserStyles() {
         // Check if link element href starts with "data:text/css"
         const customStylesheetLink = document.querySelector(
             'link[href^="data:text/css"]'
