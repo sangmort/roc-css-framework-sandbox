@@ -134,7 +134,6 @@ ul.sub-menu > li.nav-item:hover {
         var(--color-dk),
         var(--color-md)
     );
-
 }
 
 /* hover dark bg gradient - sub-menu last item round bottom corners  */
@@ -146,9 +145,6 @@ ul.sub-menu > li.nav-item:hover:last-of-type {
 ul.sub-menu > li.nav-item:hover:first-child {
     border-right: 1px solid var(--color-secondary);
 }
-
-
-
 
 /* hover dark bg gradient - nested-sub-Menu  */
 ul.nested-sub-menu > li.nav-item:hover {
