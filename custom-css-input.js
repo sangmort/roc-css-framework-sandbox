@@ -1,12 +1,17 @@
+// Wait for DOM to load before executing user-styling script
 document.addEventListener("DOMContentLoaded", () => {
+    // Target the input & create an empty variable to store the css
     const fileInput = document.getElementById("file-input");
     let css;
 
+    // Wait for a file to be inputted
     fileInput.addEventListener("change", (event) => {
+        // Use first file inputted
         const file = event.target.files[0];
 
+        // Call FileReader constructor into variable to read file
         const reader = new FileReader();
-        reader.readAsText(file);
+        reader.readAsText(file); // Read the file as text
 
         reader.onload = (event) => {
             css = event.target.result;
