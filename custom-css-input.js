@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyStylesButton.addEventListener("click", () => {
         if (css) {
-            const cssDataUri = "data:text/css;charset=utf-8," + encodeURIComponent(css);
+            const cssDataUri =
+                "data:text/css;charset=utf-8," + encodeURIComponent(css);
 
             const customStylesheetLink = document.createElement("link");
             customStylesheetLink.setAttribute("rel", "stylesheet");
