@@ -9,9 +9,9 @@ jobs:
         timeout-minutes: 60
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Cache node_modules and Playwright installation
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: |
                       node_modules
@@ -19,9 +19,9 @@ jobs:
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
                   restore-keys: |
                       ${{ runner.os }}-node-
-            - uses: actions/setup-node@v2.4.1
+            - uses: actions/setup-node@v3
               with:
-                  node-version: 16
+                  node-version: 18
             - name: Install dependencies
               run: npm ci
             - name: Install Playwright Browsers
@@ -33,7 +33,7 @@ jobs:
                   BASE_URL: http://localhost:5500
                   HEADLESS: 1
               run: npx playwright test
-            - uses: actions/upload-artifact@v2
+            - uses: actions/upload-artifact@v3
               if: always()
               with:
                   name: playwright-report
