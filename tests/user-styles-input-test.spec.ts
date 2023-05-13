@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("user styles input test", async ({ page }) => {
-    await page.goto("index.html");
+    await page.goto("http://127.0.0.1:5500/index.html");
     await page.locator("#input-styles").click();
     await page
         .getByLabel("Upload .css")
