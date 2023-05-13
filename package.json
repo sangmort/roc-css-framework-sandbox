@@ -1,0 +1,21 @@
+{
+  "name": "css-framework-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "custom-css-input.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangmort/css-framework-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sangmort/css-framework-sandbox/issues"
+  },
+  "homepage": "https://github.com/sangmort/css-framework-sandbox#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.33.0"
+  }
+}
