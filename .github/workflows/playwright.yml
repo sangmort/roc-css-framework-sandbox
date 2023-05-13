@@ -32,7 +32,7 @@ jobs:
               env:
                   BASE_URL: http://localhost:5500
                   headless: false
-              run: npx playwright test
+              run: npx playwright test --debug
             - uses: actions/upload-artifact@v3
               if: always()
               with:
