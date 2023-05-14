@@ -2,20 +2,20 @@
 document.addEventListener("DOMContentLoaded", function getUserStyles() {
     // Target the input & create an empty variable to store the css
     const inputUserStylesFile = document.getElementById("input-styles");
-    let css;
+    let storeUserCSS;
 
     // Wait for a file to be inputted
     inputUserStylesFile.addEventListener("change", (inputUserStylesEvent) => {
         // Use first file inputted
-        const file = inputUserStylesEvent.target.files[0];
+        const userCSSFile = inputUserStylesEvent.target.files[0];
 
         // Call FileReader constructor into variable to read file
         const reader = new FileReader();
-        reader.readAsText(file); // Read the file as text
+        reader.readAsText(userCSSFile); // Read the file as text
 
         // Trigger FileReader when the file has been read
         reader.onload = (loadUserStylesEvent) => {
-            css = loadUserStylesEvent.target.result; // Store in css variable
+            storeUserCSS = loadUserStylesEvent.target.result; // Store in css variable
         };
     });
 
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function getUserStyles() {
     // Wait for apply styles but to be clicked
     applyStylesButton.addEventListener("click", function applyUserStyles() {
         // When css variable is initialized, store contents of inputed file in a data URI
-        if (css) {
+        if (storeUserCSS) {
             const cssDataUri =
-                "data:text/css;charset=utf-8," + encodeURIComponent(css);
+                "data:text/css;charset=utf-8," + encodeURIComponent(storeUserCSS);
 
             // Create link rel to the stylesheet ...
             const linkUserStyles = document.createElement("link");
