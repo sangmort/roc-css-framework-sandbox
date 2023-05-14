@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function getUserStyles() {
 
             // Create link rel to the stylesheet ...
             const linkUserStyles = document.createElement("link");
+            linkUserStyles.setAttribute("id", "user-style-sheet");
             linkUserStyles.setAttribute("rel", "stylesheet");
             linkUserStyles.setAttribute("href", cssDataUri);
 
@@ -45,9 +46,7 @@ document.addEventListener("DOMContentLoaded", function getUserStyles() {
 
     removeStylesButton.addEventListener("click", function removeUserStyles() {
         // Check if link element href starts with "data:text/css"
-        const userStylesheetLink = document.querySelector(
-            'link[href^="data:text/css"]'
-        );
+        const userStylesheetLink = document.querySelector("#user-style-sheet");
 
         // If the css is found, remove the stylesheet
         if (userStylesheetLink) {
