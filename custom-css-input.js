@@ -1,32 +1,29 @@
-// Wait for DOM to load before executing user-styling script
 document.addEventListener("DOMContentLoaded", function getUserStyles() {
   // Target the input & create an empty variable to store the css
   const inputUserStylesFile = document.getElementById("input-styles");
-  let storeUserCSS;
+  const applyStylesButton = document.getElementById("apply-styles");
+  const removeStylesButton = document.getElementById("remove-styles");
+  let storeUserStylesFile;
 
   // Wait for a file to be inputted
   inputUserStylesFile.addEventListener("change", (inputUserStylesEvent) => {
     // Use first file inputted
-    const userCSSFile = inputUserStylesEvent.target.files[0];
+    const userStylesFile = inputUserStylesEvent.target.files[0];
 
     // Call FileReader constructor into variable to read file
     const reader = new FileReader();
-    reader.readAsText(userCSSFile); // Read the file as text
+    reader.readAsText(userStylesFile); // Read the file as text
 
     // Trigger FileReader when the file has been read
     reader.onload = (loadUserStylesEvent) => {
-      storeUserCSS = loadUserStylesEvent.target.result; // Store in css variable
+      storeUserStylesFile = loadUserStylesEvent.target.result; // Store in css variable
     };
   });
 
-  // Target apply-styles button
-  const applyStylesButton = document.getElementById("apply-styles");
-
-  // Wait for apply styles but to be clicked
   applyStylesButton.addEventListener("click", function applyUserStyles() {
     // When css variable is initialized, store contents of inputed file in a data URI
-    if (storeUserCSS) {
-      const cssDataUri = "data:text/css;charset=utf-8," + encodeURIComponent(storeUserCSS);
+    if (storeUserStylesFile) {
+      const cssDataUri = "data:text/css;charset=utf-8," + encodeURIComponent(storeUserStylesFile);
 
       // Create link rel to the stylesheet ...
       const linkUserStyles = document.createElement("link");
@@ -35,13 +32,10 @@ document.addEventListener("DOMContentLoaded", function getUserStyles() {
       linkUserStyles.setAttribute("href", cssDataUri);
 
       // ... and append to head element
-      const head = document.getElementsByTagName("head")[0];
-      head.appendChild(linkUserStyles);
+      const documentHead = document.getElementsByTagName("head")[0];
+      documentHead.appendChild(linkUserStyles);
     }
   });
-
-  // Target remove styles button & wait for it to be clicked
-  const removeStylesButton = document.getElementById("remove-styles");
 
   removeStylesButton.addEventListener("click", function removeUserStyles() {
     // Check if link element href starts with "data:text/css"
